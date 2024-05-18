@@ -1,0 +1,30 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 181.115.171.235
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1715025061252
+  login: 1715025001318
+money: '0.0'
+last-account-name: JhonElSpicy
+logoutlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: 0.0
+  y: 158.0
+  z: 0.0
+  yaw: -55.77739715576172
+  pitch: 18.584442138671875

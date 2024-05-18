@@ -1,0 +1,84 @@
+Settings:
+  # The rarity is an attribute of an enchantment.
+  # It affects the chance of getting an enchantment from enchanting or loots as well as the combination cost in anvil.
+  Rarity: RARE
+  # Enchantment name.
+  Name: Curse Of Death
+  # Enchantment description.
+  # You can use 'Enchantment' placeholders: https://nightexpress.gitbook.io/excellentenchants/utility/placeholders
+  Description:
+  - When killing players, you have a chance of dying too.
+  Level:
+    # Min. enchantment level.
+    Min: 1
+    # Max. enchantment level.
+    Max: 3
+  # Sets whether or not this enchantment will be hidden from Enchants GUI.
+  Hide_From_List: false
+  # Makes this enchantment exclusive for ones in the list.
+  # Conflicting enchantments can not be combined on anvils and obtained together on the same item.
+  Conflicts: []
+  VisualEffects:
+    # Enables enchantment visual effects (mostly particles).
+    Enabled: true
+  # A chance that this enchantment will be triggered.
+  Trigger_Chance:
+    # Start modifier value.
+    Base: 0.5
+    # Additional value calculated by enchantment level step (see below). Formula: <per_level> * <step>
+    Per_Level: 0.15
+    # Defines level step for 'Per_Level' value calculation. Formula: <enchant_level> / <step>
+    Step: 1.0
+    # Sets a limit for the final (base & per level calculations) value.
+    # Set '-1' for no limit.
+    Cap: 100.0
+    # Sets action performed between 'Base' and final 'Per_Level' values.
+    # Available types: ADD, MULTIPLY
+    Action: ADD
+Distribution:
+  # Sets whether this enchantment is a treasure enchantment.
+  # Treasure enchantments can only be received via looting, trading, or fishing.
+  Treasure: false
+  Enchanting_Table:
+    # =============== Vanilla Distribution Mode ===============
+    # Sets min. **modified** level cost for this enchantment to be selected in enchanting table.
+    # Explanation: https://minecraft.wiki/w/Enchanting_mechanics#How_enchantments_are_chosen
+    # Vanilla costs: https://minecraft.wiki/w/Enchanting/Levels
+    # =============== Custom Distribution Mode ===============
+    # Sets min. **plain** level cost for this enchantment to be selected in enchanting table.
+    Min_Cost:
+      # Start modifier value.
+      Base: -14.0
+      # Additional value calculated by enchantment level step (see below). Formula: <per_level> * <step>
+      Per_Level: 14.0
+      # Defines level step for 'Per_Level' value calculation. Formula: <enchant_level> / <step>
+      Step: 1.0
+      # Sets a limit for the final (base & per level calculations) value.
+      # Set '-1' for no limit.
+      Cap: -1.0
+      # Sets action performed between 'Base' and final 'Per_Level' values.
+      # Available types: ADD, MULTIPLY
+      Action: ADD
+    # =============== Vanilla Distribution Mode ===============
+    # Sets max. **modified** level cost for this enchantment to be selected in enchanting table.
+    # Explanation: https://minecraft.wiki/w/Enchanting_mechanics#How_enchantments_are_chosen
+    # Vanilla costs: https://minecraft.wiki/w/Enchanting/Levels
+    # =============== Custom Distribution Mode ===============
+    # Sets max. **plain** level cost for this enchantment to be selected in enchanting table.
+    Max_Cost:
+      # Start modifier value.
+      Base: 7.0
+      # Additional value calculated by enchantment level step (see below). Formula: <per_level> * <step>
+      Per_Level: 15.0
+      # Defines level step for 'Per_Level' value calculation. Formula: <enchant_level> / <step>
+      Step: 1.0
+      # Sets a limit for the final (base & per level calculations) value.
+      # Set '-1' for no limit.
+      Cap: -1.0
+      # Sets action performed between 'Base' and final 'Per_Level' values.
+      # Available types: ADD, MULTIPLY
+      Action: ADD
+  # Sets whether or not this enchantment can be populated in villager trades.
+  Tradeable: true
+  # Sets whether or not this enchantment can be populated in enchanting table.
+  Discoverable: true

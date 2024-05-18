@@ -1,0 +1,17 @@
+type: cooking
+result: minecraft:leather
+multiple: true
+unlock: true
+source:
+- item: minecraft:rotten_flesh
+  block: campfire
+  time: 200
+  exp: 10.0
+- item: minecraft:rotten_flesh
+  block: furnace
+  time: 200
+  exp: 10.0
+- item: minecraft:rotten_flesh
+  block: smoker
+  time: 200
+  exp: 10.0

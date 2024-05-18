@@ -1,0 +1,30 @@
+simple_dice:
+  command: /simon-dice
+  type: TEXT
+  text:
+  - '&0[&6Dice&0] &eYou got &6$rnd6 uwuwuuw!'
+  permission-required: true
+  permission-node: mycommand.cmd.dice
+  permission-error: "&a$player! , &2You can't use this command!"
+
+lobby_alias:
+  command: /lobby
+  type: ALIAS
+  alias: /mv tp Lobby
+  permission-required: false
+  register: true
+  
+mochila_alias:
+  command: /mochilas
+  type: ALIAS
+  alias: /bbp recipe
+  permission-required: false
+  register: true
+  
+tumbas_alias:
+  command: /tumbas
+  type: ALIAS
+  alias: /graves gui
+  permission-required: false
+  register: true
+  

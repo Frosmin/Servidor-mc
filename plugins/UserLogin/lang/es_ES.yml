@@ -1,0 +1,58 @@
+commands:
+  disabled: '&cÉste comando está deshabilitado'
+  player_unregistered: '&b{player} &efue removido!'
+  errors:
+    player_only: '&cEste comando solo puede ser usado por jugadores'
+    no_permission: '&cNo tienes permiso para usar este comando'
+    player_not_found: '&cJugador no encontrado!'
+    unregister_failed: '&cError borrando registro, lee la consola para más detalles'
+  set: '&eLas coordenadas de {type} han sido establecidas en &bX: {x}, Y: {y}, Z:
+    {z}, Y: {yaw}, P: {pitch}, &een el mundo &b"{world}"'
+  reload: '&ePlugin recargado!'
+  descriptions:
+    userlogin: Comando principal de UserLogin
+    login: Te logea al servidor con la contraseña ingresada
+    register: Te registra con la contraseña ingresada
+    changepassword: Cambia tu contraseña
+  usages:
+    userlogin: '&cUso correcto: /userlogin [command] (Usa /ul help para más)'
+    login: '&cUso correcto: /login <password>'
+    register: '&cUso correcto: /register <password> <password>'
+    changepassword: '&cUso correcto: /changepassword <old-password> <new-password>
+      <new-password>'
+messages:
+  not_registered: '&c¡No estás registrado! Use &a/register <password> <password> &cpara
+    registrarte!'
+  already_registered: '&cYa estás registrado!'
+  incorrect_password: '&4Contraseña incorrecta!'
+  short_password: '&cTu contraseña debe tener un mínimo de &4{chars} &ccaracteres'
+  long_password: '&cTu contraseña puede tener un máximo de &4{chars} &ccaracteres'
+  regex_mismatch: '&cTu contraseña tiene un patrón inválido!'
+  different_passwords: '&cLas contraseñas no concuerdan!'
+  already_logged_in: '&cYa estás logeado!'
+  logged_in: '&9Has sido logeado!'
+  registered: '&9Has sido registrado!'
+  register_failed: '&cRegistro fallido, por favor intenta de nuevo.'
+  welcome:
+    registered: '&6Bienvenido! Usa &3/login <password> &6para entrar al servidor'
+    unregistered: '&6Bienvenido! Usa &3/register <password> <password> &6para registrarte'
+  chat_disabled: '&cDebes estar logeado para usar el chat!'
+  move_warning: '&cTienes que logearte para moverte!'
+  timeout: Te has quedado mucho tiempo sin logearte
+  max_attempts_exceeded: Has excedido {count} intentos para logearte, intenta de nuevo
+  login_announcement: '&e{player} se ha unido al servidor!'
+  commands_disabled: '&cTienes que logearte para usar comandos!'
+  must_log_in: '&cYou must be logged in to use this command'
+  password_changed: '&6Tu contraseña ha sido cambiada'
+  password_change_error: '&cHubo un error al cambiar tu contraseña'
+  help:
+  - '&a--------- | &2[Ayuda de UserLogin] &a| ---------'
+  - '&2/ul help: &aMuestra esta lista de ayuda'
+  - '&2/ul reload: &aRecarga las configuraciones'
+  - '&2/ul set <login>|<spawn>: &aEstablece la posición indicada en tus coordenadas'
+  - '&2/ul unregister <player>: &aElimina el registro del jugador dado'
+  - '&a-----------------------------------------------------'
+other:
+  database_connected: '&bBase de datos conectada!'
+  database_error: '&cError al conectar a la base de datos, lea abajo:'
+  driver_missing: '&cDriver JDBC para la base de datos no encontrado: {driver}'

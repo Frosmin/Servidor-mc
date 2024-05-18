@@ -1,0 +1,253 @@
+### GERMAN TRANSLATION ###
+###
+### BITTE FOLGE DEN RICHTLINIEN BEI https://github.com/WeiiswurstDev/AdminTools3/wiki/Configuring-AdminTools3
+###
+### Bitte bearbeite diese Datei nicht, sondern kopiere den
+### Inhalt in eine neue Datei. Diese Datei wird bei jedem Start
+### überprüft und ggf. geändert.
+###
+######## ÄNDERUNGEN IN DIESER DATEI WERDEN BEI JEDEM START ENTFERNT !!!!!!!!
+
+chatmessages:
+  noperm: "&cDir fehlen diese Rechte: &e%s"
+  syntax: "&cSyntaxfehler. Richtige Syntax: &e%s"
+  moduleNotFound: "&cEs existiert kein Modul namens &e%s&c."
+  missingPlayer: "&cDu hast keinen Spieler ausgewählt"
+  missingWorld: "&cDu hast keine Welt ausgewählt"
+  tooManyPlayers: "&cDa nur &e54 &cSpieler in die GUI passen, aber &e%s &conline sind, musst du diese Spieler direkt im /a-Befehl auswählen!"
+  tooManyWorlds: "&cDa nur &e54 &cWelten in die GUI passen, aber &e%s &cgeladen sind, musst du diese Welten direkt im /a-Befehl auswählen!"
+  numberFormat: "&e%s &cist keine Nummer! (Denke daran, dass du Kommas als Punkt '.' schreiben musst!)"
+  smallerThanZero: "&e%s &cist kleiner oder gleich 0!"
+  playerOnlyCommand: "Diesen Befehl kannst du nur Ingame benutzen!"
+  legacyVersion: "!!! Deine Server-Version ist ALT! Bitte nutze die neueste Minecraft-Version. Obwohl wir an Kompatibilität arbeiten, kann sie nicht garantiert werden !!!"
+  protocolLibNotFound: >
+    !!! Das Plugin PROTOCOLLIB konnte nicht gefunden werden.
+    Das bedeutet, dass Text in der ACTIONBAR stattdessen im Chat angezeigt wird.
+    Installiere ProtocolLib, um das zu beheben !!!
+  papiNotFound: >
+    !!! PlaceholderAPI konnte nicht gefunden werden.
+    Das bedeutet, dass du im Text von /pinfo keine Placeholders von PAPI nutzen kannst !!!
+  vaultNotFound: >
+    !!! Das Plugin VAULT konnte nicht gefunden werden.
+    Das bedeutet, dass AdminTools den Kontostand der Mitglieder nicht auslesen kann.
+    Um den Kontostand der Spieler in /pinfo anzeigen zu lassen, installiere Vault und ein WirtschaftsSystem (z.B. EssentialsX). !!!
+  economyNotFound: >
+    !!! Es konnte kein Wirtschaftssystem gefunden werden.
+    Wenn du ein Wirtschaftssystem, z.B. EssentialsX, installierst, kann /pinfo auch den Kontostand der Spieler anzeigen !!!
+  economyFound: "AdminTools hat sich mit deinem Wirtschaftssystem %s verbunden."
+
+gui:
+  moduleSelector:
+    invName: "&bWähle ein Modul aus!"
+    noPermLore: "&cDu kannst dieses Modul ##&cnicht nutzen, da du##&ckeine Rechte dazu hast.## "
+    mayChooseOtherPlayer: "&7LINKSCLICK: Auf DICH ausführen ##&7RECHTSCLICK: Jemand anderes auswählen"
+    mayOnlyChooseSelf: "&7CLICK: Auf DICH ausführen"
+  playerSelector:
+    invName: "&bWähle einen Spieler"
+    itemLore: "&7*Click zum Auswählen*"
+  worldSelector:
+    invName: "&bWähle eine Welt"
+    itemLore: "&7*Click zum Auswählen*"
+  gamemodeSelector:
+    invName: "&bWähle einen Spielmodus!"
+    survival: "&aÜberleben"
+    creative: "&aKreativ"
+    adventure: "&aAbenteuer"
+    spectator: "&aZuschauer"
+  chatclear:
+    invName: "&bWähle das Ziel aus"
+    forYou: "&bLeere deinen Chat"
+    forAll: "&bLeere den Chat aller Spieler"
+  difficulty:
+    invName: "&bWähle die Schwierigkeit"
+    peaceful: "&bFriedlich"
+    easy: "&eEinfach"
+    normal: "&6Normal"
+    hard: "&cSchwer"
+
+playerInfo:
+  explanationIgnoredByPlugin: " -- 'lines' wird immer angezeigt.
+  optionalBalance nur wenn ein Wirtschaftssystem insstalliert ist.
+  Du kannst so viele Nachrichten wie du willst hinzufügen und die Reihenfolge beliebig ändern.
+  Wenn du PlaceholderAPI installiert hast, kannst du hier alles von PlaceholderAPI nutzen.
+  Wenn du PAPI NICHT installiert hast, kannst du diese placeholders nutzen: player_name,player_displayname,player_uuid,player_health,player_food_level,player_gamemode,player_item_in_hand
+  Diese Nachricht wird vom Plugin ignoriert und ist nur zur Erklärung der Config da --"
+  lines:
+    - "&aInfos über &b%player_name%\n"
+    - "&aAnzeigename: &b%player_displayname%"
+    - "&aUUID: &b%player_uuid%"
+    - "&aLeben: &b%player_health% &7| &aEssen: &b%player_food_level%"
+    - "&aSpielmodus: &b%player_gamemode%"
+    - "&aItem in der Hand: &b%player_item_in_hand%"
+    - "&aNameMC-Profil: https://mine.ly/%player_uuid%"
+  optionalBalance: "&aKontostand: &b%s"
+
+module:
+  heal:
+    item:
+      name: "&4Heilen"
+      lore: "&7Heile dich selbst ##&7oder jemand anderen"
+    message:
+      applyToOther: "&aDu hast &b%s &ageheilt."
+      applyToSelf: "&aDu hast dich geheilt."
+      appliedByOther: "&aDu wurdest von &b%s &ageheilt."
+  maxhearts:
+    item:
+      name: "&4Maximale Leben"
+      lore: "&7Verändere die Anzahl##&7an Leben, die das Ziel##&7haben kann."
+    message:
+      sendAmountInChat: "&aSchreibe die Anzahl an &nhalben Herzen&a in den Chat, die der Spieler danach haben soll."
+      applyToOther: "&b%s&a hat jetzt &b%s&a halbe Herzen."
+      applyToSelf: "&aDu hast jetzt &b%s &ahalbe Herzen."
+      appliedByOther: "&b%s&a hat deine Leben zu &b%s&a halben Herzen gesetzt."
+  kill:
+    item:
+      name: "&4Töten"
+      lore: "&7Töte dich selbst ##&7oder jemand anderen"
+    message:
+      applyToOther: "&aDu hast &b%s &aumgebracht.."
+      applyToSelf: "&aDu hast dich selbst umgebracht."
+      appliedByOther: "&aDu wurdest von &b%s &aerledigt."
+  workbench:
+    item:
+      name: "&3Werkbank öffnen"
+      lore: "&7Öffne eine Werkbank"
+    message:
+      applyToSelf: "&aDu hast eine Werkbank geöffnet."
+  enderchest:
+    item:
+      name: "&5Enderchest"
+      lore: "&7Öffne eine Enderchest##&7von einem Spieler"
+    message:
+      applyToSelf: "&aDu hast deine Enderchest geöffnet."
+      applyToOther: "&aDu hast die Enderchest von &b%s &ageöffnet."
+      appliedByOther: "&b%s &aschaut in deine Enderchest"
+  fly:
+    item:
+      name: "&bFliegen"
+      lore: "&7Ermögliche das Fliegen##&7wie im Kreativmodus"
+    message:
+      toggleOn: "&aDu kannst jetzt (wie im Kreativmodus) fliegen."
+      toggleOff: "&aDu kannst jetzt &cnicht mehr &afliegen."
+      toggledOnByOther: "&b%s &ahat für dich das Fliegen wie im Kreativmodus aktiviert."
+      toggledOffByOther: "&b%s &ahat für dich das Fliegen wie im Kreativmodus &cdeaktiviert."
+      toggledOnForOther: "&b%s &akann jetzt fliegen."
+      toggledOffForOther: "&b%s &akann nicht mehr fliegen."
+  mute:
+    item:
+      name: "&cStummschalten"
+      lore: "&7Schalte einen Spieler stumm##&7oder deaktiviere die Stummschaltung."
+    message:
+      toggleOn: "&cDu kannst nicht mehr reden."
+      toggleOff: "&aDu kannst wieder reden."
+      toggledOnByOther: "&b%s &ahat dich stummgeschaltet."
+      toggledOffByOther: "&b%s &ahat deine Stummschaltung aufgehoben."
+      toggledOnForOther: "&b%s &aist jetzt stumm."
+      toggledOffForOther: "&b%s &akann wieder reden."
+      stillMuted: "&cDu kannst nicht reden, weil du stummgeschaltet wurdest!"
+      bypass: "&cDu kannst &e%s &cnicht stummschalten!"
+  freeze:
+    item:
+      name: "&bEinfrieren"
+      lore: "&7Verhindere Bewegungen##&7von einem Spieler oder##&7erlaube sie wieder."
+    message:
+      toggleOn: "&cDu bist eingefroren!"
+      toggleOff: "&aDu kannst dich wieder bewegen."
+      toggledOnByOther: "&b%s &ahat dich eingefroren. &7(Du kannst dich nicht mehr bewegen)"
+      toggledOffByOther: "&b%s &ahat dich wieder aufgetaut. &7(Du kannst dich wieder bewegen)."
+      toggledOnForOther: "&b%s &aist jetzt eingefroren."
+      toggledOffForOther: "&b%s &akann sich wieder bewegen."
+      stillMuted: "&cDu bist eingefroren und kannst dich daher nicht bewegen!"
+      bypass: "&cDu kannst &e%s &cnicht einfrieren!"
+  invsee:
+    item:
+      name: "&2InventarSpion"
+      lore: "&7Öffne das Inventar##&7von einem Spieler"
+    message:
+      applyToSelf: "&cBitte öffne dein eigenes Inventar über die Taste E."
+      applyToOther: "&aDu hast das Inventar von &b%s &ageöffnet."
+      appliedByOther: "&b%s &aschaut in dein Inventar"
+  vanish:
+    item:
+      name: "&bUnsichtbarkeit"
+      lore: "&7Mache einen Spieler für Andere##&7(ohne die Rechte 'admintools3.bypass.vanish')##&bunsichtbar&7."
+    message:
+      toggleOn: "&aDu bist nun unsichtbar."
+      toggleOff: "&cDu bist wieder sichtbar."
+      toggledOnByOther: "&b%s &ahat dich unsichtbar gemacht."
+      toggledOffByOther: "&b%s &ahat dich wieder sichtbar gemacht."
+      toggledOnForOther: "&b%s &aist jetzt unsichtbar."
+      toggledOffForOther: "&b%s &aist wieder sichtbar."
+  gm:
+    item:
+      name: "&bGameMode"
+      lore: "&7Wähle einen GameMode##&7(Spielmodus) aus!"
+    message:
+      applyToSelf: "&aDu kannst einen GameMode auswählen."
+      applyToOther: "&b%s &akann sich einen GameMode aussuchen."
+      appliedByOther: "&b%s &ahat die GameMode-Auswahl geöffnet."
+      survival: "&aDu bist jetzt im Überlebens(Survival)-Modus."
+      creative: "&aDu bist jetzt im Kreativmodus (Creative)."
+      adventure: "&aDu bist jetzt im Abenteuermodus (Adventure)."
+      spectator: "&aDu bist jetzt im Zuschauermodus (Spectator)."
+  chatclear:
+    item:
+      name: "&eChat leeren"
+      lore: "&7Leere den Chat##&7für dich oder für alle"
+    message:
+      applyToSelf: "&aWähle aus, ob du den Chat für dich oder für alle leeren willst."
+      clearedForYou: "&aDu hast deinen Chat geleert."
+      clearedForAll: "&aDu hast den Chat für alle geleert."
+      clearedByPlayer: "&aDer Chat wurde von &b%s &ageleert."
+  cmdspy:
+    item:
+      name: "&cBefehls-Spion"
+      lore: "&7Erhalte eine Nachricht##&7wenn ein Spieler einen##&7Befehl ausführt."
+    message:
+      toggleOn: "&aWenn ein Spieler einen Befehl ausführt, wirst du nun benachrichtigt."
+      toggleOff: "&aWenn ein Spieler einen Befehl ausführt, wirst du nicht mehr benachrichtigt."
+      commandUsed: "&cCMDSPY &7> &b%s &ahat &b%s &aausgeführt."
+  invclear:
+    item:
+      name: "&eInventar leeren"
+      lore: "&7Leere das Inventar##&7eines Spielers!"
+    message:
+      applyToSelf: "&aDu hast dein Inventar geleert."
+      applyToOther: "&aDu hast das Inventar von &b%s&a geleert."
+      appliedByOther: "&aDein Inventar wurde von &b%s &ageleert."
+  difficulty:
+    item:
+      name: "&3Schwierigkeit setzen"
+      lore: "&7Setze die Schwierigkeit##&7für eine Welt"
+    message:
+      applyToSelf: "&aWähle die Schwierigkeit aus."
+      difficultySet: "&aDu hast die Schwierigkeit auf %s &agesetzt."
+      noDifficultySelected: "&cDu hast nicht auf eine Schwierigkeit geclickt!"
+  worldtp:
+    item:
+      name: "&dTeleportieren"
+      lore: "&7Teleportiere dich selbst ##&7oder jemand anderen##&7in eine andere Welt!"
+    message:
+      applyToOther: "&aDu hast &b%s &ateleportiert."
+      applyToSelf: "&aDu hast dich selbst teleportiert."
+      appliedByOther: "&aDu wurdest von &b%s &ateleportiert."
+  pvp:
+    item:
+      name: "&cPvP An/Ausschalten"
+      lore: "&7Erlaube oder verbiete##&7PvP in einer Welt."
+    message:
+      toggleOn: "&aDu hast in &b%s &aPvP aktiviert."
+      toggleOff: "&aDu hast in &b%s &aPvP deaktiviert."
+  weather:
+    item:
+      name: "&cRegen An/Ausschalten"
+      lore: "&7Lasse es Regnen##&7oder die Sonne scheinen."
+    message:
+      toggleOn: "&aDu hast in &b%s &aRegen aktiviert."
+      toggleOff: "&aDu hast in &b%s &aRegen deaktiviert."
+  setspawn:
+    item:
+      name: "&eWelten-Spawnpunkt setzen"
+      lore: "&7Setze den Spawnpunkt##&7der Welt, in der du##&7bist, zu dir."
+    message:
+      applyToSelf: "&aDu hast den Spawnpunkt gesetzt."

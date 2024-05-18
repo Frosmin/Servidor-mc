@@ -1,0 +1,171 @@
+{
+    "name": "Mountain Hills",
+    "color": "#ABB9C0",
+    "rarity": 1,
+    "derivative": "OLD_GROWTH_SPRUCE_TAIGA",
+    "vanillaDerivative": "OLD_GROWTH_SPRUCE_TAIGA",
+    "children": ["mountain/forest"],
+    "generators": [{
+        "generator": "smooth-dunes",
+        "max": 33,
+        "min": 15
+    }],
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:andesite"},
+        {"block": "minecraft:gravel"},
+        {"block": "minecraft:cyan_terracotta"}
+    ]},
+    "layers": [
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "slopeCondition": {
+                "minimumSlope": 0,
+                "maximumSlope": 3.3
+            },
+            "palette": [{"block": "minecraft:grass_block"}]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "slopeCondition": {"minimumSlope": 4},
+            "palette": [
+                {"block": "minecraft:gravel"},
+                {"block": "minecraft:cyan_terracotta"}
+            ]
+        },
+        {
+            "minHeight": 2,
+            "maxHeight": 4,
+            "slopeCondition": {"minimumSlope": 4},
+            "palette": [
+                {"block": "minecraft:stone"},
+                {"block": "minecraft:stone"},
+                {"block": "minecraft:cobblestone"}
+            ]
+        },
+        {
+            "minHeight": 1,
+            "maxHeight": 1,
+            "slopeCondition": {
+                "minimumSlope": 0,
+                "maximumSlope": 4
+            },
+            "palette": [{"block": "minecraft:grass_block"}]
+        },
+        {
+            "minHeight": 3,
+            "maxHeight": 3,
+            "slopeCondition": {
+                "minimumSlope": 0,
+                "maximumSlope": 3
+            },
+            "palette": [{"block": "minecraft:dirt"}]
+        }
+    ],
+
+    "objects": [
+        {
+            "mode": "PAINT",
+            "chance": 0.1,
+            "place": [
+                "clutter/sbush1",
+                "clutter/sbush2",
+                "clutter/sbush3"
+            ]
+        },
+        {
+            "mode": "PAINT",
+            "chance": 0.1,
+            "place": [
+                "clutter/sbush1",
+                "clutter/sbush2",
+                "clutter/sbush3"
+            ]
+        },
+
+        {
+            "mode": "PAINT",
+            "chance": 0.1,
+            "place": [
+                "clutter/sbush1",
+                "clutter/sbush2",
+                "clutter/sbush3"
+            ]
+        },
+        {
+            "mode": "PAINT",
+            "place": [
+                "structures/mlandstone1",
+                "structures/mlandstone2",
+                "structures/mlandstone3",
+                "structures/mlandstone4",
+                "structures/mlandstone5"
+            ],
+            "chance": 0.04,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            },
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.2,
+            "variance": {
+                "style": "CELLULAR",
+                "zoom": 0.25,
+                "fracture": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.2,
+                    "multiplier": 10
+                }
+            },
+            "style": {
+                "style": "SIMPLEX",
+                "zoom": 0.2,
+                "fracture": {
+                    "style": "STATIC",
+                    "multiplier": 8
+                }
+            },
+            "palette": [
+                {"block": "minecraft:dandelion"},
+                {"block": "minecraft:poppy"},
+                {"block": "minecraft:blue_orchid"},
+                {"block": "minecraft:allium"},
+                {"block": "minecraft:azure_bluet"},
+                {"block": "minecraft:red_tulip"},
+                {"block": "minecraft:orange_tulip"},
+                {"block": "minecraft:white_tulip"},
+                {"block": "minecraft:pink_tulip"},
+                {"block": "minecraft:oxeye_daisy"},
+                {"block": "minecraft:cornflower"},
+                {"block": "minecraft:lily_of_the_valley"}
+            ]
+        },
+        {
+            "chance": 0.01,
+            "palette": [{"block": "minecraft:tall_grass"}]
+        },
+        {
+            "chance": 0.5,
+            "palette": [{"block": "minecraft:grass"}]
+        }
+    ],
+    "childStyle": {
+        "style": "IRIS_DOUBLE",
+        "zoom": 10
+    }
+}

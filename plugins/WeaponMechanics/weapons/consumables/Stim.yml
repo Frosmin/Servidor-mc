@@ -1,0 +1,33 @@
+Stim:
+  Info:
+    Weapon_Item:
+      Type: "LIGHTNING_ROD"
+      Name: "<gold>Stim"
+      Lore:
+        - "<gray>Military stimulant that cauterizes combat wounds."
+        - ""
+        - "<gray>Weapon Statistics"
+        - "<gold>➣ &c♥♥♥♥♥♥♥♥ <gold>⟸ <gray>Heal"
+      Unbreakable: true
+      Hide_Flags: true
+      Deny_Use_In_Crafting: true
+    Weapon_Get_Mechanics:
+      - "Sound{sound=ITEM_ARMOR_EQUIP_CHAIN, pitch=0.75}"
+    Cancel:
+      Block_Interactions: true
+      Item_Interactions: true
+  Skin:
+    Default:
+      Type: FEATHER
+      Custom_Model_Data: -1  # negative numbers are ok here!
+  Shoot:
+    Trigger:
+      Main_Hand: "RIGHT_CLICK"
+      Off_Hand: "RIGHT_CLICK"
+      Circumstance:
+        Swimming: "DENY"
+    Consume_Item_On_Shoot: true
+    Delay_Between_Shots: 20
+    Mechanics:
+      - "Sound{sound=ENTITY_GENERIC_DRINK, noise=0.1}"
+      - "Potion{potion=HEAL, level=3}"

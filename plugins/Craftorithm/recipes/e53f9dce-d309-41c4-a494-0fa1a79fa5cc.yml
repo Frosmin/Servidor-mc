@@ -1,0 +1,5 @@
+type: shapeless
+source:
+- minecraft:white_wool
+unlock: true
+result: minecraft:string 4

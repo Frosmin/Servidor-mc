@@ -1,0 +1,29 @@
+{
+    "surface_builder": "minecraft:grass",
+    "depth": 0.125,
+    "scale": 0.05,
+    "temperature": 0.8,
+    "downfall": 0.4,
+    "creature_spawn_probability": 20,
+    "has_precipitation": true,
+    "precipitation": "rain",
+    "category": "forest",
+    "effects": {
+        "sky_color": -8804127,
+        "fog_color": -4138783,
+        "water_color": -9941734,
+        "water_fog_color": -16448205,
+        "grass_color": -10725350,
+        "foliage_color": -13940224
+    },
+    "starts": [],
+    "spawners": {"misc": [{
+        "type": "minecraft:slime",
+        "weight": 1,
+        "minCount": 2,
+        "maxCount": 5
+    }]},
+    "spawn_costs": {},
+    "carvers": {},
+    "features": []
+}

@@ -1,0 +1,415 @@
+# PlayerAuctions by Olzie-12
+# https://www.spigotmc.org/resources/83073
+# We also have a discord server for help: https://olziedev.com/discord or check docs https://docs.olziedev.com/projects/playerauctions
+# Also if you find any bugs be happy to report them I will fix them :)
+# Made with love
+
+# If you wish to remove a list completely from the configuration, don't remove it otherwise the configuration updater
+# will add it back to the config, and you'll be back to square one. To solve this, make sure you set the list to []
+# For example:
+# list: []
+
+# DO NOT TOUCH THIS!
+config-version: 92
+
+settings:
+  # What language do you want the plugin to read? The list langs are in the lang/ folder.
+  lang: en_US
+  # Should the plugin try and attempt to detect what language the player is using on their client?
+  # If it could not find one, it'll hse the default language.
+  attempt-detect-lang: true
+  # Very useful to tell if there are any memory leaks or if the author needs
+  # information.
+  # Current debug levels are:
+  # - NONE = No debug
+  # - MINOR = Debug for info on what the plugin is doing
+  # - MAJOR - High level of debug info (which is normally used by developers)
+  debug: NONE
+  # Notifies you if there is an update (Only people with pa.admin.update can see this when they join)
+  notify-update: true
+  # Should the plugin automatically download the latest version from spigot if your plugin version is out of date?
+  download-update: true
+  # Plugin metrics, this is very useful for the author to
+  # see information about the server. Please keep it enabled,
+  # it makes me more encouraged to make plugins like this.
+  # YOU WILL NEED TO RESTART THE SERVER!
+  metrics: true
+  # This is the main command for the plugin.
+  main-command: "pauction"
+  # Extra aliases for the main command.
+  command-aliases:
+    - "playerauction"
+    - "pa"
+    - "ah"
+    - "auctionhouse"
+  # What order should the auctions be listed?
+  # options:
+  # - HIGHEST_PRICE = The order will be from the highest price.
+  # - LOWEST_PRICE = The order will be from the lowest price.
+  # - ALPHABETICAL = The order will be from alphabetical order via the item name.
+  # - OLDEST_DATE = The order will be when the auction was created the oldest.
+  # - NEWEST_DATE = The order will be when the auction was created the newest.
+  # - AMOUNT = The order will be from the most amount of the item.
+  # - RANDOM = The order will be random every x seconds.
+  order: OLDEST_DATE
+  # How should the order be displayed instead of HIGHEST_PRICE etc...
+  # Set to "" to disable that specific order when using the sort item change cycle.
+  order-name:
+    HIGHEST_PRICE: "Highest Price"
+    LOWEST_PRICE: "Lowest Price"
+    ALPHABETICAL: "Alphabetical"
+    OLDEST_DATE: "Oldest Date"
+    NEWEST_DATE: "Newest Date"
+    AMOUNT: "Amount"
+    RANDOM: "Random"
+
+  # How often should the random sort actually randomize?
+  order-random-time: 86400
+
+  # Should the placeholder "%item%" show the display name of the item if it has a display name?
+  item-displayname: true
+
+  # How should the timer look like?
+  timer-display:
+    # Where there is one day
+    day: "%day%d "
+    # When there is more than one day
+    days: "%day%d "
+    # Where there is one hour
+    hour: "%hour%h "
+    # Where there is more than one hour
+    hours: "%hour%h "
+    # Where there is a minute
+    minute: "%minute%m "
+    # Where there is more than a minute
+    minutes: "%minute%m "
+    # Where there is a second
+    second: "%second%s "
+    # Where there is more than a second
+    seconds: "%second%s "
+
+  # Should offline messages be pending? If the player is offline and the plugin tries to send a message, it will send it to them when they're online again.
+  offline-message-pending: true
+
+  # if a line in the lore is empty should it be removed?
+  empty-line-removed: true
+
+  # Choose what locale the formatters should use, make sure to use language codes. https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html
+  format-locale: "en"
+
+  # How should the plugin format numbers?
+  # Should the plugin use the short number format? (1.2k instead of 1,200)
+  number-format-short: false
+  # If the above option is true, how should the format look like?
+  number-format-short-suffix: ["", "K", "M", "B", "T", "Q", "s", "S"]
+  # You can see the java documentation on how to use the decimal format here:
+  # https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html
+  number-format: "#,###.##" # Formatting full number
+  number-format-decimal: "#,##0.00" # Formatting decimal number
+
+  # How should the plugin format dates?
+  # You can see the java documentation on how to use the simple date format here:
+  # https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html
+  date-format: "dd/MM/yyy" # Formatting dates with no time
+  date-format-time: "dd/MM/yyy HH:mm:ss" # Formatting dates with time
+  # What timezone should the plugin format dates in? If you wish to use the server timezone, leave it as ""
+  # You can see the java documentation on how to use the time zone here: https://docs.oracle.com/javase/8/docs/api/java/util/TimeZone.html
+  date-format-timezone: ""
+
+  # Should the plugin ignore the op limit permission and focus on the actual limit permission itself.
+  pauction-limit-op: false
+
+  # Should the plugin split different worlds and separate every single auction in each world?
+  # This will include, the auction limit (per world)
+  # This will also include auctions in the menu and in commands.
+  pauction-separate-worlds: false
+  # If the above option is true, do u want to have the separate worlds in groups?
+  # For example, world, world_nether, world_the_end will technically be in the same world
+  pauction-separate-group-worlds: true
+
+  # What is the default currency that should be used?
+  # You can find the supported currencies in extensions.yml
+  default-currency: "vault"
+  # What is the default product provider that should be used?
+  default-product: "item"
+
+  sub-commands:
+    # If the open command is disabled, the only way to open the MENU is to actually type /pauction. (Only if you have it overridden in playerauction.yml).
+    # If you have this command disabled, and /pauction is not overridden in the gui. No one will be able to use the GUI.
+    # If you wish to disable the GUI just turn it off in the gui.
+    open-command: true
+    sell-command: true
+    amount-command: true
+    collect-command: true
+    cancel-command: true
+    bid-command: true
+    auction-command: true
+
+    # Here the sub command syntax's please know that you cannot have spaces in these otherwise you will break everything
+    open-command-name: "open"
+    sell-command-name: "sell"
+    amount-command-name: "amount"
+    collect-command-name: "collect"
+    cancel-command-name: "cancel"
+    bid-command-name: "bid"
+    auction-command-name: "auction"
+
+
+    # Remember, you can always add command aliases, just please use this.
+    # This example is for the set command, but you can add any command.
+    custom-command-aliases:
+      sell-command-aliases:
+        - "sale"
+
+    sell-command-syntax: "%prefix% &b/%label% %args-0% <price> [currency] [amount]"
+    bid-command-syntax: "%prefix% &b/%label% %args-0% <price> [amount]"
+    addauctions-command-syntax: "%prefix% &b/%label% %args-0% <player> <amount>"
+    dbexec-command-syntax: "%prefix% &b/%label% %args-0% <query>"
+
+    # Should players also need "pa.sell" to access the /ah sell command?
+    # They'll also need the limit permission as well to sell an item.
+    sell-command-permission: false
+
+    # Should players need "pa.open" to access the menu when using override-pauction?
+    open-command-permission: false
+
+    # Should the /ah cancel command automatically execute /ah collect (collecting the items straight away)
+    cancel-command-collect: false
+
+  database:
+    # When the plugin starts up, should it automatically convert the opposite database connected?
+    # Make sure to disable this once done!
+    convert: false
+    # This checks if the database connection is valid. If it's not, it will find a new connection.
+    # If the plugin is crashing your server with the stacktrace containing "com.mysql.cj.jdbc.ConnectionImpl.isValid". Then please disable this.
+    # When this is disabled, it will instead check if the connection is closed. If it is, it will find a new connection.
+    # SQLite users should not have to worry about this.
+    use-is-valid: true
+
+    sqlite:
+      backups:
+        # Should backups be enabled? I highly recommenced you keep this enabled.
+        enabled: true
+        # What are the maximum amount of backups allowed in the backup folder until the first one is deleted? Set this to -1 to keep unlimited backups
+        maximum: 10
+
+    mysql:
+      # Should SQL be enabled?
+      enabled: false
+      # Should the connection to the database be closed periodically?
+      # If you're having issues with "No operations allowed after connection closed.". Make sure this is disabled and add autoReconnect=true in your arguments below.
+      close: false
+      # If you want to use cross server auctioning make sure to set up MySQL, then you'll want to enable the AuctionSync extension.
+      # Please enter the server name on your proxy, otherwise the plugin will not work properly.
+      # If you don't want to set up this database as a network, please leave this blank.
+      server-name: ""
+      # If MySQL is enabled PlayerAuctions needs to be connected to the SQL database, please enter your details.
+      # I am not responsible for any leakage of these details. (If an admin accesses it etc...)
+
+      # What is the hostname?
+      hostname: "spigotmc.org"
+      # What is the port? Most database ports are 3306.
+      port: 3306
+      # What is your database name?
+      database: "PlayerAuctions"
+      # What is your database username?
+      username: "root"
+      # What is your database password?
+      password: "root"
+      # Add extra arguments to your MySQL connect URL.
+      arguments: "?characterEncoding=utf8&useSSL=true"
+
+  auction:
+    # Should there be a confirmation before selling an item?
+    confirmation: false
+    # How many seconds, should the confirmation expire. This means how many seconds they have to
+    # sell an item. Recommended is 10
+    confirmation-expire-time: 10
+    # What are the blacklisted items' player's cannot auction?
+    auction-blacklist:
+      # Blacklist specific NBT data instead of actual item stacks/materials.
+      # You only need to list the key of the NBT and NOT the value.
+      nbt: []
+      # Blacklist specific item names instead of actual item stacks/materials.
+      # You do not need to include colours here.
+      names: []
+      # Blacklist specific custom model data instead of actual item stacks/materials.
+      #custom-model-data: ["1000", "1001", "1002"]
+      custom-model-data: []
+      # Blacklisted namespaces for specific items, this is useful for plugins that add items to the game.
+      namespaces: []
+      # Blacklist specific item lores instead of actual item stacks/materials.
+      # This example blacklists any items with the lore line 0 as "Custom Item"
+      # You do not need to include colours here.
+      lores:
+        - "0:Custom Item"
+      # Blacklist specific item enchantments instead of actual item stacks/materials.
+      # https://javadocs.olziedev.com/spigot/latest/org/bukkit/enchantments/Enchantment.html
+      # This example blacklists any items any enchantment "BINDING_CURSE" or "VANISHING_CURSE" with a level of 1.
+      enchantments:
+        - "BINDING_CURSE"
+        - "VANISHING_CURSE:1"
+      # Blacklist specific materials instead of actual item stacks.
+      # This example blacklists any items with the material "BOOK_AND_QUILL"
+      materials:
+        - BOOK_AND_QUILL
+      # You can need to be very specific when using items, if you just want to blacklist a material then use materials.
+      # This example blacklists any items with the material "BOOK_AND_QUIL", with no name and no lore.
+      items:
+        1:
+          name: ""
+          material: BOOK_AND_QUILL
+          data: 0
+          lore: []
+          glowing: false
+      # Should all the above option act as a whitelist?
+      whitelist: false
+    # Should the auction house disallow damaged items? (Items with a durability)
+    disallow-damaged-items: false
+    # Should the auction house disallow items that have item contents? (Items with items inside of them such as a chest or a shulker box)
+    disallow-item-contents: false
+    # What are the blacklisted gamemodes players cannot auction in?
+    blacklisted-gamemodes:
+      - "CREATIVE"
+    # What is the cooldown in seconds for selling an item? Set this to -1 to disable.
+    # This is highly recommended having at least at 1 second to prevent some bukkit item dupes.
+    cooldown: 5
+    # What is the cooldown in seconds for purchasing an item? Set this to -1 to disable.
+    purchase-cooldown: 5
+    # How should the quantity type work in the sell/bid command?
+    # Options:
+    # DISABLED - The player cannot choose how much they want to auction.
+    # REQUIRED - The player will require to choose the amount to auction.
+    # OPTIONAL - The player doesn't need to enter the amount to auction.
+    quantity-type: OPTIONAL
+    # When auctioning an item, should the item limit be removed. If a player auctions the EXACT item to the auction house with the same price,
+    # It'll stack on the auction, obviously players can choose on how much they want in the confirm menu.
+    stack-exact-item: false
+    # Should the plugin respect the item max stack size?
+    # If this is disabled, the plugin will be able to give items that are over the max stack size.
+    respect-max-stack-size: true
+    # What is the amount that should be taken away from the seller's cut when the auction has been purchased. Set to -1 to ignore splitting a cut.
+    percentage-cut: -1
+    # What is the account holder (The players UUID) that will receive the cut?
+    # Please leave this blank if you want the money to vanish magically.
+    percentage-cut-holder: ""
+    # Should a player be able to purchase with decimals?
+    # It is recommended to keep this as true, as it may round down and become $0.
+    # Some currencies don't allow decimals, so this option will be false for those currencies.
+    allow-decimals: true
+    # Should a player be able to purchase an auction with decimals?
+    # This is only for command input only, if false players will not be able to auction with decimals.
+    allow-decimals-auction: true
+    # Should a player be able to purchase their own item?
+    purchase-own: false
+    # How many minutes should the item expire? Set to -1 to disable expire
+    expire-time: 2880
+    # Here you can choose specific ranks that the expiry time they have, if you have not put a rank there the time will be the time will be above.
+    # WARNING This will not work if you're using the default Bukkit Permissions system due to vault not supporting groups.
+    # Please list the ranks from the highest to the lowest, as if your groups inherit each other than it'll find the first one on the list instead of the highest one.
+    # Depending on your permissions plugin this may be really performance heavy.
+    expire-ranks-time: {}
+#      # The rank MVP does not have an expiry time.
+#      MVP: -1
+#      # The rank VIP has an expiry time of 72.
+#      vip: 72
+
+    # How many minutes should the item be purged when it's been expired? Set to -1 to disable the purge.
+    purge-expire: -1
+    # Should the players expired auctions also count to their used auctions.
+    # This is to stop players from using the expired auctions' menu as a backpack
+    # For example: usedAuctions + expiredAuctions >= limit
+    use-expired-limit: false
+    # You can list the auction ids here that you want to be unlimited. This will never ran out of stock or expire!
+    unlimited-items-id: []
+    # What are the commands that will be executed when an auction is listed?
+    commands:
+      - "[broadcast] &e%player%&b is now selling an &e%item_displayname% x%amount%&b for &e%price%&b! (/ah)!"
+    # What are the commands that will be executed when someone has purchased an auction? Executed as the buyer.
+    commands-purchase: []
+    # What are the commands that will be executed when someone has purchased an auction? Executed as the seller. Only when the seller is online.
+    commands-purchase-seller: []
+
+    economy:
+      # This is how much they will need to sell an item, otherwise if they don't have that it will not sell the item and send the message
+      # in lang folder. Make sure you have an economy plugin and vault supports that economy plugin!
+      # Set this to -1 to disable.
+      sell-price: 500
+      # Should the sell price act as a percentage of the cost of the auction?
+      # auction-price * (sell-price / 100)
+      sell-price-rate: false
+      # Here you can choose specific ranks that the price they need to pay, if you have not put a rank there the payment will be the payment will be above.
+      # WARNING This will not work if you're using the default Bukkit Permissions system due to vault not supporting groups.
+      # Please list the ranks from the highest to the lowest, as if your groups inherit each other than it'll find the first one on the list instead of the highest one.
+      # Depending on your permissions plugin this may be really performance heavy.
+      sell-ranks-price: {}
+#        # The rank MVP does not need to pay.
+#        MVP: -1
+#        # The rank VIP only needs to pay $1
+#        vip: 1
+
+    # Should players not be able to set sell in these worlds?
+    disabled-worlds:
+      - "world_nether"
+
+  bidding:
+    # What is the cooldown in seconds for bidding an item? Set this to -1 to disable.
+    cooldown: 5
+    # What is the cooldown in seconds for offering a bid? Set this to -1 to disable.
+    offer-cooldown: 5
+    # What is the amount that should be taken away from the seller's cut when the bid if finished. Set to -1 to ignore splitting a cut.
+    percentage-cut: -1
+    # What is the account holder (The players UUID) that will receive the cut?
+    # Please leave this blank if you want the money to vanish magically.
+    percentage-cut-holder: ""
+    # Should a player be able to bid their own item?
+    bid-own: false
+    # Should players be able to cancel an auction if it's been offered a bid?
+    cancel-bid: true
+    # When a player bids, should the money be taken away when they bid. Then given back when the auction is over.
+    # If this is disabled, the money will be taken away when the auction is over. It deletes the bid if the player doesn't have enough money
+    # every 60 seconds.
+    take-money-on-bid: true
+    # How many minutes should the item expire? You CANNOT set this to -1, obviously.
+    expire-time: 2880
+    # Here you can choose specific ranks that the expiry time they have, if you have not put a rank there the time will be the time will be above.
+    # WARNING This will not work if you're using the default Bukkit Permissions system due to vault not supporting groups.
+    # Please list the ranks from the highest to the lowest, as if your groups inherit each other than it'll find the first one on the list instead of the highest one.
+    # Depending on your permissions plugin this may be really performance heavy.
+    expire-ranks-time: {}
+#      # The rank MVP has an expiry time of 96.
+#      MVP: 96
+#      # The rank VIP has an expiry time of 72.
+#      vip: 72
+
+    # How much time should there be left when a player bids for it to be extended by the time below? This is in seconds.
+    extended-needed-time: 1800
+    # How much time should the auction be extended by when the auction is less than the above time. This is in seconds.
+    # Set this to -1 to disable.
+    extended-time: -1
+    # What are the commands that will be executed when a bid is listed?
+    commands:
+      - "[broadcast] &e%player%&b is now bidding an &e%item% x%amount%&b for a starting price of &e%price%&b! (/ah)!"
+    # What are the commands that will be executed when someone has offered a price for a bid?
+    commands-offer: []
+    # What are the commands that will be executed when the bid has ended? Executed as the buyer.
+    commands-ended: []
+    # What are the commands that will be executed when the bid has ended? Executed as the seller. Only when the seller is online.
+    commands-ended-seller: []
+
+  # This updates the players inventory when the player exits a menu. This is to prevent any issues with the inventory
+  # to take away any items that shouldn't be in the players inventory. This is recommended to be disabled.
+  # If you are having issues with plugins like Cosmetics, you may enable it to fix some issues. But you will not receive
+  # any support for duplicate items.
+  dangerous-ignore-update-inventory: false
+  # This is to change the priority of the chat wait action, if you have any issues with the chat wait action, you may want to change this from HIGHEST to LOWEST.
+  wait-chat-event-priority: HIGHEST
+  # If you are using a software that is not Spigot and has forge, you may want to enable this to fix some issues with the plugin like modded items missing NBT tags.
+  # If this is enabled, you need ProtocolLib installed.
+  use-modded-serialization: false
+  # When handling items, should it remove public bukkit values? If you have are issues with items losing lore etc set this to false.
+  # Some plugins may remove the item from a menu if it is false, if youre having this issue set it to true.
+  remove-item-pbv: true
+  # Should the plugin attempt to parse legacy JSON messages? Only set this to true if you're using JSON messages in the plugin.
+  # JSON messages are no longer supported, a better alternative is MiniMessage.
+  use-legacy-json-message: false

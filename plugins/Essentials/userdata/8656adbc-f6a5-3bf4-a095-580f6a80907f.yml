@@ -1,0 +1,119 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 181.177.129.77
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: true
+timestamps:
+  lastteleport: 1715636192879
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1715637246412
+  login: 1715628036849
+money: '15537.5'
+lastlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: -1081.1880335506817
+  y: 71.0
+  z: 413.37181418722696
+  yaw: -19.01239013671875
+  pitch: 34.412933349609375
+homes:
+  blaze:
+    world: f7c54e39-a24f-4eaf-8fa1-0d8f667c7ee3
+    world-name: inicio_nether
+    x: -146.68297723454018
+    y: 67.0
+    z: 238.56431052696507
+    yaw: -93.83866119384766
+    pitch: -5.3160319328308105
+  casa:
+    world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+    world-name: mundo
+    x: -387.63256722069895
+    y: 66.0
+    z: 104.47376864936521
+    yaw: -4.77249813079834
+    pitch: 35.549983978271484
+  mina2:
+    world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+    world-name: mundo
+    x: -178.7783858281358
+    y: 16.0
+    z: 498.1730003113468
+    yaw: 106.443115234375
+    pitch: 2.699920892715454
+  warden:
+    world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+    world-name: mundo
+    x: -311.6892672522981
+    y: -45.0
+    z: 37.65816276591837
+    yaw: -84.0684814453125
+    pitch: 44.54944610595703
+  casa2:
+    world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+    world-name: mundo
+    x: 1.0000004345863378E7
+    y: 64.0
+    z: 1.0000066442854023E7
+    yaw: -99.15059661865234
+    pitch: 21.90018081665039
+  aldeanos:
+    world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+    world-name: mundo
+    x: -395.42516482780485
+    y: 68.0
+    z: 1415.1364676976204
+    yaw: 179.70010375976562
+    pitch: 37.6500244140625
+  endportal:
+    world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+    world-name: mundo
+    x: -1250.7039207350415
+    y: -4.0
+    z: -1615.3543792099456
+    yaw: 164.30320739746094
+    pitch: 35.39962387084961
+  endcity:
+    world: bcc1ad21-819e-4792-9982-70525727639f
+    world-name: inicio_the_end
+    x: 870.7403090364576
+    y: 64.0
+    z: -582.3556825337433
+    yaw: -60.19743728637695
+    pitch: -6.380648612976074
+  endaldea:
+    world: bcc1ad21-819e-4792-9982-70525727639f
+    world-name: inicio_the_end
+    x: 1041.6480667751794
+    y: 152.70000004768372
+    z: 978.6542550633086
+    yaw: 7.604352951049805
+    pitch: 38.16956329345703
+  granjas:
+    world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+    world-name: mundo
+    x: -7.615879378798252
+    y: 278.0
+    z: -7.736851820558216
+    yaw: -8.2484130859375
+    pitch: 17.10028076171875
+logoutlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: -390.5498888853851
+  y: 78.0
+  z: 144.4464511505099
+  yaw: -179.040283203125
+  pitch: 6.5478925704956055
+last-account-name: sikimon

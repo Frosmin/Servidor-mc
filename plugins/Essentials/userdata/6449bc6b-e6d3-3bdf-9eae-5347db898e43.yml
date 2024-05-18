@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 181.177.129.77
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1715029794508
+  login: 1715029622335
+money: '0'
+logoutlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: -326.4223
+  y: 126.0
+  z: 169.79375
+  yaw: -125.31853485107422
+  pitch: 10.907928466796875
+last-account-name: Frosmin
+lastlocation:
+  world: 2a599eb3-9852-4f75-b26b-7f54bb829666
+  world-name: inicio
+  x: -14.770117
+  y: 95.0
+  z: 42.227455
+  yaw: 57.9171142578125
+  pitch: 2.058990478515625

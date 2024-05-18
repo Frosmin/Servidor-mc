@@ -1,0 +1,127 @@
+Backpacks:
+  Tier1:
+    Displayname: "&9&lBackpack"
+    Lore:
+    - "&7Slots: &f7"
+    - "&eRight click to open."
+    Texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODIyNGIyYzczOTFlYjViZmNiMjc4NDMxZDVjODI3Y2IyNjM0OTUyNmM3YmM1MzViMWU5NWY2ZGY5ZjNmZGYzIn19fQ=="
+    Recipe:
+      Enabled: true
+      Title: "&8Backpack Tier 1 recipe"
+      Cannot-craft: "&cYou don't have permission to craft Backpack Tier 1!"
+      Cannot-recipe: "&cYou don't have permission to view Backpack Tier 1 recipe or it isn't craftable!"
+      Ingredients:
+        L: "LEATHER"
+        I: "IRON_INGOT"
+        B: "BUCKET"
+        C: "CHEST"
+        S: "LAPIS_BLOCK"
+      Shape:
+      - "LIL"
+      - "BCB"
+      - "LSL"
+  Tier2:
+    Displayname: "&c&lBackpack"
+    Lore:
+    - "&7Slots: &f16"
+    - "&eRight click to open."
+    Texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODVlNGY5ZGE2OGM4MWZhNDgxZWVjZGNhNDhhMTM4Y2VjZGUyY2RkZmZlZWFlODRhYjFhZmQyNGEzNjNlMDI4In19fQ=="
+    Recipe:
+      Enabled: true
+      Title: "&8Backpack Tier 2 recipe"
+      Cannot-craft: "&cYou don't have permission to craft Backpack Tier 2!"
+      Cannot-recipe: "&cYou don't have permission to view Backpack Tier 2 recipe or it isn't craftable!"
+      Ingredients:
+        L: "LEATHER"
+        I: "IRON_INGOT"
+        B: "BUCKET"
+        C: "CHEST"
+        S: "REDSTONE_BLOCK"
+      Shape:
+      - "LIL"
+      - "BCB"
+      - "LSL"
+  Tier3:
+    Displayname: "&7&lBackpack"
+    Lore:
+    - "&7Slots: &f25"
+    - "&eRight click to open."
+    Texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWJkZjhkNTNiZGI5MzJjMjIzYzYyN2JiYjhjMWUwYzVlMzUxYTYxNmNkODA1NjkyOWM2NmU2ZGNlNDQ0MzNkYiJ9fX0="
+    Recipe:
+      Enabled: true
+      Title: "&8Backpack Tier 3 recipe"
+      Cannot-craft: "&cYou don't have permission to craft Backpack Tier 3!"
+      Cannot-recipe: "&cYou don't have permission to view Backpack Tier 3 recipe or it isn't craftable!"
+      Ingredients:
+        L: "LEATHER"
+        I: "IRON_INGOT"
+        B: "BUCKET"
+        C: "CHEST"
+        S: "IRON_BLOCK"
+      Shape:
+      - "LIL"
+      - "BCB"
+      - "LSL"
+  Tier4:
+    Displayname: "&6&lBackpack"
+    Lore:
+    - "&7Slots: &f34"
+    - "&eRight click to open."
+    Texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTM3YTM1NTIyZjY3YjJhZjkyMzQ1NTkyODQ2YjcwMmI5YWZiOWQ3YzhkYmFkNWVhMTUwNjczYzllNDRkZTMifX19"
+    Recipe:
+      Enabled: true
+      Title: "&8Backpack Tier 4 recipe"
+      Cannot-craft: "&cYou don't have permission to craft Backpack Tier 4!"
+      Cannot-recipe: "&cYou don't have permission to view Backpack Tier 4 recipe or it isn't craftable!"
+      Ingredients:
+        L: "LEATHER"
+        I: "IRON_INGOT"
+        B: "BUCKET"
+        C: "CHEST"
+        S: "GOLD_BLOCK"
+      Shape:
+      - "LIL"
+      - "BCB"
+      - "LSL"
+  Tier5:
+    Displayname: "&a&lBackpack"
+    Lore:
+    - "&7Slots: &f43"
+    - "&eRight click to open."
+    Texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2E2YWQ4YWQ5MTNkZWYxM2JkNTc0MTY1NWU3N2QxMzRlYjFiNTdmMDI5NzBkYWE2YjMzMDgyNzU0ZDFhZmZjNCJ9fX0="
+    Recipe:
+      Enabled: true
+      Title: "&8Backpack Tier 5 recipe"
+      Cannot-craft: "&cYou don't have permission to craft Backpack Tier 5!"
+      Cannot-recipe: "&cYou don't have permission to view Backpack Tier 5 recipe or it isn't craftable!"
+      Ingredients:
+        L: "LEATHER"
+        I: "IRON_INGOT"
+        B: "BUCKET"
+        C: "CHEST"
+        S: "EMERALD_BLOCK"
+      Shape:
+      - "LIL"
+      - "BCB"
+      - "LSL"
+  Tier6:
+    Displayname: "&b&lBackpack"
+    Lore:
+    - "&7Slots: &f52"
+    - "&eRight click to open."
+    Texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGRjYzZlYjQwZjNiYWRhNDFlNDMzOTg4OGQ2ZDIwNzQzNzU5OGJkYmQxNzVjMmU3MzExOTFkNWE5YTQyZDNjOCJ9fX0="
+    Recipe:
+      Enabled: true
+      Title: "&8Backpack Tier 6 recipe"
+      Cannot-craft: "&cYou don't have permission to craft Backpack Tier 6!"
+      Cannot-recipe: "&cYou don't have permission to view Backpack Tier 6 recipe or it isn't craftable!"
+      Ingredients:
+        L: "LEATHER"
+        I: "IRON_INGOT"
+        B: "BUCKET"
+        C: "CHEST"
+        S: "DIAMOND_BLOCK"
+      Shape:
+      - "LIL"
+      - "BCB"
+      - "LSL"

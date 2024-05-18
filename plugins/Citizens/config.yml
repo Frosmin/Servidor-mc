@@ -1,0 +1,228 @@
+# Citizens Configuration
+
+npc:
+  # Always use holograms for names instead of only for hex colors / placeholders
+  always-use-name-holograms: false
+  pathfinding:
+    new-finder:
+      # Number of blocks to search per tick (Citizens pathfinder)
+      iterations-per-tick: 250
+      # The maximum number of blocks to check when pathfinding
+      maximum-iterations: 768
+      # Whether to check bounding boxes when pathfinding such as between fences, inside doors, or other half-blocks
+      check-bounding-boxes: false
+      # Whether to open doors while pathfinding (should close them as well)
+      open-doors: false
+    # The default distance in blocks where the NPC will just teleport to the destination
+    # Useful when trying to get exactly to the destination
+    default-destination-teleport-margin: -1
+    # The default MOVEMENT distance in blocks where the NPC will move to before considering a path finished
+    # Note: this is different from the PATHFINDING distance which is specified by path-distance-margin
+    default-distance-margin: 1
+    # Default PATHFINDING distance in blocks where the NPC will consider pathfinding complete
+    # Note: this is different from the MOVEMENT distance, which is specified by the distance-margin
+    # Set to 0 if you want to try pathfind exactly to the target destination
+    default-path-distance-margin: 1
+    # How often to repathfind when targeting a dynamic target such as an entity
+    update-path-rate: 1s
+    # The default pathfinding range in blocks
+    # Shouldn't be set too high to avoid lag - try pathfinding in sections instead
+    default-range-blocks: 75.0
+    # The distance in blocks where the NPC will switch to walking straight towards the target instead of pathfinding
+    # Currently only for dynamic targets like entities
+    straight-line-targeting-distance: 5
+    default-stuck-action: none
+    # Minecraft will pick a 'close-enough' location when pathfinding to a block if it can't find a direct path
+    # Disabled by default
+    disable-mc-fallback-navigation: true
+    # The maximum number of blocks to check when MINECRAFT pathfinding
+    maximum-visited-blocks: 768
+    # The range in blocks before attacking the target
+    attack-range: 1.75
+    # The default allowed maximum fall distance when pathfinding, set to -1 to use the Minecraft value
+    allowed-fall-distance: -1
+    # Whether to use the Citizens pathfinder instead of the Minecraft pathfinder
+    # Much more flexible, but may have different performance characteristics
+    use-new-finder: false
+  default:
+    # The default bossbar range, in blocks
+    bossbar-view-range: 64
+    # The default distance radius for block breaking, in blocks
+    # The NPC will pathfind to be this far away from the target block if greater than 0
+    block-breaker-radius: -1
+    waypoints:
+      # Whether to cache /npc path by default
+      # Can eliminate pathfinding for repetitive static paths
+      cache-paths: false
+    look-close:
+      # Enable look close by default
+      enabled: false
+      # Default look close range in blocks
+      range: 10
+      # Default random look close enabled
+      random-look-enabled: false
+      # Default random look delay
+      random-look-delay: 3s
+      # Default to checking for line of sight when looking at players
+      realistic-looking: false
+      # Whether to disable look close while pathfinding
+      disable-while-navigating: true
+    talk-close:
+      # Default talk to nearby players
+      random-talker: false
+      enabled: false
+      # Default talk close range in blocks
+      range: 5
+      text:
+        '0': Hi, I'm <npc>!
+    # Default duration of no-damage-ticks on entity spawn, Minecraft default is 20 ticks
+    spawn-nodamage-duration: 1s
+    # Default duration in the same location before the NPC considers itself stuck and failed pathfinding
+    stationary-duration: -1
+    reset-yaw-on-spawn: true
+  chat:
+    options:
+      # Whether nearby players also hear text, even if targeted at a specific player
+      bystanders-hear-targeted-chat: false
+      # Number of target names to show to bystanders
+      max-number-of-targets-to-show: 2
+      multiple-targets-format: <target>|, <target>| & <target>| & others
+      # Nearby player range in blocks
+      range: 5
+      # The maximum range in blocks for chatting
+      max-text-range: 500
+      # Whether to talk to NPCs (and therefore bystanders) as well as players
+      talk-to-npcs: true
+    format:
+      # The default text format (placeholder enabled)
+      no-targets: '[<npc>]: <text>'
+      # The default text format for nearby players (placeholder enabled)
+      with-target-to-bystanders: '[<npc>] -> [<target>]: <text>'
+      # The default text format for targeted text (placeholder enabled)
+      to-target: '<npc>: <text>'
+      # The default text format for nearby players (placeholder enabled)
+      with-targets-to-bystanders: '[<npc>] -> [<targets>]: <text>'
+  controllable:
+    # The percentage to increase speed when controlling NPCs on the ground
+    ground-direction-modifier: 1.0
+    # The maximum speed that controllable NPCs can reach, in Minecraft velocity units
+    max-ground-speed: 0.5
+    # Whether to change vehicle direction with movement instead of strafe controls
+    use-boat-controls: true
+  hologram:
+    # Default distance between hologram lines
+    default-line-height: 0.4
+    use-display-entities: false
+    # How often to update hologram names (including placeholders)
+    update-rate: 1s
+  limits:
+    # Default maximum number of NPCs owned by a single player (give the citizens ignore-limits permission to skip this check)
+    default-limit: 10
+    # How many permissions to check when creating NPCs
+    # Only change if you have a permission limit greater than this
+    max-permission-checks: 100
+    max-packet-entries: 15
+  text:
+    # Default maximum delay when talking to players
+    default-random-text-delay-max: 10s
+    # Default minimum delay when talking to players
+    default-random-text-delay-min: 5s
+    # Default duration that speech bubbles show up for
+    speech-bubble-duration: 50t
+    # The item filter to talk with
+    talk-item: '*'
+  tablist:
+    # Whether to remove NPCs from the tablist
+    disable: true
+    # How long to wait before sending the tablist remove packet
+    remove-packet-delay: 1t
+  follow:
+    # Whether /npc follow will teleport across worlds to follow its target
+    teleport-across-worlds: false
+  skins:
+    # How long to wait before sending skins to joined players
+    player-join-update-delay: 3s
+    # How many times to try load NPC skins (due to Minecraft rate-limiting skin requests, should rarely be less than 5
+    max-retries: -1
+    try-fetch-default-skin: true
+    # How long before retrying skin requests (typically due to Mojang rate limiting)
+    retry-delay: 5s
+    rotation-update-degrees: 90.0
+    use-latest-by-default: false
+    view-distance: 100.0
+    # How often to update placeholders
+    placeholder-update-frequency: 5m
+  chunks:
+    # Whether to keep NPC chunks loaded
+    always-keep-loaded: false
+  commands:
+    # The global cooldown before a command can be used again, must be in seconds
+    global-cooldown: 1s
+    error-messages:
+      maximum-times-used: You have reached the maximum number of uses ({0}).
+      missing-item: Missing {1} {0}
+      no-permission: You don't have permission to do that.
+      not-enough-experience: You need at least {0} experience.
+      not-enough-money: You need at least ${0}.
+      on-cooldown: Please wait for {minutes} minutes and {seconds_over} seconds.
+      on-global-cooldown: Please wait for {minutes} minutes and {seconds_over} seconds.
+  movement:
+    # Movement speed percentage increase while in water
+    water-speed-modifier: 1.15
+  # Use packet NPCs for name holograms (experimental)
+  use-packet-holograms: false
+  packets:
+    update-delay: 30
+  delay-player-teleport: -1
+  player:
+    # Whether to remove NPCs from the Java list of players
+    remove-from-list: true
+  selection:
+    # The default item in hand to select an NPC
+    item: stick
+    message: Selected [[<npc>]] (ID [[<id>]]).
+  # Whether the server owns NPCs rather than individual players
+  server-ownership: false
+  shops:
+    global-view-permission: ''
+  scoreboard-teams:
+    enable: true
+general:
+  authlib:
+    # Search for gameprofiles using this URL
+    profile-url: https://sessionserver.mojang.com/session/minecraft/profile/
+  # Debug chunk load stack traces, not as useful in recent Minecraft versions
+  debug-chunk-loads: false
+  # Send Citizens debug output to a specific file
+  debug-file: ''
+  # Enable Citizens debugging
+  debug-mode: false
+  # Debug pathfinding by showing fake target blocks
+  debug-pathfinding: false
+  # Entities are no longer spawned until the chunks are loaded from disk
+  # Wait for chunk loading for one second by default, increase if your disk is slow
+  wait-for-entity-spawn: 1s
+  color-scheme:
+    message-error: <red>
+    message-highlight: yellow
+    message: <green>
+  translation:
+    # Controls translation files - defaults to your system language, set to en if English required
+    locale: ''
+  # The resource pack path to save resource packs to
+  resource-pack-path: plugins/Citizens/resourcepack
+  reload-warning-enabled: true
+advanced:
+  # Whether to check the minecraft version for compatibility (do not change)
+  check-minecraft-version: true
+economy:
+  npc:
+    # The default cost to create an NPC
+    cost: 100.0
+storage:
+  save-task:
+    # How often to save NPCs to disk
+    delay: 1hr
+  file: saves.yml
+  # Although technically Citizens can use NBT storage, it is not well tested and YAML is recommended
+  type: yaml

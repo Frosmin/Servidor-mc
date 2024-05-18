@@ -1,0 +1,60 @@
+commands:
+  disabled: '&cThis command is disabled'
+  player_unregistered: '&b{player} &ewas unregistered successfully!'
+  errors:
+    player_only: '&cThis is a player-only command'
+    no_permission: '&cYou don''t have permission to use this command'
+    player_not_found: '&cPlayer not found!'
+    unregister_failed: '&cFailed to delete password. Read the console for more info'
+  set: '&eThe {type} location has been set at &bX: {x}, Y: {y}, Z: {z}, Y: {yaw},
+    P: {pitch}, &eat the world &b"{world}"'
+  reload: '&ePlugin reloaded!'
+  descriptions:
+    userlogin: The main command for UserLogin
+    login: Logs in your user with the given password
+    register: Registers your user with the given password
+    changepassword: Changes your password to a new one
+  usages:
+    userlogin: '&cCorrect usage: /userlogin [command] (Use /ul help for more)'
+    login: '&cCorrect usage: /login <password>'
+    register: '&cCorrect usage: /register <password> <password>'
+    changepassword: '&cCorrect usage: /changepassword <old-password> <new-password>
+      <new-password>'
+messages:
+  not_registered: '&cYou are not registered! Use &a/register <password> <password>
+    &cto get registered!'
+  already_registered: '&cYou are already registered!'
+  incorrect_password: '&4Incorrect password!'
+  short_password: '&cYour password must have a minimum of &4{chars} &ccharacters'
+  long_password: '&cYour password must have a maximum of &4{chars} &ccharacters'
+  regex_mismatch: '&cYour password has an invalid pattern!'
+  different_passwords: '&cYour passwords don''t match!'
+  already_logged_in: '&cYou are already logged in!'
+  logged_in: '&9Login successful!'
+  registered: '&9You have been registered!'
+  register_failed: '&cRegistration failed, please try again.'
+  welcome:
+    registered: '&6Welcome! Use &3/login <password> &6to enter the server'
+    unregistered: '&6Welcome! Use &3/register <password> <password> &6to register
+      your account'
+  chat_disabled: '&cYou must first log in to use the chat!'
+  timeout: You stayed for too much time without logging in
+  max_attempts_exceeded: You have exceeded {count} attempts to log in, please try
+    again
+  login_announcement: '&e{player} has joined the server!'
+  move_warning: '&cYou have to login to move!'
+  commands_disabled: '&cYou must log in to use commands!'
+  must_log_in: '&cYou must be logged in to use this command'
+  password_changed: '&6Your password has been changed successfully'
+  password_change_error: '&cThere was an error changing your password'
+  help:
+  - '&a----------- | &2[UserLogin Help] &a| -----------'
+  - '&2/ul help: &aShows this help list'
+  - '&2/ul reload: &aReloads the configurations'
+  - '&2/ul set [login|spawn]: &aSets the specified location at your position'
+  - '&2/ul unregister <player>: &aUnregisters the specified player'
+  - '&a-----------------------------------------------------'
+other:
+  database_connected: '&eDatabase connected!'
+  database_error: '&cFailed to connect to database, read below:'
+  driver_missing: '&cJDBC driver for database missing: {driver}'

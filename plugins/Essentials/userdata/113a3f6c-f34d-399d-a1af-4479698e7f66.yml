@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 186.121.194.27
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1714956027614
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1714956030004
+  login: 1714951867923
+money: '0.0'
+last-account-name: Polyfishy
+logoutlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: -389.5
+  y: 81.0
+  z: 115.5
+  yaw: -163.83224487304688
+  pitch: 0.15000002086162567
+lastlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: -179.30613407609476
+  y: -38.0
+  z: 494.4092969459238
+  yaw: -92.0902099609375
+  pitch: 44.608951568603516

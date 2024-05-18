@@ -1,0 +1,9 @@
+configVersion: 1
+
+settings:
+  # Item used to put mobs up for sale
+  transferMaterial: "LEAD"
+  
+  # Language settings
+  transferOldOwner: "&fNew Owner set: &6$newOwner&f!"
+  transferNewOwner: "&6$oldOwner &ftransferred a &6$type &fto you!"

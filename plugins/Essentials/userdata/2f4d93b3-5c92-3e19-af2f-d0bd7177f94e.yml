@@ -1,0 +1,47 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 200.87.92.164
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1715396078442
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1715396241853
+  login: 1715396024848
+money: '0.0'
+last-account-name: Slend7thx
+logoutlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: 280.2915968109591
+  y: 64.0
+  z: 310.0618505295714
+  yaw: 166.45281982421875
+  pitch: 20.136571884155273
+lastlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: 98.69999998807907
+  y: 121.0
+  z: 214.7047284021248
+  yaw: -87.25843811035156
+  pitch: 22.72986602783203
+homes:
+  home:
+    world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+    world-name: mundo
+    x: 247.24944887788857
+    y: 143.0
+    z: 249.48761616152422
+    yaw: 128.31182861328125
+    pitch: 24.712987899780273

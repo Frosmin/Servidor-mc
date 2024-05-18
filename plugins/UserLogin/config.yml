@@ -1,0 +1,176 @@
+# +----------------------------------------------------+
+# |..._...._..............._................._.........|
+# |..| |..| |.............| |...............(_)........|
+# |..| |..| |___..___._.__| |.....___...__._._._.__....|
+# |..| |..| / __|/ _ \ '__| |..../ _ \./ _` | | '_ \...|
+# |..| |..| \__ \  __/ |..| |___| (_) | (_| | | |.| |..|
+# |...\____/|___/\___|_|..|______\___/.\__, |_|_|.|_|..|
+# |......................................_/ |..........|
+# |....................................|___/...........|
+# +----------------------------------------------------+
+# ascii art is pretty cool ngl
+# FAQ website: https://elchologamer.tk/userlogin
+# Discord support server: https://discord.gg/gbjaEDzRXU
+
+# Enable update checking
+checkUpdates: true
+
+# Language file to use
+lang: 'en_US'
+
+# Broadcast message when a player logs in
+loginBroadcast: true
+
+# Keep vanilla join messages
+vanillaJoinMessages: false
+
+# Interval (seconds) for repeating the welcome message (-1 to disable)
+repeatWelcomeMessage: -1
+
+# A list of commands that will be executed when a player
+# logs in. Useful for adding extra functionality
+loginCommands: [ ]
+
+# Kick players after some time (seconds)
+# Set as -1 to disable
+timeout: 60
+
+# Allows auto-login for players that join from the same
+# IP address within a timeframe. (Specify in seconds)
+# Set as -1 to disable.
+ipCache: -1
+
+# Allows enabling/disabling of specific commands
+enabledCommands:
+  userlogin: true
+  register: true
+  login: true
+  changepassword: true
+
+
+# Custom command aliases
+# (Changes will only take effect on a server restart)
+commandAliases:
+  userlogin: [ 'ul' ]
+  register: [ ]
+  login: [ ]
+  changepassword: [ ]
+
+
+# Password options
+password:
+
+  # Max amount of login attempts before
+  # kicking a player (-1 to disable)
+  maxLoginAttempts: 10
+
+  # Optionally, add extra salt rounds to
+  # the password encryption method.
+  # A higher value means higher password encryption,
+  # but slower authentication.
+  extraSalt: 0
+
+  # Minimum characters that a password must have
+  minCharacters: 4
+
+  # Maximum characters for a password.
+  # This will also be the maximum length
+  # for the VARCHAR data type in SQL storage.
+  maxCharacters: 128
+
+  # Regular expression to validate passwords with.
+  # Leave empty to disable
+  regex: ''
+
+
+# Restrictions that will apply for non-logged in players
+restrictions:
+  chat: false
+  commands: false
+  blockBreaking: true
+  blockPlacing: true
+  itemDrop: true # Can cause items to disappear if dropped from the inventory UI. Enable inventoryClick to prevent this
+  itemPickup: true # 1.12+ only
+  inventoryClick: true
+  damage:
+    attack: true
+    receive: true
+  movement:
+    enabled: true
+    warnFrequency: 20 # Message players every few ticks when they move. (-1 to disable)
+
+
+# Enable/disable specific teleports
+teleports:
+
+  # Save player positions on logout
+  # The savePosition mode teleports players
+  # to their last position when they log in.
+  # Useful for survival servers and similar.
+  savePosition: true
+
+  # Teleport players to the position set with
+  # "/ul set prelogin" on join.
+  preLogin: true
+
+  # Teleport players to the position set with,
+  # "/ul set postlogin" on login.
+  # Takes effect when the savePosition and BungeeCord modes are disabled.
+  postLogin: true
+
+
+bungeeCord:
+
+  # Enable sending logged in players to another server in the network
+  enabled: false
+
+  # Server to send the player to when logged in
+  targetServer: 'LOBBY'
+
+  # Enable auto-login
+  # This allows players to be automatically logged in
+  # when joining from another server in the network
+  # (Requires the UserLoginProxy plugin to work)
+  autoLogin: false
+
+
+# Database options
+database:
+
+  # Database type.
+  # One of: 'yaml', 'mongodb', 'mysql', 'postgresql', 'sqlite'
+  type: 'yaml'
+
+  yaml:
+    file: 'playerData.yml'
+
+  mongodb:
+    uri: 'mongodb://localhost:27017'
+    database: 'userlogin'
+    collection: 'players'
+
+  # To use anything SQL-based, the specified database
+  # must already exist, the plugin will NOT create it.
+
+  # The MySQL implementation also works with MariaDB databases
+  mysql:
+    ssl: false
+    host: 'localhost'
+    port: 3306
+    username: 'root'
+    password: 'password'
+    database: 'userlogin_data'
+    table: 'player_data'
+
+  postgresql:
+    ssl: false
+    host: 'localhost'
+    port: 5432
+    username: 'root'
+    password: 'password'
+    database: 'userlogin_data'
+    table: 'player_data'
+
+  sqlite:
+    database: 'C:/sqlite/db/userlogin.db'
+    table: 'player_data'

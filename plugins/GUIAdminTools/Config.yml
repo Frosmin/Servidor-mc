@@ -1,0 +1,9 @@
+# Flags are working on whole server without WorldEdit and WorldGuard
+FLAGS:
+  PLACE_BLOCK: true
+  BREAK_BLOCK: true
+  CHAT: true
+  PVP: true
+  MOB_SPAWN: true
+  DROP_ITEM: true
+  PICKUP_ITEM: true

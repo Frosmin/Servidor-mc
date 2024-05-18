@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 190.11.85.134
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1714956532037
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1714956543384
+  login: 1714956032537
+money: '0.0'
+last-account-name: Fraticida137
+lastlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: -186.0074132435575
+  y: -32.0
+  z: 495.4750535897911
+  yaw: -89.27545166015625
+  pitch: 40.04964065551758
+logoutlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: -396.69999998807907
+  y: 66.0
+  z: 104.47336390057045
+  yaw: -50.5235595703125
+  pitch: 8.70004940032959

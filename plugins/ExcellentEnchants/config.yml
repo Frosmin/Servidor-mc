@@ -1,0 +1,187 @@
+Plugin:
+  # Localized plugin name. It's used in messages and with internal placeholders.
+  Name: Enchants
+  # Plugin prefix. Used in messages.
+  Prefix: <light_yellow><b>Enchants</b></light_yellow><dark_gray> » </dark_gray><gray>
+  # Command names that will be registered as main plugin commands.
+  # Do not leave this empty. Split multiple names with a comma.
+  Command_Aliases: excellentenchants,eenchants
+  # Sets the plugin language.
+  # Basically it tells the plugin to use certain messages config from the '/lang/' sub-folder.
+  # If specified language is not available, default one (English) will be used instead.
+  # [Default is System Locale]
+  Language: en
+Core:
+  # Sets how often (in ticks) enchantment particle effects will be spawned behind projectiles.
+  # [Increase for performance; Decrease for better visuals]
+  # [20 ticks = 1 second]
+  # [Default is 1]
+  Projectile_Particles_Tick_Interval: 1
+  # Sets how often (in ticks) passive enchantment effects will trigger on all alive and loaded entities.
+  # For best results it's recommened to keep this value lower, but at the same rate as enchantment's 'Trigger_Interval' option.
+  # =============== EXAMPLES ===============
+  # ==> Global (this): 100 ticks; Regrowth: 200 ticks; Saturation: 300 ticks;
+  # ==> Global (this): 50 ticks, Regrowth: 100 ticks; Saturation: 150 ticks;
+  # [Increase for performance; Decrease for more smooth effect]
+  # [20 ticks = 1 second]
+  # [Default is 100]
+  Passive_Enchants_Trigger_Interval: 100
+  # Sets whether or not mobs can have passive enchantment effects (such as permanent potion effects, regeneration, etc.).
+  # [Enable for enhanced gameplay; Disable for performance]
+  # [Default is true]
+  Apply_Passive_Enchants_To_Mobs: true
+  # Sets max. amount of custom enchantments per item.
+  # [Default is 3]
+  Item_Enchantments_Limit: 3
+  # Sets whether or not Sword enchantments can be applied on Axes.
+  # [Default is true]
+  Sword_Enchants_To_Axes: true
+  # Sets whether or not Bow enchantments can be applied on Crossbows.
+  # [Default is true]
+  Bow_Enchants_To_Crossbows: true
+  # Sets whether or not Chestplate enchantments can be applied on Elytras.
+  # [Default is false]
+  Chestplate_Enchants_To_Elytra: false
+Enchantments:
+  Disabled:
+    # Put here CUSTOM enchantment names that you want to disable and remove completely.
+    # Enchantment names are equal to their config file names in '/enchants/' folder.
+    # [*] You MUST REBOOT your server for disabled enchantments to have effect.
+    # [*] Once enchantment is disabled, it will be removed from all items in the world on next load!
+    List:
+    - example_name
+    - custom_sharpness
+    # Put here CUSTOM enchantment names that you want to disable in specific worlds.
+    # To disable all enchantments for a world, use '*' instead of enchantment names.
+    # Enchantment names are equal to their config file names in '/enchants/' folder.
+    # =============== Vanilla Distribution Mode ===============
+    # Enchantments will have no effect, but will appear in the world.
+    # =============== Custom Distribution Mode ===============
+    # Enchantments will have no effect and won't appear in the world.
+    ByWorld:
+      your_world_name:
+      - enchantment_name
+      - ice_aspect
+      another_world:
+      - another_enchantment
+      - ice_aspect
+  Distribution:
+    # Sets in a which way new enchantments will be distributed to the worlds.
+    # Allowed values: VANILLA, CUSTOM
+    # =============== ! WARNING ! ===============
+    # You MUST REBOOT your server when changing this. Otherwise result is unpredictable.
+    # =============== Vanilla Distribution Mode ===============
+    # [+] Very simple to use, almost no need to configure anything.
+    # [+] Handled by the server, automatically supports all possible ways to get enchantments.
+    # [+] Very accurate generation, repsects all vanilla game mechanics.
+    # [-] Customization is almost non-existent.
+    # =============== Custom Distribution Mode ===============
+    # [+] Very flexible and customizable.
+    # [+] Possibility for new ways to generate / obtain enchantments.
+    # [-] Might be difficult to configure and balance everything.
+    # [-] Enchantment generation is not such accurate as vanilla does.
+    Mode: VANILLA
+    Custom:
+      # When enabled, enchanted books in villager trades will have no more than 1 enchantment (vanilla or custom one).
+      Single_Enchant_In_Villager_Books: true
+      # Settings for the different ways of obtaining enchantments.
+      Ways:
+        VILLAGER:
+          Enabled: true
+          Max_Enchantments: 4
+          Generation_Chance: 60.0
+          Amount:
+            Min: 0
+            Max: 2
+        ENCHANTING:
+          Enabled: true
+          Max_Enchantments: 5
+          Generation_Chance: 75.0
+          Amount:
+            Min: 0
+            Max: 2
+        MOB_EQUIPMENT:
+          Enabled: true
+          Max_Enchantments: 4
+          Generation_Chance: 35.0
+          Amount:
+            Min: 0
+            Max: 2
+        LOOT_GENERATION:
+          Enabled: true
+          Max_Enchantments: 4
+          Generation_Chance: 80.0
+          Amount:
+            Min: 0
+            Max: 2
+        FISHING:
+          Enabled: true
+          Max_Enchantments: 4
+          Generation_Chance: 45.0
+          Amount:
+            Min: 0
+            Max: 2
+      Rarity_Weights:
+        COMMON: 10
+        UNCOMMON: 5
+        RARE: 2
+        VERY_RARE: 1
+  Display:
+    # Sets how enchantment names and descriptions will be handled on items.
+    # =============== AVAILABLE VALUES ===============
+    # 1 = Plain modification of item's lore (lore changes are real and persistent).
+    # 2 = Packet modification of item's lore (no real changes are made to the items). Requires ProtocolLib to be installed.
+    #
+    # Plain mode is faster, but may not reflect all changes immediately.
+    # Packet mode is slower, but instantly reflect all changes. In creative mode, there is a chance for lore duplication.
+    Mode: 1
+    Name:
+      # Hides enchantment level component from name format for level 1 enchantments.
+      Hide_1st_Level: true
+      # Sets enchantment name format depends on enchantment rarity.
+      Rarity:
+        VERY_RARE: <light_orange>%name%</light_orange>
+        RARE: <light_cyan>%name%</light_cyan>
+        COMMON: <white>%name%</white>
+        UNCOMMON: <light_green>%name%</light_green>
+      # Sets cursed enchantments name format.
+      Curse: <light_red>%name%</light_red>
+      # Enchantment name format created from name components.
+      Format: '%enchantment_name%%enchantment_level%%enchantment_charges%'
+      Component:
+        # Enchantment name display component for name format.
+        Name: '%value%'
+        # Enchantment level display component for name format.
+        Level: ' %value%'
+        # Enchantment charges display component for name format.
+        Charges: ' %value%'
+    Description:
+      # When 'true', adds the enchantment description to item lore under enchantment names.
+      # For Display-Mode = 2 description is not shown while you're in Creative gamemode.
+      Enabled: true
+      # Sets whether or not only enchanted books will have enchantment descriptions.
+      Books_Only: false
+      # Sets enchantment description format.
+      Format: <light_gray>• %description%</light_gray>
+  Charges:
+    # Enables Enchantment Charges feature.
+    # When enabled in the first time, make sure to check enchantments configs for new 'Charges' section.
+    # https://nightexpress.gitbook.io/excellentenchants/features/charges
+    Enabled: false
+    # Enchantment charges format depends on amount of charges left (in percent).
+    # If you don't want to display charges, leave only keys with negative values.
+    # Use '%amount%' placeholder for charges amount.
+    Format:
+      '0': <light_red>(%amount%⚡)</light_red>
+      '25': <light_orange>(%amount%⚡)</light_orange>
+      '50': <light_yellow>(%amount%⚡)</light_yellow>
+      '75': <light_green>(%amount%⚡)</light_green>
+    # When enabled, only item material will be checked to determine if an item can be used as an enchantment fuel.
+    # When disabled, it will compare the whole item meta including name, lore, model data etc.
+    # [Default is false]
+    Compare_Material_Only: false
+    # Default item used to recharge item's enchantments on anvils.
+    # If you want different item for certain enchantments, you can do it in that enchantment configs.
+    # Item Options: https://github.com/nulli0n/nightcore-spigot/wiki/ItemStack-Options
+    Fuel_Item:
+      Material: LAPIS_LAZULI

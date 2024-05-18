@@ -1,0 +1,170 @@
+# PlayerAuctions by Olzie-12
+# https://www.spigotmc.org/resources/83073
+# We also have a discord server for help: https://olziedev.com/discord or check docs https://docs.olziedev.com/projects/playerauctions
+# Also if you find any bugs be happy to report them I will fix them :)
+# Made with love
+
+confirm:
+  # Should we enable the gui?
+  enabled: true
+  # What is the name of the gui?
+  name: "confirm"
+  # The title of the gui (Can use color codes)
+  title: "&b&lConfirm Purchase"
+  # What is the size of this GUI? (multiples of 9 can only go up to 54)
+  size: 27
+  # What are the actions when this menu is opened up?
+  open-actions: []
+  # What are the actions when this menu is closed?
+  close-actions: []
+  # Where should the item the player is buying be?
+  slot-buying: 13
+  # What is the default amount an item should be at?
+  # If this number is higher than the item amount of the auction, it'll just be set to the auction amount instead.
+  default-amount: 64
+  # Should the previous menu that was opened be opened when this menu is closed?
+  open-previous: true
+  # Should the amount items be removed if there is not enough for that button. E.g. you're purchasing an item with 1x amount, it won't show any of the buttons.
+  # You can also put an item where the amount items are, and it'll only show if the amount item isn't there.
+  show-needed-amount-items: false
+
+  # Enter amounts through the GUI
+  enter:
+    # Should the feature be enabled?
+    # You will need ProtocolLib for this to work.
+    enabled: true
+    # What are the premade lines in the sign?
+    # %search% is the variable they have to enter the auction in, so please make sure that line doesn't contain anything else.
+    # If it doesn't contain the variable, then the plugin will just assume line 1 is user input. Colour codes will not work either.
+    lines:
+      - "%search%"
+      - "----------------"
+      - "Please enter"
+      - "an amount."
+
+    item:
+      material: OAK_SIGN
+      data: 0
+      name: "&bEnter an amount"
+      lore:
+        - "&eClick&b to enter an amount to purchase."
+      slot: 22
+      amount: 1
+      glowing: false
+
+  clickable-items:
+    accept:
+      # If you wish to disable any of these please set them the material to "AIR"
+      name: "&aAccept Purchase"
+      # this is the material of the next page item. valid material names: https://javadocs.olziedev.com/spigot/latest/org/bukkit/Material.html
+      material: LIME_WOOL
+      data: 5
+      lore:
+        - "&eClick&b to purchase &e[amount]x&b for &e[price]&b!"
+      slot: 11
+      amount: 1
+      glowing: false
+      # These only work if the skull is a PLAYER_HEAD and the data is 3!
+      #texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWE0ZjY4YzhmYjI3OWU1MGFiNzg2ZjlmYTU0Yzg4Y2E0ZWNmZTFlYjVmZDVmMGMzOGM1NGM5YjFjNzIwM2Q3YSJ9fX0= - Skull texture
+      #owner: Next - Skull owner
+    deny:
+      name: "&cDeny Purchase"
+      material: RED_WOOL
+      data: 14
+      lore:
+        - "&cClick to deny this purchase."
+      slot: 15
+      amount: 1
+      glowing: false
+    add-1:
+      name: "&aAdd 1x"
+      material: LIME_STAINED_GLASS_PANE
+      data: 5
+      lore:
+        - "&aClick to add 1x amount."
+        - " "
+        - "&bCurrent amount: &e[amount]x"
+      slot: 0
+      amount: 1
+      glowing: false
+    add-32:
+      name: "&aAdd 32x"
+      material: LIME_STAINED_GLASS_PANE
+      data: 5
+      lore:
+        - "&aClick to add 32x amount."
+        - " "
+        - "&bCurrent amount: &e[amount]x"
+      slot: 9
+      amount: 32
+      glowing: false
+    add-64:
+      name: "&aAdd 64x"
+      material: LIME_STAINED_GLASS_PANE
+      data: 5
+      lore:
+        - "&aClick to add 64x amount."
+        - " "
+        - "&bCurrent amount: &e[amount]x"
+      slot: 18
+      amount: 64
+      glowing: false
+    remove-1:
+      name: "&cRemove 1x"
+      material: RED_STAINED_GLASS_PANE
+      data: 14
+      lore:
+        - "&cClick to remove 1x amount."
+        - " "
+        - "&bCurrent amount: &e[amount]x"
+      slot: 8
+      amount: 1
+      glowing: false
+    remove-32:
+      name: "&cRemove 32x"
+      material: RED_STAINED_GLASS_PANE
+      data: 14
+      lore:
+        - "&cClick to remove 32x amount."
+        - " "
+        - "&bCurrent amount: &e[amount]x"
+      slot: 17
+      amount: 32
+      glowing: false
+    remove-64:
+      name: "&cRemove 64x"
+      material: RED_STAINED_GLASS_PANE
+      data: 14
+      lore:
+        - "&cClick to remove 64x amount."
+        - " "
+        - "&bCurrent amount: &e[amount]x"
+      slot: 26
+      amount: 64
+      glowing: false
+
+  items:
+    # What are the items that are placed into the GUI to make it more pretty?
+    1:
+      # This is the name of the item.
+      name: " "
+      # This is the item material.
+      material: AIR
+      # This is the data item
+      data: 0
+      # You can add lores!
+      # example of what you can do:
+      # lore:
+      #   - "&bThis is a pane."
+      slot: 0
+      # What is the stack amount?
+      amount: 1
+      # commands that will be executed on click.
+      # [server] means the command is executed as the console
+      # [player] means the command is executed as the player
+      # commands:
+      #   - "[server] msg %player% you clicked this item!"
+      glowing: false
+      # These only work if the skull is a PLAYER_HEAD and the data is 3!
+      #texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTZmOGFmYjI3YmFmYzc3YzJiODI1OTljMmY3YjhmMWY2ODMxMGU2YWE5MDRmMDUxYjA3YWIxYzJiNmIifX19 - Skull texture
+      #owner: Glass - Skull owner

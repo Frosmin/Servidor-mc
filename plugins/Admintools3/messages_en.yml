@@ -1,0 +1,253 @@
+### ENGLISH TRANSLATION ###
+###
+### TO EDIT THIS, FOLLOW THE GUIDELINES AT https://github.com/WeiiswurstDev/AdminTools3/wiki/Configuring-AdminTools3
+###
+### Please dont edit the contents of this file.
+### This file gets overwritten everytime the server starts!
+### Copy it in a new file, name that to "messages_<something>.yml" and change the language in the config to <something>!
+###
+######## ANY CHANGES MADE IN HERE ARE REMOVED AT STARTUP !!!!!!!! DO NOT CHANGE THIS FILE
+
+chatmessages:
+  noperm: "&cMissing Permission: &e%s"
+  syntax: "&cSyntax Error. Please use: &e%s"
+  moduleNotFound: "&cCan't find a module named &e%s&c."
+  missingPlayer: "&cYou didn't select a player!"
+  missingWorld: "&cYou didn't select a world!"
+  tooManyPlayers: "&There are &e%s&c players online, but only &e54&c fit in the GUI. You have to use the /a <module> [player] [world] to select those."
+  tooManyWorlds: "&There are &e%s&c worlds, but only &e54&c fit in the GUI. You have to use the /a <module> [player] [world] to select those."
+  numberFormat: "&e%s &cis not a number!"
+  smallerThanZero: "&e%s &cis smaller than or equal to 0!"
+  playerOnlyCommand: "You may only use this command as a player."
+  legacyVersion: "!!! You are using an OLD minecraft version! We try everything to support old versions, but we can't guarantee anything. Please update to the newest version. !!!"
+  protocolLibNotFound: >
+    !!! The plugin PROTOCOLLIB could not be found.
+    This means that the ACTIONBAR will be sent to chat instead.
+    Install ProtocolLib to fix this !!!
+  papiNotFound: >
+    !!! PlaceholderAPI could not be found.
+    This means that you can't use PAPI placeholders in message files anymore. !!!
+  vaultNotFound: >
+    !!! The plugin VAULT coult not be found.
+    This means that AdminTools3 is not able to read player balanced anymore.
+    If you want to see your players balance in /pinfo, install Vault and an Economy plugin (e.g. EssentialsX). !!!
+  economyNotFound: >
+    !!! No economy plugin could be found.
+    If you install an economy plugin, e.g. EssentialsX, /pinfo will show player balances as well. !!!
+  economyFound: "AdminTools could establish a connection to your Economy plugin named %s."
+
+gui:
+  moduleSelector:
+    invName: "&bSelect a module!"
+    noPermLore: "&cYou may not use ##&cthis module, you don't##&chave permission!## "
+    mayChooseOtherPlayer: "&7LEFT CLICK to apply on yourself ##&7RIGHT CLICK to select a player"
+    mayOnlyChooseSelf: "&7CLICK: apply on yourself"
+  playerSelector:
+    invName: "&bSelect a player"
+    itemLore: "&7*Click to select me*"
+  worldSelector:
+    invName: "&bSelect a world"
+    itemLore: "&7*Click to select me*"
+  gamemodeSelector:
+    invName: "&bChoose a gamemode!"
+    survival: "&aSurvival"
+    creative: "&aCreative"
+    adventure: "&aAdventure"
+    spectator: "&aSpectator"
+  chatclear:
+    invName: "&bSelect the target"
+    forYou: "&bClear your chat"
+    forAll: "&bClear the chat of all players"
+  difficulty:
+    invName: "&bSelect a difficulty"
+    peaceful: "&bPeaceful"
+    easy: "&eEasy"
+    normal: "&6Normal"
+    hard: "&cHard"
+
+playerInfo:
+  explanationIgnoredByPlugin: " -- 'lines' will always be sent.
+  optionalBalance will only be sent if an economy plugin and Vault is installed.
+  You may send as many messages as you want, in any order.
+  If you installed PlaceholderAPI, you can use any PAPI placeholders in here.
+  Without PAPI, you can use these placeholders in 'lines': player_name,player_displayname,player_uuid,player_health,player_food_level,player_gamemode,player_item_in_hand
+  This message will be ignored by the plugin and is just present for information. --"
+  lines:
+    - "&aInformation about &b%player_name%\n"
+    - "&aDisplayname: &b%player_displayname%"
+    - "&aUUID: &b%player_uuid%"
+    - "&aHealth: &b%player_health% &7| &aFood: &b%player_food_level%"
+    - "&aGamemode: &b%player_gamemode%"
+    - "&aHolding item: &b%player_item_in_hand%"
+    - "&aNameMC Profile: https://mine.ly/%player_uuid%"
+  optionalBalance: "&aBalance: &b%s"
+
+module:
+  heal:
+    item:
+      name: "&4Heal"
+      lore: "&7Heal yourself ##&7or someone else"
+    message:
+      applyToOther: "&aYou healed &b%s."
+      applyToSelf: "&aYou healed yourself."
+      appliedByOther: "&b%s &ahealed you."
+  maxhearts:
+    item:
+      name: "&4Maximum Hearts"
+      lore: "&7Change the amount of##&7maximal hearts that the##&7target player can have."
+    message:
+      sendAmountInChat: "&aEnter the amount of &nhalf hearts&a that the target should have."
+      applyToOther: "&b%s&a has &b%s&a half hearts now."
+      applyToSelf: "&aYou now have &b%s&a half hearts."
+      appliedByOther: "&b%s&a changed your hearts to &b%s&a half hearts."
+  kill:
+    item:
+      name: "&4Kill"
+      lore: "&7Kill yourself ##&7or someone else"
+    message:
+      applyToOther: "&aYou killed &b%s."
+      applyToSelf: "&aYou killed yourself."
+      appliedByOther: "&b%s &akilled you."
+  workbench:
+    item:
+      name: "&3Crafting Table"
+      lore: "&7Open a Crafting Table"
+    message:
+      applyToSelf: "&aYou opened your mobile crafting table."
+  enderchest:
+    item:
+      name: "&5EnderChest"
+      lore: "&7Open the enderchest##&7of somebody."
+    message:
+      applyToSelf: "&aYou opened your enderchest."
+      applyToOther: "&aYou opened &b%s&a's enderchest."
+      appliedByOther: "&b%s &aopened your enderchest."
+  fly:
+    item:
+      name: "&bFly"
+      lore: "&7Enables Flying, like##&7in creative mode."
+    message:
+      toggleOn: "&aYou can now fly like in creative mode."
+      toggleOff: "&cYou can't fly anymore."
+      toggledOnByOther: "&b%s &aenabled flying like in creative mode for you."
+      toggledOffByOther: "&b%s &cdisabled flying like in creative mode for you."
+      toggledOnForOther: "&aFlying was enabled for &b%s"
+      toggledOffForOther: "&aFlying was disabled for &b%s"
+  mute:
+    item:
+      name: "&cMute"
+      lore: "&7Mute or unmute##&7a player."
+    message:
+      toggleOn: "&cYou were muted."
+      toggleOff: "&aYou can talk again."
+      toggledOnByOther: "&b%s &cmuted you."
+      toggledOffByOther: "&b%s &aunmuted you."
+      toggledOnForOther: "&b%s &ais now muted."
+      toggledOffForOther: "&b%s &acan talk again."
+      stillMuted: "&cYou can't talk because you were muted!"
+      bypass: "&cYou may not mute &e%s&c!"
+  freeze:
+    item:
+      name: "&bFreeze"
+      lore: "&7Prohibit movement##&7by a player or##&7allow it again."
+    message:
+      toggleOn: "&cYou were frozen!"
+      toggleOff: "&aYou can move again."
+      toggledOnByOther: "&b%s &afreezed you. &7(You can't move anymore)"
+      toggledOffByOther: "&b%s &adefrosted you. &7(You can move again)."
+      toggledOnForOther: "&b%s &awas frozen."
+      toggledOffForOther: "&b%s &acan move again."
+      stillMuted: "&cYou can't move because you were frozen!"
+      bypass: "&cYou may not freeze &e%s&c!"
+  invsee:
+    item:
+      name: "&2InvSee"
+      lore: "&7Open the inventory##&7of a player"
+    message:
+      applyToSelf: "&cPress E to open your own inventory."
+      applyToOther: "&aDu opened the inventory of &b%s&a."
+      appliedByOther: "&b%s &atakes a look at your inventory."
+  vanish:
+    item:
+      name: "&bVanish"
+      lore: "&7Make a player &binvisible##&7to others without this permission:##&7'admintools3.bypass.vanish'."
+    message:
+      toggleOn: "&aYou are invisible."
+      toggleOff: "&cYou are visible again."
+      toggledOnByOther: "&b%s &avanished you."
+      toggledOffByOther: "&b%s &amade you visible to others again."
+      toggledOnForOther: "&b%s &ais now invisible."
+      toggledOffForOther: "&b%s &ais visible again."
+  gm:
+    item:
+      name: "&bGameMode"
+      lore: "&7Select a gamemode"
+    message:
+      applyToSelf: "&aYou can choose a gamemode now."
+      applyToOther: "&b%s &acan choose a gamemode."
+      appliedByOther: "&b%s &aopened the gamemode selection for you."
+      survival: "&aYou are now in Survival mode."
+      creative: "&aYou are now in Creative mode."
+      adventure: "&aYou are now in Adventure mode."
+      spectator: "&aYou are now in Spectator mode."
+  chatclear:
+    item:
+      name: "&eClear the Chat"
+      lore: "&7Clear the chat##&7for you or for everyone"
+    message:
+      applyToSelf: "&aSelect if you want to clear the chat for yourself or for everyone."
+      clearedForYou: "&aYou cleared your chat."
+      clearedForAll: "&aYou cleared the chat for everyone."
+      clearedByPlayer: "&aThe chat was cleared by &b%s&a."
+  cmdspy:
+    item:
+      name: "&cCommandSpy"
+      lore: "&7Recieve a message##&7if a user executes##&7a command."
+    message:
+      toggleOn: "&aYou will recieve a message if a user executes a command."
+      toggleOff: "&aYou won't recieve any messages if a user executes a command."
+      commandUsed: "&cCMDSPY &7> &b%s &aexecuted &b%s"
+  invclear:
+    item:
+      name: "&eClear Inventory"
+      lore: "&7Clear the inventory##&7of a player!"
+    message:
+      applyToSelf: "&aYou cleared your inventory."
+      applyToOther: "&aYou cleared the inventory of &b%s&a."
+      appliedByOther: "&b%s&a cleared your inventory."
+  difficulty:
+    item:
+      name: "&3Set the difficulty"
+      lore: "&7Set the difficulty##&7of a world"
+    message:
+      applyToSelf: "&aSelect a difficulty."
+      difficultySet: "&aYou set the difficulty to %s&a."
+      noDifficultySelected: "&cYou didn't select a difficulty!"
+  worldtp:
+    item:
+      name: "&dTeleport"
+      lore: "&7Teleport yourself ##&7or another player##&7to another world!"
+    message:
+      applyToOther: "&aYou teleported &b%s&a."
+      applyToSelf: "&aYou teleported yourself."
+      appliedByOther: "&b%s&a teleported you."
+  pvp:
+    item:
+      name: "&cToggle PvP"
+      lore: "&7Allow or deny PvP##&7in a world."
+    message:
+      toggleOn: "&aPvP is now enabled in &b%s&a."
+      toggleOff: "&aPvP is now disabled in &b%s&a."
+  weather:
+    item:
+      name: "&cToggle Rain"
+      lore: "&7Let it rain or##&7stop the rain in##&7a world."
+    message:
+      toggleOn: "&aIt will now rain in &b%s&a."
+      toggleOff: "&aThe rain will stop in &b%s&a."
+  setspawn:
+    item:
+      name: "&eSet World Spawn"
+      lore: "&7Set the spawnpoint##&7of the world you are in##&7to your location."
+    message:
+      applyToSelf: "&aSpawnpoint set."

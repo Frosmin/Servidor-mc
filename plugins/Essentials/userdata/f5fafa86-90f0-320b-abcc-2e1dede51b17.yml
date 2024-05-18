@@ -1,0 +1,47 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 189.28.80.75
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1715320963006
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1715321057255
+  login: 1715314084507
+money: '3669.50'
+lastlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: -346.4561243616249
+  y: 58.0
+  z: 257.2670898317412
+  yaw: -28.853347778320312
+  pitch: 20.881616592407227
+logoutlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: -376.69999998807907
+  y: 82.0
+  z: 246.3305239152653
+  yaw: 67.23419189453125
+  pitch: 35.48284912109375
+last-account-name: BrunoHD11
+homes:
+  home:
+    world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+    world-name: mundo
+    x: -335.66535091018636
+    y: 80.0
+    z: 259.87263296875983
+    yaw: 139.90545654296875
+    pitch: 26.753828048706055

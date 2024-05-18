@@ -1,0 +1,129 @@
+# PlayerAuctions por Olzie-12
+# https://www.spigotmc.org/resources/83073
+# Também temos um servidor do Discord para ajuda: https://olziedev.com/discord ou verifique a documentação em https://docs.olziedev.com/projects/playerauctions
+# Se você encontrar algum bug, por favor, reporte, eu vou corrigi-los :)
+# Feito com amor
+
+# Se você quiser desabilitar qualquer mensagem, basta definir como vazio, fazendo
+# list: "" <- Isso não enviará mais uma mensagem.
+
+
+# Todas as mensagens do plugin estão aqui.
+# Certifique-se de usar "" para encerrar cada string
+# Você também pode usar códigos de cores <3
+
+# Para usar códigos de cor hexadecimais, você precisará fazer
+# '{#HEX} texto"
+
+lang:
+  cancel-chat-wait: "cancelar"
+  chat-wait-cancelled: "&cCancelled your request!"
+  friendly-max-auctions: "Ilimitado" # Se você quiser mostrar a quantidade real, use %amount%
+  prefix: "&b&lPA &7»" # Use %prefix% para adicionar o prefixo a qualquer mensagem!
+  auction-confirmation: "%prefix% &aVender este leilão custará &e%price%&a, repita o comando para confirmar."
+  auction-sell: "%prefix% &aComeçou a vender &e%item_displayname%&a por &e%price%&a no leilão!"
+  auction-added: "%prefix% &aVocê adicionou &e%amount%&a itens ao seu leilão similar no mercado, o preço total para esse item agora é &e%price%&a, o que dá um total de &e$%priceper%&a por item."
+  auction-bid: "%prefix% &aComeçou a dar um lance de &e%price%&a no item do leilão!"
+  reloaded: "%prefix% &aTodas as configurações foram recarregadas com sucesso!"
+  money-taken: "%prefix% &a%price% foi retirado da sua conta bancária."
+  auctions-cancelled: "%prefix% &aSeus leilões foram cancelados!"
+  auctions-collected: "%prefix% &aItens vencidos coletados com sucesso: &e%items%&a!"
+  bought-item: "%prefix% &aComprado com sucesso: &e%item%&a por &e%price%&a!"
+  someone-purchased: "%prefix% &e%player%&a acabou de comprar &e%item% x%amount%&a por &e%price%&a!"
+  offline-title: "%prefix% &bEnquanto você estava offline..."
+  bidder: "%prefix% &e%player%&a acabou de fazer uma oferta no seu item: &e%item%&a por &e%price%"
+  bidded: "%prefix% &aVocê acabou de fazer uma oferta no item: &e%item%&a por &e%price%"
+  bid-success: "%prefix% &e%player%&a ganhou o seu leilão do item: &e%item%&a por &e%price%"
+  bidder-success: "%prefix% &aVocê venceu o leilão do item: &e%item%&a por &e%price%&a. Verifique seus leilões vencidos."
+  earned-offline: "%prefix% &aVocê ganhou um total de &e$%total%&a!"
+  given-more-auctions-success: "%prefix% &aDado com sucesso a &e%player%&a mais &e%extra%&a leilões, totalizando &e%total%&a!"
+  dbexec-successful: "%prefix% &a%scount% linhas foram atualizadas com sucesso. Execute &d/%cmd% reload&a para aplicar as alterações."
+  current-amount-of-auctions:
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+    - "%prefix% &bVocê atualmente tem um máximo de &e%auctionsmax%&b leilões (&e%staticauctions% estáticos&b)."
+    - "%prefix% &bVocê atualmente usou &e%auctionsused%&b leilões."
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+  current-amount-of-auctions-other:
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+    - "%prefix% &d%player%&b atualmente tem um máximo de &e%auctionsmax%&b leilões (&e%staticauctions% estáticos&b)."
+    - "%prefix% &d%player%&b atualmente usou &e%auctionsused%&b leilões."
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+  amount-auctions-others-alert: "&c%player% está offline no momento, mostrando apenas o máximo de leilões como uma quantidade estática."
+
+  # o menu de ajuda para um jogador
+  # A variável %cmd% é qualquer comando do config.yml :)
+  help-player:
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+    - "%prefix% &e/%cmd% help &7&l- &bMostra este menu."
+    - "%prefix% &e/%cmd% sell <preço> [moeda] [quantidade] &7&l- &bVende um item."
+    - "%prefix% &e/%cmd% bid <preço> &7&l- &bDá um lance em um item."
+    - "%prefix% &e/%cmd% auction &7&l- &bLeilão via interface gráfica."
+    - "%prefix% &e/%cmd% cancel [id] [jogador] &7&l- &bCancela seus itens em leilão."
+    - "%prefix% &e/%cmd% collect &7&l- &bColeta seus itens cancelados."
+    - "%prefix% &e/%cmd% open [menu] [opções] &7&l- &bAbre a interface gráfica de leilão do jogador."
+    - "%prefix% &e/%cmd% amount &7&l- &bVerifica quantos leilões você possui."
+    - "%prefix% &e/%cmd% reload &7&l- &bRecarrega todos os arquivos de configuração."
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+
+  # o menu de ajuda para o console
+  # A variável %cmd% é qualquer comando do config.yml :)
+  help-console:
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+    - "%prefix% &e/%cmd% help &7&l- &bMostra este menu."
+    - "%prefix% &e/%cmd% open [menu] [opções] &7&l- &bAbre a interface gráfica de leilão do jogador."
+    - "%prefix% &e/%cmd% reload &7&l- &bRecarrega todos os arquivos de configuração."
+    - "%prefix% &e/%cmd% dbexec <consulta> &7&l- &bExecuta uma consulta."
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+
+  # mensagens de erro.
+  errors:
+    command-syntax: "%prefix% &cSintaxe incorreta, use:\n%syntax%"
+    player-only: "%prefix%&c Você precisa ser um jogador!"
+    console-only: "%prefix% &cVocê só pode executar este comando no console!"
+    not-a-number: "%prefix%&c Isso não é um número!"
+    no-permission: "%prefix%&c Você não tem permissão para fazer isso! %reason%"
+    auction-dont-exist: "%prefix% &cEsse leilão não existe!"
+    too-many-auctions: "%prefix%&c Você não pode vender tantos itens. Você só pode vender &4%amount%&c devido às suas permissões/quantidade estática!"
+    money-not-enough-sell: "%prefix%&c Você não tem %price% para vender este item!"
+    money-not-enough-buy: "%prefix%&c Você não tem %price% para comprar este item!"
+    money-not-enough-bid: "%prefix%&c Você não tem %price% para dar um lance neste item!"
+    disabled-world-sell: "%prefix%&c Você não pode vender itens neste mundo!"
+    invalid-item: "%prefix%&c Este item é inválido para venda!"
+    damaged-item: "%prefix%&c Você não pode vender um item danificado!"
+    invalid-gamemode: "%prefix%&c Este é um modo de jogo inválido para venda!"
+    invalid-category: "%prefix%&c Esta é uma categoria inválida"
+    min-price: "%prefix%&c Você precisa definir o preço para pelo menos %min%!"
+    max-price: "%prefix%&c Você precisa definir o preço abaixo de %max%!"
+    no-auctions: "%prefix%&c Você não tem leilões!"
+    no-expired-auctions: "%prefix%&c Você não tem leilões vencidos para coletar!"
+    purchase-own: "%prefix%&c Você não pode comprar o seu próprio leilão!"
+    bid-own: "%prefix%&c Você não pode dar um lance no seu próprio leilão!"
+    sell-cooldown: "%prefix%&c Você atualmente possui um tempo de espera para leiloar itens! (%cooldown% restante)"
+    bid-cooldown: "%prefix%&c Você atualmente possui um tempo de espera para dar lances em itens! (%cooldown% restante)"
+    offer-cooldown: "%prefix%&c Você atualmente possui um tempo de espera para fazer uma oferta! (%cooldown% restante)"
+    purchase-cooldown: "%prefix%&c Você atualmente possui um tempo de espera para comprar itens! (%cooldown% restante)"
+    no-player-joined: "%prefix% &cEsse jogador não existe!"
+    bidder-no-money: "%prefix% &c%player% não tem dinheiro suficiente para o seu &e%item%, sua oferta foi removida."
+    bid-no-money: "%prefix% &cVocê não tem mais dinheiro suficiente para o lance do &e%item%, sua oferta foi removida."
+    min-bid: "%prefix% &cVocê não pode oferecer tanto! A oferta mínima que você pode dar é de $1.000"
+    gui-cooldown: "%prefix% &cVocê precisará esperar alguns segundos para usar isso novamente."
+    not-enough-add-bid: "%prefix% &cVocê não tem dinheiro suficiente para adicionar $%amount% a $%bid%"
+    cancel-bid: "%prefix% &cVocê não pode cancelar este leilão enquanto ele tiver um lance oferecido!"
+    auction-doesnt-exist: "%prefix% &cThat auction doesn't exist anymore!"
+    dbexec-failed: "%prefix% &cHouve um erro ao executar essa consulta. %error%"
+
+# Aqui você pode especificar diferentes tipos de mensagens para a mensagem de no-permission, usando o nó de permissão específico.
+# Ou você pode deixar em branco para não enviar nenhuma mensagem.
+# no-permission:
+#   pa.purchase: "Você não tem permissão para comprar leilões!"
+
+n/a:
+  no-seller: "N/A"
+  no-expire: "N/A"
+  no-category: "N/A"
+  no-displayname: "%player%" # mostra o nome do jogador em vez disso
+
+# Aqui você pode configurar a formatação do nome do item, observe que você terá que adicionar os itens abaixo que deseja alterar
+# Você pode ver a lista dos itens aqui: https://javadocs.olziedev.com/spigot/latest/org/bukkit/Material.html
+item-names:
+  ARMOR_STAND: "Suporte de Armadura"

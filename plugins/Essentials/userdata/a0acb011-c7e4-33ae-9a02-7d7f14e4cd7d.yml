@@ -1,0 +1,30 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 181.177.129.77
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1714772512077
+  login: 1714772465571
+money: '0'
+last-account-name: juan
+logoutlocation:
+  world: 2a599eb3-9852-4f75-b26b-7f54bb829666
+  world-name: inicio
+  x: -14.527502778630819
+  y: 128.0
+  z: -8.23140802422311
+  yaw: 149.39450073242188
+  pitch: 38.24996566772461

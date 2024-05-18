@@ -1,0 +1,72 @@
+Command:
+  List:
+    Desc: List of all custom enchantments.
+    Usage: '[player]'
+    DoneOthers: <light_gray>Opened enchantments GUI for <light_yellow>%player_name%</light_yellow>.</light_gray>
+  GetFuel:
+    Desc: Get enchantment fuel item.
+    Usage: <enchant> [amount]
+    Done: <light_gray>You got <light_yellow>x%amount% %name%</light_yellow>.</light_gray>
+  Enchant:
+    Usage: <enchant> <level> [player] [slot]
+    Desc: Enchants the item in your hand.
+    Done:
+      Self: <light_gray><light_yellow>%item%</light_yellow> enchanted with <light_yellow>%enchant% %level%</light_yellow>!</light_gray>
+      Others: <light_gray><light_yellow>%player_display_name%</light_yellow>'s <light_yellow>%item%</light_yellow> enchanted with <light_yellow>%enchant% %level%</light_yellow>!</light_gray>
+    Error:
+      NoItem: <red>There is no item to enchant!</red>
+  Book:
+    Usage: <player> <enchant> <level>
+    Desc: Gives custom enchanted book.
+    Done: <light_gray>Given <light_yellow>%enchant%</light_yellow> enchanted book to <light_yellow>%player_display_name%</light_yellow>.</light_gray>
+  RarityBook:
+    Usage: <player> <tier> <level>
+    Desc: Give an enchanted book with enchantment of specified rarity.
+    Done: <light_gray>Given <light_yellow>%name%</light_yellow> enchanted book to <light_yellow>%player_display_name%</light_yellow>.</light_gray>
+Error:
+  InvalidEnchantment: <red>Invalid enchantment.</red>
+  InvalidRarity: <red>Invalid rarity!</red>
+ItemCategory:
+  HELMET: Helmet
+  CHESTPLATE: Chestplate
+  LEGGINGS: Leggings
+  BOOTS: Boots
+  ELYTRA: Elytra
+  SWORD: Sword
+  TRIDENT: Trident
+  AXE: Axe
+  BOW: Bow
+  CROSSBOW: Crossbow
+  HOE: Hoe
+  PICKAXE: Pickaxe
+  SHOVEL: Shovel
+  FISHING_ROD: Fishing Rod
+  SHIELD: Shield
+  TOOL: Tool
+EnchantmentTarget:
+  ALL: All
+  ARMOR: Armor
+  ARMOR_FEET: Armor Feet
+  ARMOR_LEGS: Armor Legs
+  ARMOR_TORSO: Armor Torso
+  ARMOR_HEAD: Armor Head
+  WEAPON: Weapon
+  TOOL: Tool
+  BOW: Bow
+  FISHING_ROD: Fishing Rod
+  BREAKABLE: Breakable
+  WEARABLE: Wearable
+  TRIDENT: Trident
+  CROSSBOW: Crossbow
+  VANISHABLE: Vanishable
+DistributionWay:
+  ENCHANTING: Enchanting
+  VILLAGER: Villager
+  LOOT_GENERATION: Loot Generation
+  FISHING: Fishing
+  MOB_EQUIPMENT: Mob Equipment
+Rarity:
+  COMMON: Common
+  UNCOMMON: Uncommon
+  RARE: Rare
+  VERY_RARE: Very Rare

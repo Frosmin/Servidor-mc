@@ -1,0 +1,66 @@
+# CUSTOMIZE MESSAGES FOR SLEEP-MOST.
+# To disable messages set the message to ''
+# Placeholders are available here --> https://sleepmost.pseudonova.com/placeholders/sleepmost-config
+# You need support? Join our Discord server --> https://discord.pseudonova.com/
+#
+# Add multiple messages to randomly select by doing the following:
+# messagetype:
+#  - 'message1'
+
+prefix: '&7[&bSleep-Most&7]'
+user:
+  night-skipped-chat: '&aGood morning, %player%!'
+  storm-skipped-chat: '&aThe sky is clearing!'
+  players-left-night: '&bSleeping to skip the night &f[&c%sleeping%/%required%&f]&b!'
+  players-left-storm: '&bSleeping to skip the storm &f[&c%sleeping%/%required%&f]&b!'
+  sleep-prevented: '&cYou cannot sleep in this world!'
+  no-sleep-storm: '&cYou cannot sleep during a thunderstorm'
+  cannot-sleep-now: '&cYou cannot sleep right now'
+  sleep-success: '&bYou are now asleep'
+  no-longer-sleeping: '&cYou are no longer sleeping'
+  no-bed-location-set: '&cThere is no bed location set'
+  teleported-to-bed: '&bYou were teleported to your bed'
+  sleep-command-disabled: '&cThe sleep-command is disabled'
+  insomnia-not-sleepy: '&cYou don`t feel sleepy at the moment'
+  insomnia-feeling-sleepy: '&bYou start feeling sleepy ...'
+  kicked-player-from-bed: '&bYou kicked &a%player% &bout of their bed'
+  kicked-from-bed: '&cYou were kicked out from your bed'
+  kicking-not-allowed: '&cYou do not have permission to kick this player out of their
+    bed'
+  night-skipped-title: '&aNight skipped'
+  night-skipped-subtitle: '&bGood morning sunshine!'
+  storm-skipped-title: '&eStorm skipped'
+  storm-skipped-subtitle: '&bWhat a weather...'
+  longer-night:
+    sleep-prevented: '&cThe night is longer than usual, you don''t feel sleepy yet'
+boss-bar:
+  title: '&bPlayers sleeping to skip the %skip-cause% &f[&c%sleeping-count%&f/&c%sleeping-required-count%&f]'
+admin:
+  no-console-command: '&cThis command cannot be executed from the console'
+  no-permission-command: '&cYou do not have permission to do this'
+  unknown-command: '&cUnknown command'
+  config-reloaded: '&aYou successfully reloaded Sleep-Most plugin'
+  already-enabled-for-world: '&cSleep-Most is already enabled in &a%world%'
+  already-disabled-for-world: '&cSleep-Most is already disabled in &a%world%'
+  enabled-for-world: '&bSleep-Most is now enabled in &a%world%'
+  disabled-for-world: '&cSleep-Most is now disabled in &a%world%'
+  not-enabled-for-world: '&cSleep-Most is not enabled in &a%world%&c. Enable it with
+    &a/sm enable'
+  currently-disabled: '&bSleepmost is currently &cdisabled &bfor this world. Type
+    &a/sm enable &bto enable sleepmost for this world'
+  one-player-sleep-set: '&bOne player sleep has been configured'
+  specify-player: '&cPlease specify with the player username'
+  target-not-sleeping: '&cThe player is not sleeping'
+  target-not-online: '&cThe player is not online'
+  insomnia-already-enabled: '&cInsomnia is already enabled in this world'
+  insomnia-enabled: '&bInsomnia is enabled'
+  only-during-night-command: '&cThis command can only be used during the night'
+  kick-out-bed: '&c&l[kick out]'
+flag:
+  all-reset-success: '&cAll flags were successfully reset'
+  set-in-world: '&bThe &e%flag% &bflag value in your world is &e%value%&b.'
+  reset-in-world: '&bThe &e%flag% &bflag has been reset to &e%default-value%'
+  not-exist: '&cThis flag does not exist'
+clock:
+  title: '&b%time%'
+  subtitle: '&a>>>'

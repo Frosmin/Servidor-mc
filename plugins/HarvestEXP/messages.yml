@@ -1,0 +1,94 @@
+#########################################################################################
+#                                                                                       #
+# HarvestEXP, a free resource by Norska @ https://norska.dev                            #
+#                                                                                       #
+# Wiki: https://norska.dev/docs/welcome                                                 #
+# Support: https://norska.dev/discord/                                                  #
+#                                                                                       #
+# You are editing the messages.yml file of HarvestEXP.                                  #
+#                                                                                       #
+#########################################################################################
+
+#########################################################################################
+#                                                                                       #
+# NOTE: PLEASE READ BEFORE CONFIGURING!                                                 #
+#                                                                                       #
+# If PlaceholderAPI is installed you can use any placeholder inside messages,           #
+# make sure to properly install any extension using /papi ecloud.                       #
+#                                                                                       #
+# Placeholders that are inside {} (e.g {0}, {1}) are inner placeholders.                #
+# To use PAPI's placeholders, use them normally, like %player_gamemode%, etc.           #
+#                                                                                       #
+# Scopes:                                                                               #
+# 1) Global -> All online players will get the message.                                 #
+# 2) User -> User that executed commands/triggered event will get the message.          #
+# 3) Limited -> Only users/systems with specific perms will get the message.            #
+#                                                                                       #
+# Note: Scopes are per message and cannot be manually altered.                          #
+#                                                                                       #
+#########################################################################################     
+
+# Note: Whether or not to strip colors from messages shown to console.
+stripConsole: false
+
+messages:
+
+   # Note: Use {PREFIX} in any message to add the below prefix!
+   prefix: "<GRADIENT:7EFF18>&lHarvestEXP</GRADIENT:FFF500>&r"
+   
+   EVENT_HARVEST_EXP_GAIN:
+   # Placeholders: {0} = exp
+   # Scope: User
+      chatMessage:
+         enabled: false
+         centered: false
+         content: 
+         - ""
+         - " {PREFIX} &f» &fGained <GRADIENT:7EFF18>{0} experience</GRADIENT:FFF500> &fby harvesting crops!"
+         - ""
+      actionbar:
+         enabled: true
+         content: "{PREFIX} &f» &fGained <GRADIENT:7EFF18>{0} experience</GRADIENT:FFF500> &fby harvesting crops!"
+      titles:
+         enabled: false
+         titleContent: '<GRADIENT:7EFF18>+{0} experience</GRADIENT:FFF500>' 
+         subtitleContent: '&7(Harvesting crops)' 
+
+   ###############################  
+           
+   COMMAND_RELOAD:
+   # Placeholders: {0} = ms
+   # Scope: User
+      chatMessage:
+         enabled: true
+         centered: false
+         content: 
+         - ""
+         - " {PREFIX} &f» &fReloaded configuration files. &7(&f{0}ms&7)"
+         - ""
+      actionbar:
+         enabled: false
+         content: "{PREFIX} &f» &7[&a&l✓&7] &fReloaded configuration files. &7(&f{0}ms&7)" 
+      titles:
+         enabled: false
+         titleContent: '&a&lDONE' 
+         subtitleContent: '&fReloaded configuration!'
+         
+   COMMAND_NOPERMISSION:
+   # Placeholders: None
+   # Scope: User
+      chatMessage:
+         enabled: true
+         centered: false
+         content: 
+         - ''
+         - ' {PREFIX} &f» &fYou do not have permission to run this command!'
+         - ''
+      actionbar:
+         enabled: false
+         content: "{PREFIX} &f» &7[&c&l❌&7] &fYou do not have permission to run this command!"       
+      titles:
+         enabled: false
+         titleContent: '&c&lERROR' 
+         subtitleContent: '&fYou do not have permission!'   
+         

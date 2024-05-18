@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 181.115.171.235
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1714626177030
+  login: 1714624840612
+money: '0'
+last-account-name: Jh0nD
+logoutlocation:
+  world: 2a599eb3-9852-4f75-b26b-7f54bb829666
+  world-name: inicio
+  x: 331.30000001192093
+  y: -40.0
+  z: -78.57848213064689
+  yaw: -112.96859741210938
+  pitch: 32.776023864746094
+lastlocation:
+  world: 2a599eb3-9852-4f75-b26b-7f54bb829666
+  world-name: inicio
+  x: -9.835669567240013
+  y: 154.0
+  z: -7.6918944865693915
+  yaw: 126.53990173339844
+  pitch: 41.310638427734375

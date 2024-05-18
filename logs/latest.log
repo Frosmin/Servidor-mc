@@ -1,0 +1,41 @@
+[00:01:21] [Server thread/INFO]: Named entity EntityPiglinBrute['Piglin Brute'/209099, uuid='ef1144f4-cf92-499d-af6c-388e0c478756', l='ServerLevel[inicio_nether]', x=-1431.92, y=51.00, z=931.08, cpos=[-90, 58], tl=11208, v=true] died: Piglin Brute was slain by marjho
+[00:14:58] [Server thread/WARN]: marjho moved wrongly!
+[00:19:23] [Server thread/INFO]: marjho lost connection: Disconnected
+[00:19:23] [Server thread/INFO]: marjho se fue
+[00:19:36] [User Authenticator #47/INFO]: UUID of player marjho is c18baa62-ddee-3320-91f6-716c61f0a742
+[00:19:36] [TAB Processing Thread/INFO]: [TAB] [WARN] Player marjho's group (vip+++) is not in sorting list! Sorting list: owner,admin,mod,helper,builder,vip,default. Player will be sorted on the bottom.
+[00:19:36] [Server thread/INFO]: marjho joined the server
+[00:19:36] [Server thread/INFO]: marjho[/189.28.80.128:50422] logged in with entity id 211218 at ([inicio_nether]0.0, 60.0, 0.0)
+[00:20:12] [Server thread/INFO]: marjho lost connection: Disconnected
+[00:20:12] [Server thread/INFO]: marjho se fue
+[00:20:41] [User Authenticator #48/INFO]: UUID of player marjho is c18baa62-ddee-3320-91f6-716c61f0a742
+[00:20:41] [TAB Processing Thread/INFO]: [TAB] [WARN] Player marjho's group (vip+++) is not in sorting list! Sorting list: owner,admin,mod,helper,builder,vip,default. Player will be sorted on the bottom.
+[00:20:41] [Server thread/INFO]: marjho joined the server
+[00:20:41] [Server thread/INFO]: marjho[/189.28.80.128:16017] logged in with entity id 211254 at ([inicio_nether]0.0, 60.0, 0.0)
+[00:21:41] [Server thread/INFO]: marjho lost connection: You stayed for too much time without logging in
+[00:21:41] [Server thread/INFO]: marjho se fue
+[00:21:57] [User Authenticator #49/INFO]: UUID of player marjho is c18baa62-ddee-3320-91f6-716c61f0a742
+[00:21:57] [TAB Processing Thread/INFO]: [TAB] [WARN] Player marjho's group (vip+++) is not in sorting list! Sorting list: owner,admin,mod,helper,builder,vip,default. Player will be sorted on the bottom.
+[00:21:57] [Server thread/INFO]: marjho joined the server
+[00:21:57] [Server thread/INFO]: marjho[/189.28.80.128:16026] logged in with entity id 211271 at ([inicio_nether]0.0, 60.0, 0.0)
+[00:22:57] [Server thread/INFO]: marjho lost connection: You stayed for too much time without logging in
+[00:22:57] [Server thread/INFO]: marjho se fue
+[00:24:49] [User Authenticator #50/INFO]: UUID of player marjho is c18baa62-ddee-3320-91f6-716c61f0a742
+[00:24:49] [TAB Processing Thread/INFO]: [TAB] [WARN] Player marjho's group (vip+++) is not in sorting list! Sorting list: owner,admin,mod,helper,builder,vip,default. Player will be sorted on the bottom.
+[00:24:49] [Server thread/INFO]: marjho joined the server
+[00:24:49] [Server thread/INFO]: marjho[/189.28.80.128:55156] logged in with entity id 211317 at ([inicio_nether]0.0, 60.0, 0.0)
+[00:25:21] [Server thread/INFO]: marjho issued server command: /fly
+[00:28:47] [Server thread/INFO]: marjho issued server command: /home aa
+[00:35:11] [Server thread/INFO]: marjho lost connection: Disconnected
+[00:35:11] [Server thread/INFO]: marjho se fue
+[03:24:41] [Server thread/WARN]: [ChestSort] **************************************************
+[03:24:41] [Server thread/WARN]: [ChestSort] * There is a new version of ChestSort available!
+[03:24:41] [Server thread/WARN]: [ChestSort] *  
+[03:24:41] [Server thread/WARN]: [ChestSort] * Your version:   14.0.1
+[03:24:41] [Server thread/WARN]: [ChestSort] * Latest version: 14.0.3
+[03:24:41] [Server thread/WARN]: [ChestSort] *  
+[03:24:41] [Server thread/WARN]: [ChestSort] * Please update to the newest version.
+[03:24:41] [Server thread/WARN]: [ChestSort] *  
+[03:24:41] [Server thread/WARN]: [ChestSort] * Download:
+[03:24:41] [Server thread/WARN]: [ChestSort] *   https://www.chestsort.de
+[03:24:41] [Server thread/WARN]: [ChestSort] **************************************************

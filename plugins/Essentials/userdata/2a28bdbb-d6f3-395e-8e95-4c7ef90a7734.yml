@@ -1,0 +1,71 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 189.28.82.209
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1715638298224
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1715638409756
+  login: 1715635782048
+money: '2970.0'
+logoutlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: 54.327459254548245
+  y: -48.0
+  z: 1144.8112884176016
+  yaw: 93.15057373046875
+  pitch: 8.700077056884766
+last-account-name: rmzamorano
+lastlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: -400.7653398493061
+  y: 64.0
+  z: 1414.2189207999286
+  yaw: 13.500580787658691
+  pitch: 19.650007247924805
+homes:
+  casa:
+    world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+    world-name: mundo
+    x: -400.60393600145164
+    y: 64.0
+    z: 1407.111836541422
+    yaw: -25.949472427368164
+    pitch: 29.10003662109375
+  granjas:
+    world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+    world-name: mundo
+    x: -5.748046637390436
+    y: 278.0
+    z: -9.635241299198942
+    yaw: 1.53912353515625
+    pitch: 81.75000762939453
+  extra_o:
+    world: 2a599eb3-9852-4f75-b26b-7f54bb829666
+    world-name: inicio
+    x: -365.9345559118146
+    y: 209.0
+    z: 114.69999998807907
+    yaw: -17.2869873046875
+    pitch: 24.149974822998047
+  xp:
+    world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+    world-name: mundo
+    x: 67.69999998807907
+    y: -46.0
+    z: 1150.9828677215617
+    yaw: 81.90030670166016
+    pitch: 18.000093460083008

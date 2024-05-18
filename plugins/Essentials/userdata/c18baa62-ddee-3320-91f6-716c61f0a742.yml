@@ -1,0 +1,63 @@
+npc: false
+last-account-name: marjho
+money: '0.0'
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 189.28.80.128
+afk: false
+socialspy: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1715646527923
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1715646911358
+  login: 1715646289848
+logoutlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: -400.30000001192093
+  y: 67.0
+  z: 1455.1153052069087
+  yaw: -87.6964111328125
+  pitch: 18.858095169067383
+lastlocation:
+  world: f7c54e39-a24f-4eaf-8fa1-0d8f667c7ee3
+  world-name: inicio_nether
+  x: -122.92592276957173
+  y: 47.0
+  z: -107.6553545749485
+  yaw: 9.102264404296875
+  pitch: 47.44112014770508
+homes:
+  home:
+    world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+    world-name: mundo
+    x: -396.84253917788214
+    y: 64.0
+    z: 1407.3412080386236
+    yaw: 63.62939453125
+    pitch: 8.75124740600586
+  ou:
+    world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+    world-name: mundo
+    x: 63.04937948849258
+    y: -46.0
+    z: 1151.7834563523634
+    yaw: 118.66886901855469
+    pitch: 22.632354736328125
+  aa:
+    world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+    world-name: mundo
+    x: -396.42239551447176
+    y: 66.0
+    z: 1411.367327229526
+    yaw: -174.866943359375
+    pitch: 62.28558349609375

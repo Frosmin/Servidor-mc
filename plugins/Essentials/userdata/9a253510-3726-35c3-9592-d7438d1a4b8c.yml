@@ -1,0 +1,39 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 181.177.129.77
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1714774048380
+  login: 1714773867419
+money: '0'
+last-account-name: hola
+homes:
+  home:
+    world: 2a599eb3-9852-4f75-b26b-7f54bb829666
+    world-name: inicio
+    x: 1.699999988079071
+    y: 153.0
+    z: 5.699999988079071
+    yaw: 86.24771118164062
+    pitch: 18.299909591674805
+logoutlocation:
+  world: 2a599eb3-9852-4f75-b26b-7f54bb829666
+  world-name: inicio
+  x: 0.0
+  y: 155.0
+  z: 0.0
+  yaw: -45.5999755859375
+  pitch: 28.349977493286133

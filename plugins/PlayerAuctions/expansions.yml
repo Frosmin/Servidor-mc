@@ -1,0 +1,406 @@
+# Here you can choose to be able to convert from other plugins that PlayerAuctions supports.
+# MAKE SURE TO DISABLE THESE AFTER THE CONVERSION!
+converters:
+  zauctionhouse:
+    # if this is enabled, this will convert data zAuctionHouse (https://www.spigotmc.org/resources/63010/) to PlayerAuctions.
+    # Please restart the server for this conversion to happen.
+    enabled: false
+    # What version of this expansion do you want to download/use?
+    version: latest
+  product:
+    # This will convert old product serialized data to the new format and should essentially fix the
+    # "java.io.InvalidClassException: com.olziedev.playerauctions.api.auction.product.ASerializableProduct; local class incompatible:" error.
+    # It's suggested you keep this enabled for any product updates to prevent errors like above.
+    enabled: true
+    # What version of this expansion do you want to download/use?
+    version: latest
+
+# Here you can choose to be able to hook into expansions that supports PlayerAuctions and configure them to your liking.
+expansions:
+  # This is used for syncing your Player Auctions data across your servers instantly. You will need to download
+  # AuctionSync here: https://cdn.olziedev.com/playerauctions/expansions/auctionsyncexpansion.jar to put onto your proxy.
+  # Then read https://docs.olziedev.com/projects/playerauctions/features#proxy-support on how to set it up.
+  auctionsync:
+    # Do you want to enable auctionsync?
+    enabled: false
+    # What version of this expansion do you want to download/use?
+    version: latest
+    # Put the proxy IP address.
+    host: "0.0.0.0"
+    # Please put the open port that is on the proxy.
+    port: 27789
+    # Please put the generated auth here from your proxy configuration file.
+    auth: ""
+
+  # This is used for sending notifications to your discord server using webhooks.
+  # You can read https://docs.olziedev.com/projects/playerauctions/features#discord-alerts on how to set it up.
+  auctiondiscord:
+    # Do you want to enable auction discord?
+    enabled: false
+    # What version of this expansion do you want to download/use?
+    version: latest
+    webhook:
+      # The url of your Webhook from the discord channel of your choice.
+      url: ""
+      # The username of the embed that appears in the message.
+      username: "Auction Notifications"
+      # The avatar URL of the embed.
+      avatar: "https://cdn.olziedev.com/playerauctions/images/PlayerAuctionsIcon.png"
+      # Normal content in a message, leave blank if you just want the embed.
+      content: ""
+
+      # The item thumbnail that appears in embeds.
+      thumbnail:
+        enabled: true
+        # Here you can put custom thumbnail links the plugin will use if a plugin has a specific custom model data.
+        # If you wish to specify data in the items list, you can do so by doing the following:
+        # custom-thumbnails:
+        #  This thumbnail will only show if the item is an apple AND has a custom model data of 20.
+        #  ITEM=APPLE#MODEL=20: https://cdn.olziedev.com/playerauctions/images/PlayerAuctionsIcon.png
+        #  This thumbnail will only show if any item has a custom model data of 20.
+        #  MODEL=20: https://cdn.olziedev.com/playerauctions/images/PlayerAuctionsIcon.png
+        #  This thumbnail will only show if the name of the item is "Custom Item".
+        #  NAME=Custom Item: https://cdn.olziedev.com/playerauctions/images/PlayerAuctionsIcon.png
+        custom-thumbnails:
+          # If my item has a custom model data of 101, this image will show up instead.
+          model=20: "https://cdn.olziedev.com/playerauctions/images/PlayerAuctionsIcon.png"
+
+    # If you wish to show the item name if they have an item name, then use [item_displayname] instead of [item]!
+    embeds:
+      sell:
+        enabled: true
+        author: "[seller] is selling [item_displayname] for [price]"
+        # If you're using offline mode you can always use [name] to grab the players name instead.
+        author-image: "https://www.mc-heads.net/head/[uuid]/100/.png"
+        color: "#4287f5"
+        title: "Auction Information"
+        footer: "Auction ID: [id]"
+        fields:
+          Seller:
+            name: "Seller"
+            value: "[seller]"
+            inline: true
+          blank:
+            name: ""
+            value: ""
+            inline: true
+          Item:
+            name: "Item"
+            value: "[item_displayname]"
+            inline: true
+          Amount:
+            name: "Amount"
+            value: "[amount]"
+            inline: true
+          blank1:
+            name: ""
+            value: ""
+            inline: true
+          Price:
+            name: "Price"
+            value: "[price]"
+            inline: true
+      buy:
+        enabled: true
+        author: "[buyer] bought [item_displayname] for [price]"
+        # If you're using offline mode you can always use [name] to grab the players name instead.
+        author-image: "https://www.mc-heads.net/head/[uuid]/100/.png"
+        color: "#48f542"
+        title: "Auction Information"
+        footer: "Auction ID: [id]"
+        fields:
+          Seller:
+            name: "Seller"
+            value: "[seller]"
+            inline: true
+          Buyer:
+            name: "Buyer"
+            value: "[buyer]"
+            inline: true
+          Item:
+            name: "Item"
+            value: "[item_displayname]"
+            inline: true
+          Amount:
+            name: "Amount"
+            value: "[amount]"
+            inline: true
+          blank1:
+            name: ""
+            value: ""
+            inline: true
+          Price:
+            name: "Price"
+            value: "[price]"
+            inline: true
+      remove:
+        enabled: true
+        author: "[item_displayname] was removed from the Auction!"
+        # If you're using offline mode you can always use [name] to grab the players name instead.
+        author-image: "https://www.mc-heads.net/head/[uuid]/100/.png"
+        color: "#bf2a2a"
+        title: "Auction Information"
+        footer: "Auction ID: [id]"
+        fields:
+          Seller:
+            name: "Seller"
+            value: "[seller]"
+            inline: true
+          blank:
+            name: ""
+            value: ""
+            inline: true
+          Item:
+            name: "Item"
+            value: "[item_displayname]"
+            inline: true
+          Amount:
+            name: "Amount"
+            value: "[amount]"
+            inline: true
+          blank1:
+            name: ""
+            value: ""
+            inline: true
+          Price:
+            name: "Price"
+            value: "[price]"
+            inline: true
+      bid:
+        enabled: true
+        author: "[buyer] bidded on [item_displayname] for [price]"
+        # If you're using offline mode you can always use [name] to grab the players name instead.
+        author-image: "https://www.mc-heads.net/head/[uuid]/100/.png"
+        color: "#48f542"
+        title: "Auction Information"
+        footer: "Auction ID: [id]"
+        fields:
+          Seller:
+            name: "Seller"
+            value: "[seller]"
+            inline: true
+          Buyer:
+            name: "Bidder"
+            value: "[buyer]"
+            inline: true
+          Item:
+            name: "Item"
+            value: "[item_displayname]"
+            inline: true
+          Amount:
+            name: "Amount"
+            value: "[amount]"
+            inline: true
+          blank1:
+            name: ""
+            value: ""
+            inline: true
+          Price:
+            name: "Price"
+            value: "[price]"
+            inline: true
+
+# Here you can choose to be able to hook into other economy's and configure them to your liking.
+currencies:
+  vault:
+    # Do you want to enable the vault currency?
+    enabled: true
+    # What version of this expansion do you want to download/use?
+    version: latest
+    # The name that is used in-game to decide what currency to use.
+    name: "money"
+    # The prefix of the price variable, this is how you want the variable to show when using the vault currency.
+    prefix: "$%price%"
+    # The minimum amount they need to at least pay when using this currency in the confirmation GUI. Set to -1 to ignore.
+    min-price-purchase: -1
+    # What's the minimum amount the player can add to the offer of a bid?
+    # This is to stop people from adding for example $1 when the bid is about to end to win the bid.
+    min-bid-amount: 1000
+    # What is the minimum price for an auction?
+    min-price-auction: 1000
+    # What is the maximum price for an auction?
+    max-price-auction: 9999999
+    # How should the plugin interact with vault, by default the plugin uses player names due to some limitations with economy plugins.
+    # If you're having issues with this expansion, changing this to use false may resolve this problem.
+    use-name: true
+    # The banks expansions support for this currency, if you want to enable expansions for this currency, then set this to true.
+    # This is used to be able to take money from the bank account of the player if they dont have any money in the main currency.
+    banks:
+      bankplus:
+        # Do you want to enable the bankplus expansion for this currency?
+        enabled: true
+        # What is the default bank player auctions should use? If this is not set, it will use the default bank.
+        bank: ""
+
+  tokenmanager:
+    # Do you want to enable the TokenManager currency?
+    enabled: false
+    # What version of this expansion do you want to download/use?
+    version: latest
+    # The name that is used in-game to decide what currency to use.
+    name: "tokens"
+    # The prefix of the price variable, this is how you want the variable to show when using the token manager currency.
+    prefix: "%price% tokens"
+    # The minimum amount they need to at least pay when using this currency in the confirmation GUI. Set to -1 to ignore.
+    min-price-purchase: -1
+    # What's the minimum amount the player can add to the offer of a bid?
+    # This is to stop people from adding for example $1 when the bid is about to end to win the bid.
+    min-bid-amount: 1000
+    # What is the minimum price for an auction?
+    min-price-auction: 1000
+    # What is the maximum price for an auction?
+    max-price-auction: 9999999
+  playerpoints:
+    # Do you want to enable the PlayerPoints currency?
+    enabled: false
+    # What version of this expansion do you want to download/use?
+    version: latest
+    # The name that is used in-game to decide what currency to use.
+    name: "points"
+    # The prefix of the price variable, this is how you want the variable to show when using the player points currency.
+    prefix: "%price% points"
+    # The minimum amount they need to at least pay when using this currency in the confirmation GUI. Set to -1 to ignore.
+    min-price-purchase: -1
+    # What's the minimum amount the player can add to the offer of a bid?
+    # This is to stop people from adding for example $1 when the bid is about to end to win the bid.
+    min-bid-amount: 1000
+    # What is the minimum price for an auction?
+    min-price-auction: 1000
+    # What is the maximum price for an auction?
+    max-price-auction: 9999999
+  beasttoken:
+    # Do you want to enable the BeastToken currency?
+    enabled: false
+    # What version of this expansion do you want to download/use?
+    version: latest
+    # The name that is used in-game to decide what currency to use.
+    name: "tokens"
+    # The prefix of the price variable, this is how you want the variable to show when using the beast token currency.
+    prefix: "%price% tokens"
+    # The minimum amount they need to at least pay when using this currency in the confirmation GUI. Set to -1 to ignore.
+    min-price-purchase: -1
+    # What's the minimum amount the player can add to the offer of a bid?
+    # This is to stop people from adding for example $1 when the bid is about to end to win the bid.
+    min-bid-amount: 1000
+    # What is the minimum price for an auction?
+    min-price-auction: 1000
+    # What is the maximum price for an auction?
+    max-price-auction: 9999999
+  gemseconomy:
+    # Do you want to enable the GemsEconomy currency?
+    enabled: false
+    # What version of this expansion do you want to download/use?
+    version: latest
+    # The name that is used in-game to decide what currency to use.
+    name: "gems"
+    # The prefix of the price variable, this is how you want the variable to show when using the gems economy currency.
+    prefix: "%price% gems"
+    # What is the gem currency player auctions should use? If this is not set, it will use the default currency.
+    currency: ""
+    # The minimum amount they need to at least pay when using this currency in the confirmation GUI. Set to -1 to ignore.
+    min-price-purchase: -1
+    # What's the minimum amount the player can add to the offer of a bid?
+    # This is to stop people from adding for example $1 when the bid is about to end to win the bid.
+    min-bid-amount: 1000
+    # What is the minimum price for an auction?
+    min-price-auction: 1000
+    # What is the maximum price for an auction?
+    max-price-auction: 9999999
+  ecobits:
+    # Do you want to enable the EcoBits currency?
+    enabled: false
+    # What version of this expansion do you want to download/use?
+    version: latest
+    # The name that is used in the config to decide what currency to use.
+    name: "bits"
+    # The prefix of the price variable, this is how you want the variable to show when using the eco bits currency.
+    prefixes:
+      currency_name: "%price% coins"
+    # The minimum amount they need to at least pay when using this currency in the confirmation GUI. Set to -1 to ignore.
+    min-price-purchase: -1
+    # What's the minimum amount the player can add to the offer of a bid?
+    # This is to stop people from adding for example $1 when the bid is about to end to win the bid.
+    min-bid-amount: 1000
+    # What is the minimum price for an auction?
+    min-price-auction: 1000
+    # What is the maximum price for an auction?
+    max-price-auction: 9999999
+  coinsengine:
+    # Do you want to enable the CoinsEngine currency?
+    enabled: false
+    # What version of this expansion do you want to download/use?
+    version: latest
+    # The name that is used in the config to decide what currency to use.
+    name: "coins"
+    # The prefix of the price variable, this is how you want the variable to show when using the coins engine currency.
+    prefixes:
+      currency_name: "%price% coins"
+    # The minimum amount they need to at least pay when using this currency in the confirmation GUI. Set to -1 to ignore.
+    min-price-purchase: -1
+    # What's the minimum amount the player can add to the offer of a bid?
+    # This is to stop people from adding for example $1 when the bid is about to end to win the bid.
+    min-bid-amount: 1000
+    # What is the minimum price for an auction?
+    min-price-auction: 1000
+    # What is the maximum price for an auction?
+    max-price-auction: 9999999
+  rivalcredits:
+    # Do you want to enable the RivalCredits currency?
+    enabled: false
+    # What version of this expansion do you want to download/use?
+    version: latest
+    # The name that is used in the config to decide what currency to use.
+    name: "credits"
+    # The prefix of the price variable, this is how you want the variable to show when using the rival credits currency.
+    prefix: "%price% credits"
+    # The minimum amount they need to at least pay when using this currency in the confirmation GUI. Set to -1 to ignore.
+    min-price-purchase: -1
+    # What's the minimum amount the player can add to the offer of a bid?
+    # This is to stop people from adding for example $1 when the bid is about to end to win the bid.
+    min-bid-amount: 1000
+    # What is the minimum price for an auction?
+    min-price-auction: 1000
+    # What is the maximum price for an auction?
+    max-price-auction: 9999999
+  item:
+    # Do you want to enable the Item currency?
+    enabled: true
+    # What version of this expansion do you want to download/use?
+    version: latest
+    # The name that is used in-game to decide what currency to use.
+    name: "item"
+    # The prefix of the price variable, this is how you want the variable to show when using the item currency.
+    prefix: "%price% %item%"
+    # The minimum amount they need to at least pay when using this currency in the confirmation GUI. Set to -1 to ignore.
+    min-price-purchase: -1
+    # What's the minimum amount the player can add to the offer of a bid?
+    # This is to stop people from adding for example $1 when the bid is about to end to win the bid.
+    min-bid-amount: 1000
+    # What is the minimum price for an auction?
+    min-price-auction: 1000
+    # What is the maximum price for an auction?
+    max-price-auction: 9999999
+    # The item that should be used as the currency.
+    item:
+      name: ""
+      material: BEACON
+      data: 0
+      lore: []
+  xp:
+    # Do you want to enable the XP currency?
+    enabled: true
+    # What version of this expansion do you want to download/use?
+    version: latest
+    # The name that is used in-game to decide what currency to use.
+    name: "xp"
+    # The prefix of the price variable, this is how you want the variable to show when using the xp currency.
+    prefix: "%price% XP"
+    # The minimum amount they need to at least pay when using this currency in the confirmation GUI. Set to -1 to ignore.
+    min-price-purchase: -1
+    # What's the minimum amount the player can add to the offer of a bid?
+    # This is to stop people from adding for example $1 when the bid is about to end to win the bid.
+    min-bid-amount: 1000
+    # What is the minimum price for an auction?
+    min-price-auction: 1000
+    # What is the maximum price for an auction?
+    max-price-auction: 9999999

@@ -1,0 +1,67 @@
+### CONFIGURATION FILE
+###
+###  --- ENGLISH ---
+### This file is for plugin configuration ONLY. To change message texts,
+### copy a messages_en.yml - file, change en to your language sign and change "language" in this file to your language sign.
+### NEVER EDIT messages_de.yml OR messages_en.yml !!! THEY GET OVERWRITTEN AT EVERY START!
+###
+### To avoid making any mistakes, READ THE WIKI !!! https://github.com/WeiiswurstDev/AdminTools3/wiki/Configuring-AdminTools3
+###
+###  --- DEUTSCH ---
+### Diese Datei ist ausschließlich für die Konfiguration gedacht.
+### Um Nachrichten zu ändern, kopiere messages_de.yml und ändere de in das Kürzel der Sprache. Ändere auch hier "language" zu dem Kürzel der Sprache.
+### BEARBEITE NIEMALS message_de.yml ODER message_en.yml !!! DIESE DATEIEN WERDEN BEI JEDEM START ÜBERSCHRIEBEN !!!
+###
+### Bitte lies das Wiki, um Details zu bekommen: https://github.com/WeiiswurstDev/AdminTools3/wiki/Configuring-AdminTools3 (Englisch)
+
+language: en
+prefix: "&cAdminTools&8│ &7"
+log-module-usage: true
+
+join-leave-messages:
+  replace-messages: false
+  join: "&e%s joined the game."
+  leave: "&e%s left the game."
+
+adminchat:
+  format: "&c&lAC &7<&e%player%&7> &a%message%"
+  prefix: "@admin"
+
+module:
+  heal:
+    fillFoodBar: true
+    cooldown: 0
+  chatclear:
+    messageAmount: 100
+    aliases:
+      - clearchat
+      - cc
+  enderchest:
+    aliases:
+      - ec
+  workbench:
+    aliases:
+      - wb
+  invsee:
+    showMessageToTarget: false
+    aliases:
+      - invspy
+  worldtp:
+    aliases:
+      - wtp
+  weather:
+    registerCommands: false
+    aliases:
+      - sun
+      - sunny
+      - rain
+  difficulty:
+    registerCommands: false
+  gamemode:
+    registerCommands: false
+    aliases:
+      - gm
+  kill:
+    registerCommands: false
+
+CONFIG_VERSION_NEVER_CHANGE_THIS: 3

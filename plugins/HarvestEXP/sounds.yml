@@ -1,0 +1,44 @@
+#########################################################################################
+#                                                                                       #
+# HarvestEXP, a free resource by Norska @ https://norska.dev                            #
+#                                                                                       #
+# Wiki: https://norska.dev/docs/welcome                                                 #
+# Support: https://norska.dev/discord/                                                  #
+#                                                                                       #
+# You are editing the sounds.yml file of HarvestEXP.                                    #
+#                                                                                       #
+#########################################################################################
+
+#########################################################################################
+#                                                                                       #
+# WARNING: PLEASE READ BEFORE CONFIGURING!                                              #
+#                                                                                       #
+# The plugin uses ENUM sound names, meaning you cannot use default sound names          #
+# To find the ENUM names, google the following: "<Server Version> ENUM Sounds>".        #
+#                                                                                       #
+# Do not open tickets regarding issues with sounds, they can be easily solved by using  #
+# names which are in ENUM form and are appropriate for YOUR base server version.        #
+#                                                                                       #
+#########################################################################################   
+
+sounds:
+
+   EVENT_HARVEST_EXP_GAIN:
+      enabled: false
+      sound: 'ENTITY_PLAYER_LEVELUP'
+      volume: 1.0
+      pitch: 1.0  
+
+   ###############################  
+      
+   COMMAND_RELOAD:
+      enabled: true
+      sound: 'ENTITY_PLAYER_LEVELUP'
+      volume: 1.0
+      pitch: 1.0  
+      
+   COMMAND_NOPERMISSION:
+      enabled: true
+      sound: 'ENTITY_VILLAGER_NO'
+      volume: 1.0
+      pitch: 1.0      

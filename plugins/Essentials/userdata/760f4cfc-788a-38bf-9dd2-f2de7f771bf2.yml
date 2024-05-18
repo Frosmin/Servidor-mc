@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 181.115.171.235
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1714773976106
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1714775990808
+  login: 1714775894388
+money: '0'
+last-account-name: ricardo
+lastlocation:
+  world: 2a599eb3-9852-4f75-b26b-7f54bb829666
+  world-name: inicio
+  x: -28.473966855367905
+  y: 135.72449691452374
+  z: 180.34467352180997
+  yaw: 21.8251953125
+  pitch: 4.270879745483398
+logoutlocation:
+  world: a5f4adbc-da0e-43ce-b564-11fe3c8418c1
+  world-name: friender
+  x: -424.11865635909567
+  y: 239.0
+  z: 594.3278766818072
+  yaw: 90.41667938232422
+  pitch: 24.15460777282715

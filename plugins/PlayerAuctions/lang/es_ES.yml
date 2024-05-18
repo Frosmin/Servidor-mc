@@ -1,0 +1,128 @@
+# PlayerAuctions by Olzie-12
+# https://www.spigotmc.org/resources/83073
+# We also have a discord server for help: https://olziedev.com/discord or check docs https://docs.olziedev.com/projects/playerauctions
+# Also if you find any bugs be happy to report them I will fix them :)
+# Made with love
+
+# If you want to disable any message just set it to nothing. by doing
+# list: "" <- This will no longer send a message.
+
+
+# every singe message in the plugin is here.
+# make sure you use "" to end of every string
+# Also you can use colour codes <3
+
+# To use hex color codes you will need to do
+# '{#HEX} text"
+
+lang:
+  cancel-chat-wait: "cancelar"
+  chat-wait-cancelled: "&cCancelled your request!"
+  friendly-max-auctions: "Unlimited" # If you want it to show the actual amount, use %amount%
+  prefix: "&b&lCS &7»" # Usa %prefix% para añadir este prefijo a los mensajes.
+  auction-confirmation: "%prefix% &aHacer esta subasta te costará &e%price%&a, vuelve a enviar el comando para empezar la subasta."
+  auction-sell: "%prefix% &aEmpezó la venta inicial del objeto a &e%price%&a en la subasta."
+  auction-added: "%prefix% &aAñadiste &e%amount%&a a la casa de subastas, el precio total es ahora &e%price%&a y el precion unitario es de &e$%priceper%."
+  auction-bid: "%prefix% &aComenzó la oferta por &e%price%&a en la subasta."
+  reloaded: "%prefix% &aConfiguración actualizada exitosamente."
+  money-taken: "%prefix% Se retiró &a%price% de tu cuenta bancaria."
+  auctions-cancelled: "%prefix% &aTu subasta fue cancelada"
+  auctions-collected: "%prefix% &aRecuperaste &e%items%&a objetos de subastas terminadas."
+  bought-item: "%prefix% &aCompra realizada exitosamente por &e%price%."
+  someone-purchased: "%prefix% &e%player%&a compró &e%amount% &e%item%&a por &e%price%&a!"
+  offline-title: "%prefix% &bMientras estuviste desconectado..."
+  bidder: "%prefix% &e%player%&a ofreció &e%price% %&apor &e%item."
+  bidded: "%prefix% &aOfertaste &e%price% &apor &e%item%."
+  bid-success: "%prefix% &e%player%&a ganó la subasta de tu &e%item%&a por &e%price%"
+  bidder-success: "%prefix% &aGanaste la subasta de &e%item%&a por &e%price%&a, revisa tus subastas terminadas."
+  earned-offline: "%prefix% &aGanaste un total de &e$%total%&a."
+  given-more-auctions-success: "%prefix% &aDiste a &e%player%&a un extra de &e%extra%&a subastas, en total: &e%total%&a!"
+  dbexec-successful: "%prefix% &aSuccessfully updated &d%count%&a rows. &aPlease execute &d/%cmd% reload&a to update changes."
+  current-amount-of-auctions:
+    - "%prefix% &7&l&m----------&7&l[ &b&lCasa de Subastas&7&l]&m----------"
+    - "%prefix% &bTienes un máximo de &e%auctionsmax%&b (&e%staticauctions% static&b) subastas."
+    - "%prefix% &bHasta ahora has usado &e%auctionsused%&b subastas."
+    - "%prefix% &7&l&m----------&7&l[ &b&lCasa de Subastas&7&l]&m----------"
+  current-amount-of-auctions-other:
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+    - "%prefix% &d%player%&b un máximo de &e%auctionsmax%&b (&e%staticauctions% static&b) subastas."
+    - "%prefix% &d%player%&b ahora has usado &e%auctionsused%&b subastas."
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+  amount-auctions-others-alert: "&c%player% is currently offline, only showing their maximum auctions as a static amount."
+
+  # Menú de ayuda para el jugador.
+  # La variable %cmd% es de cualquier comando en config.yml :)
+  help-player:
+    - "%prefix% &7&l&m----------&7&l[ &b&lCasa de Subastas&7&l]&m----------"
+    - "%prefix% &e/%cmd% help &7&l- &bMuestra este menú."
+    - "%prefix% &e/%cmd% sell <price> [currency] [amount] &7&l- &bVende un obejeto en subasta."
+    - "%prefix% &e/%cmd% bid <price> &7&l- &bOferta un objeto."
+    - "%prefix% &e/%cmd% auction &7&l- &bSubastar vía interfaz gráfica."
+    - "%prefix% &e/%cmd% cancel [id] [player] &7&l- &bCancela la subasta de tus objetos."
+    - "%prefix% &e/%cmd% collect &7&l- &bRecupera los objetos de tus subastas canceladas."
+    - "%prefix% &e/%cmd% open [menu] [options] &7&l- &bAbre la intergaz grafica de Subastas."
+    - "%prefix% &e/%cmd% amount &7&l- &bRevisa cuantas subastas tienes."
+    - "%prefix% &e/%cmd% reload &7&l- &bActualiza todas la configuraciones."
+    - "%prefix% &7&l&m----------&7&l[ &b&lCasa de Subastas&7&l]&m----------"
+
+  # Menú de ayuda para la consola
+  # La variable %cmd% es de cualquier comando en config.yml :)
+  help-console:
+    - "%prefix% &7&l&m----------&7&l[ &b&lCasa de Subastas&7&l]&m----------"
+    - "%prefix% &e/%cmd% help &7&l- &bMuestra este menú."
+    - "%prefix% &e/%cmd% open [menu] [options] &7&l- &bAbre la interfaz grafica de Subasta."
+    - "%prefix% &e/%cmd% reload &7&l- &bActualiza todas las configuraciones."
+    - "%prefix% &e/%cmd% dbexec <query> &7&l- &bEjecutar una consulta."
+    - "%prefix% &7&l&m----------&7&l[ &b&lCasa de Subastas&7&l]&m----------"
+
+  # Mensajes de Error.
+  errors:
+    command-syntax: "%prefix% &cSintaxis incorrecta, usa:\n%syntax%"
+    player-only: "%prefix%&c Debes ser un jugador."
+    console-only: "%prefix% &cThis command can only be executed from console!"
+    not-a-number: "%prefix%&c Eso no es un número."
+    no-permission: "%prefix%&c No tienes &4%permission%&c para hacer eso. %reason%"
+    too-many-auctions: "%prefix%&c No puedes vender tantas veces, solo &4%amount%&c."
+    money-not-enough-sell: "%prefix%&c No tienes %price% para vender este objeto."
+    money-not-enough-buy: "%prefix%&c No tienes %price% para comprar ese objeto."
+    money-not-enough-bid: "%prefix%&c You do not have %price% to bid this item!"
+    disabled-world-sell: "%prefix%&c No puedes subastar en este mundo."
+    invalid-item: "%prefix%&c Ese objeto no se puede vender."
+    damaged-item: "%prefix%&c You cannot sell a damaged item!"
+    invalid-gamemode: "%prefix%&c No puedes vender mientras estás en ese modo de juego. (gamemode)"
+    invalid-category: "%prefix%&c Categoriía no válida."
+    min-price: "%prefix%&c El precio no puede ser menor a %min%."
+    max-price: "%prefix%&c El precio no puede ser mayor a %max%."
+    no-auctions: "%prefix%&c No tienes subastas."
+    no-expired-auctions: "%prefix%&c No tienes subastas canceladas/terminadas."
+    purchase-own: "%prefix%&c No puedes comprar algo de tu propia Subasta."
+    bid-own: "%prefix%&c No puedes hacer ofertas en tus propias subastas."
+    sell-cooldown: "%prefix%&c Debes esperar un poco antes de volver a hacer una subasta (%cooldown%)"
+    bid-cooldown: "%prefix%&c Debes esperar un poco antes de volver a ofertar objetos (%cooldown%)"
+    offer-cooldown: "%prefix%&c Debes esperar un poco antes de hacer una oferta (%cooldown%)"
+    purchase-cooldown: "%prefix%&c Debes esperar un poco antes de volver a comprar objetos (%cooldown%)"
+    no-player-joined: "%prefix% &cEse jugador no existe."
+    bidder-no-money: "%prefix% &c%player% no tiene suficiente dinero para comprar tu &e%item%, su oferta fue anulada."
+    bid-no-money: "%prefix% &cYa no tienes dinero suficiente para mantener tu oferta por &e%item%, tu oferta fue anulada."
+    min-bid: "%prefix% &cNo puedes ofrecer esa cantidad."
+    gui-cooldown: "%prefix% &cEspera unos segundos antes de usarlo nuevamente."
+    not-enough-add-bid: "%prefix% &cNo tienes suficiente dinero como para añadir $%amount% a $%bid%"
+    cancel-bid: "%prefix% &cNo puedes cancelar una subasta mientras tenga una oferta."
+    auction-doesnt-exist: "%prefix% &cThat auction doesn't exist anymore!"
+    dbexec-failed: "%prefix% &cThere was an error executing this query. %error%"
+
+# Here you can specify different types of messages per no-permission message, using the specific permission node.
+# Or you may set it to blank to not send a message at all.
+# no-permission:
+#   pa.purchase: "You do not have permission to purchase auctions!"
+
+n/a:
+  no-seller: "N/A"
+  no-expire: "N/A"
+  no-category: "N/A"
+  no-displayname: "%player%" # Muestra el nombre del jugador en su lugar.
+
+# Aquí puedes configurar los nombres de los objetos, ten en cuenta que debes añadir a la lista los objetos que deseas modificar.
+# Puedes ver la lista de objetos aquí, (la página se encuentra en inglés): https://javadocs.olziedev.com/spigot/latest/org/bukkit/Material.html
+item-names:
+  ARMOR_STAND: "Soporte para Armadura"

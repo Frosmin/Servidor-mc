@@ -1,0 +1,47 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 181.115.171.235
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1714706845963
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1715219630716
+  login: 1715219469912
+money: '0.0'
+last-account-name: jhoncito
+lastlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: -389.4348130676192
+  y: 79.0
+  z: 131.46545389290804
+  yaw: -14.20849609375
+  pitch: 22.566253662109375
+logoutlocation:
+  world: 1cd402a5-7f0a-41aa-8f28-ddd0feb8d607
+  world-name: build_battle
+  x: -37.207979622819536
+  y: -60.0
+  z: -3.2092571833648
+  yaw: 174.5734100341797
+  pitch: 32.955955505371094
+homes:
+  home:
+    world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+    world-name: mundo
+    x: -389.931576970062
+    y: 77.0
+    z: 119.54681922106802
+    yaw: 104.1129150390625
+    pitch: 45.794193267822266

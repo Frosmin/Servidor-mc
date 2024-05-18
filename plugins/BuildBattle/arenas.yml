@@ -1,0 +1,63 @@
+instances:
+  default:
+    lobbylocation: world,-1.0,80.0,7.0,0.0,0.0
+    startlocation: world,-1.0,80.0,7.0,0.0,0.0
+    endlocation: world,-1.0,80.0,7.0,0.0,0.0
+    minimumplayers: 2
+    maximumplayers: 10
+    plotmembersize: 1
+    mapname: mapname
+    world: worldname
+    # classic (deprecated: solo), guess_the_build
+    gametype: classic
+    isdone: false
+    signs: {}
+    plots: {}
+  candy:
+    lobbylocation: candyland,73.86413272336738,83.0,-40.98853218516298,-270.3,1.9499832
+    startlocation: candyland,73.86413272336738,83.0,-40.98853218516298,-270.3,1.9499832
+    spectatorlocation: candyland,73.86413272336738,83.0,-40.98853218516298,-270.3,1.9499832
+    endlocation: candyland,73.86413272336738,83.0,-40.98853218516298,-270.44998,2.2499833
+    minimumplayers: 1
+    maximumplayers: 8
+    mapname: §bCandyland
+    signs:
+    - Lobby,-1,65,12,0.0,0.0
+    - candyland,60,83,-42,0.0,0.0
+    - candyland,60,83,-41,0.0,0.0
+    plots:
+      '0':
+        '1': candyland,-4.0,69.0,30.0,0.0,0.0
+        '2': candyland,-30.0,95.0,4.0,0.0,0.0
+      '1':
+        '1': candyland,-4.0,69.0,-2.0,0.0,0.0
+        '2': candyland,-30.0,95.0,-28.0,0.0,0.0
+      '2':
+        '1': candyland,-4.0,69.0,-34.0,0.0,0.0
+        '2': candyland,-30.0,95.0,-60.0,0.0,0.0
+      '3':
+        '1': candyland,-4.0,69.0,-66.0,0.0,0.0
+        '2': candyland,-30.0,95.0,-92.0,0.0,0.0
+      '4':
+        '1': candyland,-36.0,69.0,-66.0,0.0,0.0
+        '2': candyland,-62.0,95.0,-92.0,0.0,0.0
+      '5':
+        '1': candyland,-36.0,69.0,-34.0,0.0,0.0
+        '2': candyland,-62.0,95.0,-60.0,0.0,0.0
+      '6':
+        '1': candyland,-36.0,69.0,-2.0,0.0,0.0
+        '2': candyland,-62.0,95.0,-28.0,0.0,0.0
+      '7':
+        '1': candyland,-36.0,69.0,30.0,0.0,0.0
+        '2': candyland,-62.0,95.0,4.0,0.0,0.0
+    gametype: classic
+    plotmembersize: 1
+    isdone: true
+    world: candyland
+
+# Don't edit it. But who's stopping you? It's your server!
+# Really, don't edit ;p
+# You edited it, huh? Next time hurt yourself!
+Do-Not-Edit:
+  File-Version: 0
+  Core-Version: 1

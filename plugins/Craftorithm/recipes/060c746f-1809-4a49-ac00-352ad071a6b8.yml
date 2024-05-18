@@ -1,0 +1,11 @@
+type: shaped
+shape:
+- '  c'
+- ' e '
+- 'g  '
+source:
+  c: minecraft:diamond
+  e: minecraft:paper
+  g: minecraft:paper
+unlock: true
+result: minecraft:name_tag

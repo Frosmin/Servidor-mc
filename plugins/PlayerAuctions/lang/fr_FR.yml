@@ -1,0 +1,128 @@
+# PlayerAuctions by Olzie-12
+# https://www.spigotmc.org/resources/83073
+# We also have a discord server for help: https://olziedev.com/discord or check docs https://docs.olziedev.com/projects/playerauctions
+# Also if you find any bugs be happy to report them I will fix them :)
+# Made with love
+
+# If you want to disable any message just set it to nothing. by doing
+# list: "" <- This will no longer send a message.
+
+# every singe message in the plugin is here.
+# make sure you use "" to end of every string
+# Also you can use colour codes <3
+
+# To use hex color codes you will need to do
+# '{#HEX} text"
+
+lang:
+  cancel-chat-wait: "Annuler"
+  chat-wait-cancelled: "&cCancelled your request!"
+  friendly-max-auctions: "Illimité" # If you want it to show the actual amount, use %amount%
+  prefix: "&b&lPA &7»" # Use %prefix% to add the prefix to any message!
+  auction-confirmation: "%prefix% &aVendre cette enchère vous coûtera &e%price%&a, Répéter la commande pour confirmer."
+  auction-sell: "%prefix% &aCommence à vendre &e%item_displayname%&a pour &e%price%&a sur la vente aux enchères!"
+  auction-added: "%prefix% &aVVous avez ajouté &e%amount%&a articles à votre enchère similaire sur le marché, le prix total de cet article est maintenant &e%price%&a, cela fonctionne comme &e$%priceper%&a par article."
+  auction-bid: "%prefix% &aDébut de la mise au choix de l’article &e%price%&a aux enchères!"
+  reloaded: "%prefix% &aChargement réussi de toutes les configs !"
+  money-taken: "%prefix% &a%price% a été pris de votre compte bancaire."
+  auctions-cancelled: "%prefix% &aVos enchères ont été annulées !"
+  auctions-collected: "%prefix% &aRamassage réussi &e%items%&a objets expirés !"
+  bought-item: "%prefix% &aAcheté avec succès &e%item%&a pour &e%price%&a!"
+  someone-purchased: "%prefix% &e%player%&a vient d'acquérir &e%item% x%amount%&a pour &e%price%&a!"
+  offline-title: "%prefix% &bPendant que tu étais déconnecté..."
+  bidder: "%prefix% &e%player%&a vient d’offrir votre offre de &e%item%&a pour &e%price%"
+  bidded: "%prefix% &aVous venez de faire une offre &e%item%&a pour &e%price%"
+  bid-success: "%prefix% &e%player%&a a gagné votre enchère de &e%item%&a pour &e%price%"
+  bidder-success: "%prefix% &aVous avez gagné la vente aux enchères de &e%item%&a pour &e%price%&a Vérifiez vos enchères expirées."
+  earned-offline: "%prefix% &aVous avez gagné un total de &e$%total%&a!"
+  given-more-auctions-success: "%prefix% &aA donné avec succès &e%player%&a un supplément de &e%extra%&a ventes aux enchères et un total de &e%total%&a!"
+  dbexec-successful: "%prefix% &aMises à jour avec succès &d%count%&a lignes. &aS'il vous plaît exécuter &d/%cmd% reload&a pour mettre à jour les changements."
+  current-amount-of-auctions:
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+    - "%prefix% &bVous disposez actuellement d’un maximum de &e%auctionsmax%&b (&e%staticauctions% statique&b) ventes aux enchères."
+    - "%prefix% &bVous avez actuellement utilisé &e%auctionsused%&b ventes aux enchères."
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+  current-amount-of-auctions-other:
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+    - "%prefix% &d%player%&b a actuellement un maximum de &e%auctionsmax%&b (&e%staticauctions% statique&b) ventes aux enchères."
+    - "%prefix% &d%player%&b a actuellement utilisé &e%auctionsused%&b ventes aux enchères."
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+  amount-auctions-others-alert: "&c%player% est actuellement hors ligne, montrant seulement leurs enchères maximales comme un montant statique."
+
+  # the help menu for a player
+  # The variable %cmd% is any command from the config.yml :)
+  help-player:
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+    - "%prefix% &e/%cmd% help &7&l- &bAffiche ce menu."
+    - "%prefix% &e/%cmd% sell <prix> [devise] [quantité] &7&l- &bVendre un article."
+    - "%prefix% &e/%cmd% bid <prix> &7&l- &bEnchérir un article."
+    - "%prefix% &e/%cmd% auction &7&l- &bAuction via a GUI."
+    - "%prefix% &e/%cmd% cancel [id] [player] &7&l- &bAnnulez vos articles vendus aux enchères."
+    - "%prefix% &e/%cmd% collect &7&l- &bRamassez vos articles annulés."
+    - "%prefix% &e/%cmd% open [menu] [options] &7&l- &bOuvre le gui des enchères des joueurs."
+    - "%prefix% &e/%cmd% amount &7&l- &bVérifiez combien d’enchères vous avez."
+    - "%prefix% &e/%cmd% reload &7&l- &bRecharge tous les fichiers de configuration."
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+
+  # the help menu for console
+  # The variable %cmd% is any command from the config.yml :)
+  help-console:
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+    - "%prefix% &e/%cmd% help &7&l- &bAffiche ce menu."
+    - "%prefix% &e/%cmd% open [menu] [options] &7&l- &bOuvre le gui des enchères des joueurs."
+    - "%prefix% &e/%cmd% reload &7&l- &bRecharge tous les fichiers de configuration."
+    - "%prefix% &e/%cmd% dbexec <query> &7&l- &bExécute une requête."
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+
+  # error messages.
+  errors:
+    command-syntax: "%prefix% &cSyntaxe incorrecte, utilisation:\n%syntax%"
+    player-only: "%prefix%&c Vous devez être un joueur !"
+    console-only: "%prefix% &cCette commande ne peut être exécutée qu’à partir de la console !"
+    not-a-number: "%prefix%&c Ce n’est pas un chiffre !"
+    no-permission: "%prefix%&c vous n'avez pas &4%permission%&c pour faire cela! %reason%"
+    auction-dont-exist: "%prefix% &cCette enchère n’existe pas !"
+    too-many-auctions: "%prefix%&c Vous ne pouvez pas vendre autant d’articles que vous pouvez seulement vendre &4%amount%&c en raison de vos autorisations/montant statique!"
+    money-not-enough-sell: "%prefix%&c vous n'avez pas %price% pour vendre cet article!"
+    money-not-enough-buy: "%prefix%&c vous n'avez pas %price% pour acheter cet article!"
+    money-not-enough-bid: "%prefix%&c vous n'avez pas %price% pour enchérir cet article !"
+    disabled-world-sell: "%prefix%&c Vous ne pouvez pas vendre des objets dans ce monde!"
+    invalid-item: "%prefix%&c C’est un article invalide à vendre!"
+    damaged-item: "%prefix%&c You cannot sell a damaged item!"
+    invalid-gamemode: "%prefix%&c C’est un mode de jeu invalide à vendre!"
+    invalid-category: "%prefix%&c Il s’agit d’une catégorie invalide."
+    min-price: "%prefix%&c Vous devez fixer le prix au moins %min%!"
+    max-price: "%prefix%&c Vous devez définir le prix ci-dessous %max%!"
+    no-auctions: "%prefix%&c Vous n’avez actuellement pas de ventes aux enchères!"
+    no-expired-auctions: "%prefix%&c Vous n’avez actuellement pas d’enchères expirées à collecter!"
+    purchase-own: "%prefix%&c Vous ne pouvez pas acheter votre propre enchère!"
+    bid-own: "%prefix%&c Vous ne pouvez pas enchérir votre propre enchère !"
+    sell-cooldown: "%prefix%&c Vous avez actuellement un temps de recharge pour les articles aux enchères! (%cooldown% left)"
+    bid-cooldown: "%prefix%&c Vous avez actuellement un délai de réutilisation pour enchérir des articles! (%cooldown% left)"
+    offer-cooldown: "%prefix%&c Vous avez actuellement un temps de recharge pour offrir une offre! (%cooldown% left)"
+    purchase-cooldown: "%prefix%&c Vous avez actuellement un temps de recharge pour acheter des articles! (%cooldown% left)"
+    no-player-joined: "%prefix% &cCe joueur n’existe pas !"
+    bidder-no-money: "%prefix% &c%player% n’a pas assez d’argent pour votre &e%item%, leur offre a été retirée."
+    bid-no-money: "%prefix% &cTu n’as plus assez d’argent pour &e%item% enchérir, votre offre a été retirée."
+    min-bid: "%prefix% &cVous ne pouvez pas offrir autant! L’offre minimale sur laquelle vous pouvez soumissionner est de 5$"
+    gui-cooldown: "%prefix% &cVous devrez attendre quelques secondes pour l’utiliser à nouveau."
+    not-enough-add-bid: "%prefix% &cVous n’avez pas assez d’argent pour ajouter $%amount% à $%bid%"
+    cancel-bid: "%prefix% &cVous ne pouvez pas annuler cette enchère tant qu’une enchère lui a été proposée !"
+    auction-doesnt-exist: "%prefix% &cThat auction doesn't exist anymore!"
+    dbexec-failed: "%prefix% &cIl y a eu une erreur lors de l’exécution de cette requête. %error%"
+
+# Here you can specify different types of messages per no-permission message, using the specific permission node.
+# Or you may set it to blank to not send a message at all.
+# no-permission:
+#   pa.purchase: "You do not have permission to purchase auctions!"
+
+n/a:
+  no-seller: "N/A"
+  no-expire: "N/A"
+  no-category: "N/A"
+  no-displayname: "%player%" # show the players name instead
+
+# Here you can configure the item name formatting, please note that you will have to add the items below that you want to change
+# You can view the list of the items here: https://javadocs.olziedev.com/spigot/latest/org/bukkit/Material.html
+item-names:
+  ARMOR_STAND: "Armor Stand"

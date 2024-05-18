@@ -1,0 +1,45 @@
+locales:
+  valid-version: 5.0.0
+  register:
+    'zh_CN':
+      name: "Chinese (Simplified)"
+      original_name: "简体中文"
+    'cs_CZ':
+      name: "Czech"
+      original_name: "Český"
+    'nl_NL':
+      name: "Dutch"
+      original_name: "Nederlands"
+    'en_GB':
+      name: "English"
+      original_name: "English"
+    'fr_FR':
+      name: "French"
+      original_name: "Français"
+    'fr_BE':
+      name: "French (BE)"
+      original_name: "Belgian French"
+    'de_DE':
+      name: "German"
+      original_name: "Deutsch"
+    'it_IT':
+      name: "Italian"
+      original_name: "Italiano"
+    'fa_FA':
+      name: "Persian"
+      original_name: "Persian"
+    'pl_PL':
+      name: "Polish"
+      original_name: "Polski"
+    'pt_BR':
+      name: "Portuguese (BR)"
+      original_name: "Português Brasileiro"
+    'ru_RU':
+      name: "Russian"
+      original_name: "Pусский"
+    'es_ES':
+      name: "Spanish"
+      original_name: "Español"
+    'tr_TR':
+      name: "Turkish"
+      original_name: "Türk"

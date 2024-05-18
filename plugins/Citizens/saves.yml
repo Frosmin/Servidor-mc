@@ -1,0 +1,144 @@
+# Citizens NPC Storage
+
+last-created-npc-id: 4
+npc:
+  '0':
+    metadata:
+      cached-skin-uuid: 54230616-b6a1-4caf-a03b-333dcc20e7c9
+      cached-skin-uuid-name: vegetta777
+    name: '&x&f&4&c&4&f&3&oT&x&f&6&b&1&f&4&oi&x&f&7&9&f&f&6&oe&x&f&9&8&c&f&7&on&x&f&a&7&a&f&9&od&x&f&c&6&7&f&a&oa'
+    uuid: 701c1cdf-7572-4349-b9ef-6035e9f9b75a
+    traits:
+      owner:
+        uuid: f376977a-9d0e-341e-a1f5-7db1941c23d9
+      type: PLAYER
+      spawned: true
+      skintrait:
+        fetchDefaultSkin: true
+        signature: LVTD4FaCA8BwWxLkm94/dqF6EqHugKX4iINXKQCz3Pyd0xnGSiF4RRZqeN0AQI2KtUVapciDSnpCyhupEloE7zQnXJPPPTxOkUV1ap/5ygaZiEQJNtNxWWi+B4FfLYEVc2orYFusbKUKvd0jBOv3FBal3Hzc+6yneBgu/p0DKfDG1l+OvNmGsahrvedaTZS0U39tdn6yllydHXp9XW+JukHdZWyljIFQt59SGbElMEO0fMpntDHQ6akjYmCmqf+82WnqLW3BXDdHkjmR4HSRW2WfCj9ITaA+Hht2Xu0yiUDzIO3hZG2YExZaZNOivGG2otliwT5rSaeuxbhnyyAEdw91xJApkgRd8kD2kIPyc0f5dmPgHMCQ/OX2bRv6bmhiecz0zDxgIe+OITqSSZD/L2OliCuz87xnZbcbcyH4fZBM6enk84yURTVH+5zbOhF1mRK/nllKutMw+CncCU+XhM0QSJhvEmq3+O8eLDKabdDO764ba9OkEiAAHwAzFHcyP9I4kqfrASxghU7AXd+V6zbglQtbOTGnV5QiUQV2s/2THDDM3QedRhna3W6RFSJjUiKI80vaBzGEpe4/MYITuT6I8HxPitx+eMzATNMHG66n8IW1mAVN+LwL1yrKlMcgLu9qRT27j5lK9n3Cdee+wdw3KlwdA04hbdtFo32seu4=
+        skinName: Vegetta777
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTcxNDkyMjIzODAwNiwKICAicHJvZmlsZUlkIiA6ICI1NDIzMDYxNmI2YTE0Y2FmYTAzYjMzM2RjYzIwZTdjOSIsCiAgInByb2ZpbGVOYW1lIiA6ICJWRUdFVFRBNzc3IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzFjMTljNDVjMjc4Y2ZjZWMxZTU1MTBkMjZjYzczYzQxNWY5NjAzMWZmMmJmMTQwMDBhZWEyYjhlZWViOGZkNDciCiAgICB9CiAgfQp9
+        updateSkins: false
+      followtrait:
+        protect: false
+      commandtrait:
+        cost: -1.0
+        executionMode: LINEAR
+        experienceCost: -1
+        hideErrorMessages: false
+        persistSequence: false
+        commands:
+          '0':
+            command: shop
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: '-1.0'
+            experienceCost: -1
+      location:
+        bodyYaw: 54.301315
+        world: Lobby
+        x: '4.2534'
+        y: '65.0'
+        z: '-2.9231'
+        yaw: '54.3013'
+        pitch: '0.0'
+      hologramtrait:
+        direction: BOTTOM_UP
+        lineHeight: -1.0
+    traitnames: spawned,scoreboardtrait,type,mounttrait,followtrait,owner,equipment,hologramtrait,location,inventory,rotationtrait,skintrait,commandtrait
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: false
+  '1':
+    metadata:
+      cached-skin-uuid: 13ca889e-2f69-43d2-9b4d-6a1ec83c25ce
+      cached-skin-uuid-name: uwu
+    name: No_Tocar
+    uuid: 826ad3ff-c15f-4224-974b-80cad41399b2
+    traits:
+      type: PLAYER
+      spawned: true
+      owner:
+        uuid: f376977a-9d0e-341e-a1f5-7db1941c23d9
+      skintrait:
+        fetchDefaultSkin: true
+        signature: u25/ojUv6poZZfjZwBFTOOTNF/lfn8RQ83NQD2Cm3vdW1YfX/fO2eBJgqLATVlDYBfj5Uk8WRrcZZNSRTGNzGmCSp5lN91Vu3ILKGVVMJiwmximntQdhGYUZNfNBXtv3MOJTDy8kXy7SKFYcGxGrgUvwDkiRm32MLGw+Svdh7/yQRfdVx9WYMwjvrqTDL6yzpwQqEH8nWQ86CdrXyxU7nt3gOyKzaVEXntqRscaY2MCS3JDX3lL95Aw/s6vQOsYATI2i0cBWNz3Qp4ssTC9sAKZ8uMprV257y9K0amm7m4m1BSH4LH2E8MxSVqxIk6O5JtYqRWThREStPQK4+23ZFMbuvHeV2yC1Keb945qdLMiGIoDfzfak+LaB+kQj8SaeinCaqF5Ijqh7Cc1fm8mOK+T8mRu2qd/aSzwHDuM7jo6ru40xYR4msBJk2Md/J1tU83Gm7TU7OH6gXiB+Fgg1pUlzfMnPrcOvHodmeNxwTk9syZ8fZQEg+bJ77Jl4WADYywMqPiL8OVv90WLDWkf8lkKgAVOdY/1ddkHGzMYDfE+s/vG2lIvcLUFCr4OoEMe+Q7xAAqZUdC5m+tXp8NmAxDRgBqcy3eq+T58PMSNkRVeB1Hb8RA45hbxFLsLflS+iwJT/+o4EDn5l9gIAn9OYm2rsqsFPGdfFHojcttR9P60=
+        skinName: uwu
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTcxNDkyMzkxMTQwMCwKICAicHJvZmlsZUlkIiA6ICIxM2NhODg5ZTJmNjk0M2QyOWI0ZDZhMWVjODNjMjVjZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJ1d3UiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODI4MjY2MGJiMzA0OWE4ZGM2YWEwZmIxZTJhZGY4YzAyYTQ5YjM1ODg5NWY5OTk1OTA4NjMzZDJhMDY2M2RmOCIKICAgIH0KICB9Cn0=
+        updateSkins: false
+      lookclose:
+        range: '10.0'
+        disablewhilenavigating: true
+        enabled: false
+        enableRandomLook: false
+        headonly: false
+        linkedbody: false
+        perplayer: false
+        randomLookDelay: 60
+        randomSwitchTargets: false
+        realisticlooking: false
+        targetnpcs: false
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      location:
+        bodyYaw: 139.4506
+        world: Lobby
+        x: '4.25'
+        y: '65.0'
+        z: '9.2173'
+        yaw: '139.7978'
+        pitch: '0.0'
+      commandtrait:
+        cost: -1.0
+        executionMode: LINEAR
+        experienceCost: -1
+        hideErrorMessages: false
+        persistSequence: false
+        commands:
+          '0':
+            command: kick <p>
+            hand: RIGHT
+            player: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: '-1.0'
+            experienceCost: -1
+    traitnames: lookclose,location,spawned,scoreboardtrait,type,mounttrait,inventory,rotationtrait,skintrait,commandtrait,owner
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: false
+  '4':
+    metadata:
+      protected: true
+    name: §7§aChange floor NPC
+    uuid: a7c33878-1df3-4ba7-8b45-ab38da17cea0
+    traits:
+      type: VILLAGER
+      location:
+        bodyYaw: 4.3267164
+        world: build_battle
+        x: '-42.3149'
+        y: '-60.0'
+        z: '-1.6449'
+        yaw: '4.3267'
+        pitch: '0.0'
+      spawned: true
+    traitnames: location,scoreboardtrait,spawned,type,mounttrait
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: false

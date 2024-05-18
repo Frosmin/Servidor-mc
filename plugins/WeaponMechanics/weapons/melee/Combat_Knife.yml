@@ -1,0 +1,57 @@
+Combat_Knife:
+  Info:
+    Weapon_Item:
+      Type: "FEATHER"
+      Name: "<gold>Combat Knife"
+      Lore:
+        - "<gray>Standard military issue, employed for fast, quiet, and deadly wetwork."
+        - ""
+        - "<gray>Weapon Statistics <gold>-<gray> 29.2"
+        - "<gold>➣<gray> 90 <gold>⟸ <gray>Damage"
+        - "<gold>➣<gray> 4 <gold>⟸ <gray>Range in blocks"
+        - "<gold>➣<gray> 80 <gold>⟸ <gray>Mobility"
+      Unbreakable: true
+      Hide_Flags: true
+      Attributes:
+        - "GENERIC_MOVEMENT_SPEED 0.004"
+        - "GENERIC_ATTACK_SPEED -3"
+      Deny_Use_In_Crafting: true
+    Weapon_Get_Mechanics:
+      - "Sound{sound=ITEM_ARMOR_EQUIP_CHAIN, pitch=0.75, listeners=Source{}}"
+  Skin:
+    Default:
+      Custom_Model_Data: -10  # negative numbers work fine for Custom Model Data
+  Damage:
+    Base_Damage: 13
+    Armor_Damage: 4
+    Victim_Mechanics:
+      Sounds:
+        - "Sound{sound=ENTITY_ARROW_SHOOT} @Target{}"
+        - "Sound{sound=ENTITY_SLIME_JUMP} @Target{}"
+    Head:
+      Bonus_Damage: 7
+      Victim_Mechanics:
+        - "Firework{effects=[(shape=BALL, color=RED, flicker=true, trail=true)]} @Source{offset=0 2 0}"
+    Backstab:
+      Bonus_Damage: 10
+      Victim_Mechanics:
+        - "Firework{effects=[(shape=BURST, color=BLACK, flicker=true, trail=true)]} @Source{offset=0 2 0}"
+  Melee:
+    Enable_Melee: true
+    Melee_Range: 4
+    Melee_Hit_Delay: 20
+    Melee_Miss:
+      Mechanics:
+        - "Sound{sound=BLOCK_ANVIL_HIT, noise=0.1}"
+      Melee_Miss_Delay: 20
+
+  # The following options are added by WeaponMechanicsCosmetics, and you will
+  # not see the changes take effect until you purchase it.
+
+  Show_Time:
+    Melee_Miss_Delay:
+      Item_Cooldown: true
+      Exp: true
+    Melee_Hit_Delay:
+      Item_Cooldown: true
+      Exp: true

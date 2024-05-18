@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 200.87.92.18
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1715052023482
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1715184171382
+  login: 1715184111441
+money: '0'
+lastlocation:
+  world: bcc1ad21-819e-4792-9982-70525727639f
+  world-name: inicio_the_end
+  x: 18.663845584534318
+  y: 62.0
+  z: 5.479922078120267
+  yaw: -140.63243103027344
+  pitch: 10.908720970153809
+logoutlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: 0.0
+  y: 158.0
+  z: 0.0
+  yaw: 0.5241590738296509
+  pitch: 6.379643440246582
+last-account-name: Dayana

@@ -1,0 +1,23 @@
+{
+    "surface_builder": "minecraft:grass",
+    "depth": 0.125,
+    "scale": 0.05,
+    "temperature": 0.45,
+    "downfall": 0.1,
+    "creature_spawn_probability": -1,
+    "has_precipitation": true,
+    "precipitation": "rain",
+    "category": "taiga",
+    "effects": {
+        "sky_color": -8869889,
+        "fog_color": -4138753,
+        "water_color": -12618012,
+        "water_fog_color": -16448205,
+        "grass_color": -10828784
+    },
+    "starts": [],
+    "spawners": {},
+    "spawn_costs": {},
+    "carvers": {},
+    "features": []
+}

@@ -1,0 +1,273 @@
+## Thanks for using our plugins! ~Tigerpanzer_02 from Plugily Projects
+#
+#         Build Battle configuration file
+#               Edit it by yourself
+#          Read descriptions CAREFULLY
+#   You don't want to break anything, do you?
+#
+
+# Locale of BuildBattle language. By default it's english.
+# Available localizations:
+#    default - English language. Uses 'language.yml'.
+#    See https://github.com/Plugily-Projects/locale_storage/tree/master/plugins/minecraft/buildbattle
+#    Use filename of the language e.g. de_DE.yml -> locale: de_DE
+locale: default
+
+# Should we display a boss bar with additional arena information?
+Bossbar:
+  Display: true
+  # Interval in seconds between messages
+  Interval: 10
+
+
+# Should we hook into bungeecord? (If you wanna use arena per server option)
+# This option will let you access bungee.yml and its options.
+# You STILL need to use external addon for HUB server game signs
+# Check here for more info: https://wiki.plugily.xyz/
+Bungee-Mode: false
+
+
+# Enable Inventory Manager for your games? (VERY USEFUL feature for MULTI ARENA)
+# This saves inventory of players and restores it after player leaves arena.
+# Saved elements: max health, health, food, experience, full inventory, armor contents, fire ticks, active potions
+Inventory-Manager: true
+
+
+Commands:
+  # Commands which can be used in game, remove all of them to disable (only works if Block.In-Game.Commands = true)
+  Whitelist:
+    - me
+    - help
+  # Enable and Disable predefined shortened commands or add your own
+  Shorter:
+    '1':
+      Short: "start"
+      Executes: "buildbattleadmin forcestart"
+      Enabled: true
+    '2':
+      Short: "leave"
+      Executes: "buildbattle leave"
+      Enabled: true
+    '3':
+      Short: "stats"
+      Executes: "buildbattle stats"
+      Enabled: false
+    '4':
+      Short: "top"
+      Executes: "buildbattle top"
+      Enabled: true
+
+
+# Block some functions of your players
+Block:
+  In-Game:
+    # Should we block every not plugin associated commands in game?
+    Commands: true
+    # Should the leave command be blocked inside arena?
+    Leave: false
+    # Cancels Item Movement into player crafting, enchantment tables, anvils ...
+    Item-Move: true
+
+
+# Enable this option when you're using MySQL, otherwise it won't work.
+# Be careful when changing this because there is NO migrator between
+# flat file and MySQL for player stats.
+# If this option is disabled it means all stats will be saved as flat file!
+Database: false
+
+
+# Should we enable in game rewards? See rewards.yml for more...
+# You should also check out our script engine tutorial for rewards! https://tutorial.plugily.xyz
+Rewards: false
+
+
+Chat:
+  # Enable in game (eg. '[KIT][LEVEL] Tigerpanzer_02: hey') special formatting?
+  # Formatting is configurable in language.yml
+  # You can use PlaceholderAPI placeholders in chat format!
+  Format: true
+  Separate:
+    # Should we enable a separate arena chat for players inside a arena
+    # Useful on multi arena servers that don't want the same chat for all players on the server
+    Arena: true
+    # Should spectators only write with other spectators
+    Spectators: true
+
+
+# Should we fire some cool fireworks at locations of every player at special events such as the game end?
+Firework: true
+
+
+# Should blocks behind game signs change their color based on game state?
+# They will change color to:
+# - white (waiting for players) stained glass
+# - yellow (starting) stained glass
+# - orange (in game) stained glass
+# - gray (ending) stained glass
+# - black (restarting) stained glass
+# or define your own at signs.yml!
+Sign-Block-States: true
+
+
+# Should holiday events for the plugin be enabled?
+# Eg. 4 days before and 4 days after Halloween special effects
+# for death, spooky! There are more holiday events! Check wiki!
+# Wiki: -
+Holidays: true
+
+
+# Should we create leaderboards out of the stats?
+Leaderboard: true
+
+
+Parties:
+  # Should we try to hook into your current party plugin? (Supports well know party plugins, see wiki!)
+  # It will group up all players with the party leader. The party leader can join with the whole party!
+  External: true
+  # Should we enable our own party system that can be only used for this plugin?
+  # Check the wiki for commands
+  Own: false
+
+
+Damage:
+  # Should players get fall damage?
+  Fall: false
+  # Should players get drowning damage?
+  Drowning: false
+  # Should players get fire damage?
+  Fire: false
+  # Should players lose food ingame & get damage?
+  Hunger: false
+
+Cycle:
+  # Should we make permanent clear weather on all worlds where our arenas are?
+  Weather: false
+  # Should the time on the world your arenas are modified to stay at the same time?
+  Daylight:
+    Enable: false
+    Time: 10000
+
+
+# Configure the time of the phases
+Time-Manager:
+  # At what intervals should players be notified of the remaining build time?
+  Time-Left-Intervals: [ 15, 30, 60, 300, 240, 180, 120 ]
+  Waiting: 20
+  Starting: 60
+  Shorten-Waiting-Full: 15
+  Shorten-Waiting-Force: 5
+  Ending: 10
+  Restarting: 5
+  Guess-The-Build:
+    Voting:
+      # Total time of voting for themes before starting
+      Theme: 25
+    # Total time of delay between rounds
+    Round-Delay: 5
+    # After guessing the time will be shortened by
+    Guess: 10
+    # Total build time
+    In-Game: 120
+  Classic:
+    Voting:
+      # Total time of voting for themes before starting
+      Theme: 25
+      # Total time of voting per player plot
+      Plot: 20
+    # Total build time
+    In-Game: 200
+  Teams:
+    Voting:
+      # Total time of voting for themes before starting
+      Theme: 25
+      # Total time of voting per player plot
+      Plot: 20
+    # Total build time
+    In-Game: 540
+
+
+Mob:
+  # Should mob spawning on arenas be enabled?
+  Spawn: false
+  # The list of restricted entities that can't be spawned in game
+  Restricted:
+    - wither
+  # Max amount of mobs to spawn per plot
+  Max-Amount: 20
+
+
+Particle:
+  # How many particle effects should have one spawned particle
+  Effects: 20
+  # Max amount of particles to spawn
+  Max-Amount: 25
+  # Time of refreshing particles
+  Refresh-Rate: 10
+
+
+# How many more points will the first x guessers get (pre-defined first 3 players)?
+Guessing-Points:
+  Builder: 1
+  1: 3
+  2: 2
+  3: 1
+
+
+
+Floor:
+  # Default floor material name
+  Material: log
+  # Blacklisted floor materials, you can't use them for the floor.
+  Blacklist:
+    - MOB_SPAWNER
+    - TNT
+    - AIR
+
+
+# Blacklisted item names, you can't use them while building.
+Items:
+  Blacklist:
+    - tnt
+    - water
+
+
+# Enable another Head menu instead of our
+Head-Menu:
+  Custom: false
+  # The command that should be executed on the player
+  Command: heads
+
+
+# Enable a command on report item click
+Report:
+  Commands: false
+  # The amount of reports that the target needs to execute this command.
+  # Leave it -1 to perform this command immediately.
+  Amount: 3
+  # The command that should be executed - Placeholder: %reported%, %reporter%
+  Execute: kick %reported%
+
+Plot:
+  #Announce the plot owner after voting stage, so it's hidden while on voting
+  #default false - plot owner will be announced at the beginning
+  Hide-Owner: false
+  # Allows players to move outside an arena while building.
+  # default false - moving outside plot will teleport back
+  Move-Outside: false
+
+
+Update-Notifier:
+  # Should we check for updates on plugin start/after admin join?
+  # You REALLY should have this true!
+  Enabled: true
+  # Should we inform you when beta version is out?
+  # BETA IS NOT ALWAYS AS STABLE AS NORMAL RELEASE!
+  Notify-Beta-Versions: true
+
+
+# Don't edit it. But who's stopping you? It's your server!
+# Really, don't edit ;p
+# You edited it, huh? Next time hurt yourself!
+Do-Not-Edit:
+  File-Version: 1
+  Core-Version: 4

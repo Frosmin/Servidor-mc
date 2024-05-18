@@ -1,0 +1,232 @@
+# PlayerAuctions by Olzie-12
+# https://www.spigotmc.org/resources/83073
+# We also have a discord server for help: https://olziedev.com/discord or check docs https://docs.olziedev.com/projects/playerauctions
+# Also if you find any bugs be happy to report them I will fix them :)
+# Made with love
+
+pauction:
+  # Should we enable the gui?
+  enabled: true
+  # What is the name of the gui?
+  name: "playerauctions"
+  # The title of the gui (Can use color codes) the variable "[category]" will only work if it is enabled.
+  title: "&b&lPlayer Auctions - [category] ([page]/[pages])"
+  # What is the size of this GUI? (multiples of 9 can only go up to 54)
+  size: 54
+  # What are the actions when this menu is opened up?
+  open-actions: []
+  # What are the actions when this menu is closed?
+  close-actions: []
+  # should /ah open the gui? if so you just do /ah open (if enabled)
+  override-pauction: true
+  # Should the page items be removed if there is page for that button. E.g. you're on page 0, it won't show the previous item.
+  # You can also put an item where this page item is, and it'll only show if the page item isn't there.
+  show-needed-page-items: false
+  # Should the menu just instantly cancel the auction and collect the item for the player?
+  cancel-collect: false
+  # What are the blacklisted slots that auctions will not appear in the GUI?
+  # This is useful if you want to add empty slots in the middle of the GUI instead of having an item there instead.
+  blacklisted-slots:
+    - ""
+
+  # Searching for auctions through the GUI
+  search:
+    # Should the feature be enabled?
+    # You will need ProtocolLib for this to work.
+    enabled: true
+    # What is the title for the inventory?
+    title: "&b&lSearch [search] - [category] ([page]/[pages])"
+    # What are the premade lines in the sign? %search% is the variable they have to enter the auction in.
+    lines:
+      - "%search%"
+      - "----------------"
+      - "Please enter a"
+      - "search result."
+    # This is the sign material that will be used for the search. This is only allowed to be a sign.
+    material: OAK_SIGN
+
+    item:
+      material: OAK_SIGN
+      data: 0
+      name: "&bSearch"
+      lore:
+        - "&eClick&b to search for an auction."
+        - " "
+        - "&bYou can search for auctions by:"
+        - "&e* Full IGN"
+        - "&e* Item name/Item type"
+        - "&e* Auction ID"
+      slot: 46
+      amount: 1
+      glowing: false
+
+  # Preview an item's contents.
+  preview:
+    # Should we enable the gui?
+    enabled: true
+    # What is the name of the gui?
+    name: "preview"
+    # What is the title of the inventory?
+    title: "&b&lPreview"
+    # The variable "[preview]" will display the message below if the auction can be previewed.
+    preview: "&eRight click&b to preview contents."
+    # The variable "[preview]" will display the message below if the actuin cannot be previewed.
+    no-preview: ""
+
+  icon:
+    price-per-item: "([price_item] per item)"
+    none-price-per-item: ""
+    enchants-entry: "&d[enchant] [level]\n"
+    no-enchants-entry: "&cNone"
+    repair-cost: "&bRepair Cost: &e[repair_cost] XP"
+    no-repair-cost: ""
+
+    item-flags:
+      - "HIDE_ATTRIBUTES"
+    name: ""
+    lore:
+      - "[lore]"
+      - "&7--------------------------"
+      - "&b[delauction]"
+      - "&eClick&b to purchase."
+      - " "
+      - "&bID: &e[id]"
+      - "&bSeller: &e[seller]"
+      - "&bAmount: &e[amount]x"
+      - "&bPrice: &e[price] [price_item]"
+      - "&bExpires in: &e[expire]"
+      - "&bAuctioned on: &e[date]"
+      - "&bCategory: &e[categories]"
+      - "[repair_cost]"
+      - "&7--------------------------"
+
+    lore-bidding:
+      - "[lore]"
+      - "&7--------------------------"
+      - "&b[delauction]"
+      - "&eClick&b to offer a bid."
+      - " "
+      - "&bID: &e[id]"
+      - "&bSeller: &e[seller]"
+      - "&bHighest bidder: &e[bidder]"
+      - "&bCurrent bid: &e[price]"
+      - "&bExpires in: &e[expire]"
+      - "&bAuctioned on: &e[date]"
+      - "&bCategory: &e[categories]"
+      - "&7--------------------------"
+    # The variable "[delauction]" will display the message below if they do have permission to cancel the auction.
+    del-auction: "&eShift+Right&b to cancel this auction.\n[preview]"
+    # The variable "[delauction]" will display the message below if they don't have permission to cancel the auction.
+    del-not-auction: "[preview]"
+    # What are the commands that are ran when a player clicks on an auction?
+    commands: []
+
+  clickable-items:
+    next-page:
+      # This is the name of the next page item
+      # If you wish to disable any of these please set them the material to "AIR"
+      name: "&bNext Page"
+      # this is the material of the next page item. valid material names: https://javadocs.olziedev.com/spigot/latest/org/bukkit/Material.html
+      material: ARROW
+      data: 0
+      lore:
+        - "&eClick&b to go to the next page."
+      slot: 50
+      amount: 1
+      glowing: false
+      # These only work if the skull is a PLAYER_HEAD and the data is 3!
+      #texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWE0ZjY4YzhmYjI3OWU1MGFiNzg2ZjlmYTU0Yzg4Y2E0ZWNmZTFlYjVmZDVmMGMzOGM1NGM5YjFjNzIwM2Q3YSJ9fX0= - Skull texture
+      #owner: Next - Skull owner
+    previous-page:
+      name: "&bPrevious page"
+      material: BARRIER
+      data: 0
+      lore:
+        - "&eClick&b to go to the previous page."
+      slot: 48
+      amount: 1
+      glowing: false
+    refresh:
+      name: "&bRefresh"
+      material: SUNFLOWER
+      data: 0
+      lore:
+        - "&eClick&b to refresh the panel."
+      slot: 49
+      amount: 1
+      glowing: false
+      cooldown: 3
+    category:
+      # If you have enabled the category GUI then this item wil appear into the main GUI.
+      name: "&bCategory menu"
+      material: BOOK
+      data: 0
+      lore:
+        - "&eClick&b to go back to the category menu."
+      slot: 45
+      amount: 1
+      glowing: false
+    category-swapper:
+      # If you have enabled the category GUI then this item wil appear into the main GUI.
+      name: "&bCategory"
+      material: BOOK
+      data: 0
+      lore:
+        - "&eClick&b to switch through the categories."
+        - " "
+        - "%categories%"
+      slot: 51
+      amount: 1
+      glowing: false
+      current-category: "&e%category%"
+      other-category: "&d%category%"
+    myauctions:
+      # If you have enabled the my auctions GUI then this item wil appear into the main GUI.
+      name: "&bMy auctions"
+      material: BEACON
+      data: 0
+      lore:
+        - "&eClick&b to view your auctions."
+      slot: 53
+      amount: 1
+      glowing: false
+    sort:
+      name: "&bSort"
+      material: HOPPER
+      data: 0
+      lore:
+        - "&eClick&b to sort the GUI in a specific format."
+        - "&bCurrent: &e%sort%"
+      slot: 52
+      amount: 1
+      glowing: false
+
+  items:
+    1:
+      # This is the name of the item.
+      name: " "
+      # This is the item material. To disable set this to AIR
+      material: YELLOW_STAINED_GLASS_PANE
+      # This is the data item
+      data: 4
+      # You can add lores!
+      # lore:
+      #   - "&bThis is a pane."
+      slot: [45, 47, 51, 53]
+      # What is the stack amount?
+      amount: 1
+      # commands that will be executed on click.
+      # [server] means the command is executed as the console
+      # [player] means the command is executed as the player
+      # commands:
+      #   - "[server] msg %player% you clicked this item!"
+      glowing: false
+      # These only work if the skull is a PLAYER_HEAD and the data is 3!
+      #texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTZmOGFmYjI3YmFmYzc3YzJiODI1OTljMmY3YjhmMWY2ODMxMGU2YWE5MDRmMDUxYjA3YWIxYzJiNmIifX19 - Skull texture
+      #owner: Glass - Skull owner
+    2:
+      name: " "
+      material: LIGHT_BLUE_STAINED_GLASS_PANE
+      data: 3
+      slot: [46, 52]
+      amount: 1

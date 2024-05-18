@@ -1,0 +1,1408 @@
+# PlayerAuctions by Olzie-12 zh_TW by andy
+# https://www.spigotmc.org/resources/83073
+# We also have a discord server for help: https://olziedev.com/discord or check docs https://docs.olziedev.com/projects/playerauctions
+# Also if you find any bugs be happy to report them I will fix them :)
+# Made with love
+
+# If you want to disable any message just set it to nothing. by doing
+# list: "" <- This will no longer send a message.
+
+
+# every singe message in the plugin is here.
+# make sure you use "" to end of every string
+# Also you can use colour codes <3
+
+# To use hex color codes you will need to do
+# '{#HEX} text"
+
+lang:
+  cancel-chat-wait: "取消"
+  chat-wait-cancelled: "&cCancelled your request!"
+  friendly-max-auctions: "無限"
+  prefix: "&b&l線上商城 &7»"
+  auction-confirmation: "%prefix% &a出售此物品將花費您 &e%price%&a，再次執行指令確認操作."
+  auction-sell: "%prefix% &a開始在線上商城上以 &e%price%&a 的價格出售該物品!"
+  auction-added: "%prefix% &a您在市場上的類似拍賣中添加了 &e%amount%&a 件商品，該商品的總價現在是 &e%price%&a，這相當於每件 &e%priceper%&a."
+  auction-bid: "%prefix% &a開始在拍賣會上以 &e%price%&a 出價該項目!"
+  reloaded: "%prefix% &a成功重新加載所有配置!"
+  money-taken: "%prefix% &a%price% 已從您的銀行帳戶中提取."
+  auctions-cancelled: "%prefix% &a您的拍賣已被取消!"
+  auctions-collected: "%prefix% &a已成功回收 &e%items%&a 個過期物品!"
+  bought-item: "%prefix% &a以 &e%price%&a 的價格成功購買了該商品!"
+  someone-purchased: "%prefix% &e%player%&a 剛剛以 &e%price%&a 的價格購買了 &e%item% x%amount%&a!"
+  offline-title: "%prefix% &b當你離線時..."
+  bidder: "%prefix% &e%player%&a 剛剛以 &e%price% 的價格為您提供了 &e%item%&a 的出價"
+  bidded: "%prefix% &a您剛剛向 &e%item%&a 出價，價格為 &e%price%"
+  bid-success: "%prefix% &e%player%&a 以 &e%price% 的價格贏得了您的 &e%item%&a 拍賣"
+  bidder-success: "%prefix% &a您以 &e%price%&a 的價格贏得了 &e%item%&a 的拍賣 檢查您的過期拍賣."
+  earned-offline: "%prefix% &a您總共賺了 &e%total%&a!"
+  given-more-auctions-success: "%prefix% &a成功給予 &e%player%&a 額外的 &e%extra%&a 拍賣和總計 &e%total%&a!"
+  dbexec-successful: "%prefix% &a成功更新 &d%count% &a行. &a請執行 &d/%cmd% reload&a 執行更改."
+  current-amount-of-auctions:
+  - "%prefix% &7&l&m----------&7&l[ &b&l玩家拍賣 &7&l]&m----------"
+  - "%prefix% &b您目前有最多 &e%auctionsmax%&b (&e%staticauctions% static&b) 拍賣."
+  - "%prefix% &b您目前已使用 &e%auctionsused%&b 拍賣."
+  - "%prefix% &7&l&m----------&7&l[ &b&l玩家拍賣 &7&l]&m----------"
+  current-amount-of-auctions-other:
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+    - "%prefix% &d%player%&b a actuellement un maximum de &e%auctionsmax%&b (&e%staticauctions% statique&b) ventes aux enchères."
+    - "%prefix% &d%player%&b a actuellement utilisé &e%auctionsused%&b ventes aux enchères."
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+  amount-auctions-others-alert: "&c%player% est actuellement hors ligne, montrant seulement leurs enchères maximales comme un montant statique."
+
+  # the help menu for a player
+  # The variable %cmd% is any command from the config.yml :)
+  help-player:
+  - "%prefix% &7&l&m----------&7&l[ &b&l玩家拍賣 &7&l]&m----------"
+  - "%prefix% &e/%cmd% help &7&l- &b顯示此菜單."
+  - "%prefix% &e/%cmd% sell <price> &7&l- &b出售物品."
+  - "%prefix% &e/%cmd% bid <price> &7&l- &b投標項目."
+  - "%prefix% &e/%cmd% auction &7&l- &b通過 GUI 拍賣."
+  - "%prefix% &e/%cmd% cancel [id] [player] &7&l- &b取消您的拍賣物品."
+  - "%prefix% &e/%cmd% collect &7&l- &b領取您取消的物品."
+  - "%prefix% &e/%cmd% open [category] [action] &7&l- &b打開玩家拍賣GUI."
+  - "%prefix% &e/%cmd% amount &7&l- &b檢查您有多少拍賣."
+  - "%prefix% &e/%cmd% reload &7&l- &b重新加載所有配置文件."
+  - "%prefix% &7&l&m----------&7&l[ &b&l玩家拍賣 &7&l]&m----------"
+
+  # the help menu for console
+  # The variable %cmd% is any command from the config.yml :)
+  help-console:
+  - "%prefix% &7&l&m----------&7&l[ &b&l玩家拍賣 &7&l]&m----------"
+  - "%prefix% &e/%cmd% help &7&l- &b顯示此菜單."
+  - "%prefix% &e/%cmd% open [category] [action] &7&l- &b打開玩家拍賣GUI."
+  - "%prefix% &e/%cmd% reload &7&l- &b重新加載所有配置文件."
+  - "%prefix% &7&l&m----------&7&l[ &b&l玩家拍賣 &7&l]&m----------"
+
+  # error messages.
+  errors:
+    command-syntax: "%prefix% &c不正確的語法，使用:\n%syntax%"
+    player-only: "%prefix%&c 你必須是玩家!"
+    console-only: "%prefix% &c此指令只能從控制台執行!"
+    not-a-number: "%prefix%&c 那不是一個數字!"
+    no-permission: "%prefix%&c 您沒有 &4%permission%&c 來執行此操作! %reason%"
+    too-many-auctions: "%prefix%&c 由於您的權限/靜態數量，您不能出售這麼多商品，您只能出售 &4%amount%!"
+    money-not-enough-sell: "%prefix%&c 您沒有 %price% 可以出售此商品!"
+    money-not-enough-buy: "%prefix%&c 您沒有購買此商品的 %price%!"
+    money-not-enough-bid: "%prefix%&c 您沒有 %price% 對該物品競標!"
+    disabled-world-sell: "%prefix%&c 你不能在這個世界出售物品!"
+    invalid-item: "%prefix%&c 這是一個無效的物品出售!"
+    damaged-item: "%prefix%&c You cannot sell a damaged item!"
+    invalid-gamemode: "%prefix%&c 這是一個無效的遊戲模式出售!"
+    invalid-category: "%prefix%&c 這是一個無效的類別"
+    min-price: "%prefix%&c 您需要將價格設置為至少 %min%!"
+    max-price: "%prefix%&c 您需要將價格設置為低於 %max%!"
+    no-auctions: "%prefix%&c 您目前沒有拍賣的商品!"
+    no-expired-auctions: "%prefix%&c 您目前沒有退回的過期拍賣品!"
+    purchase-own: "%prefix%&c 您不能購買自己的商品!"
+    bid-own: "%prefix%&c 您不能對自己的商品出價!"
+    sell-cooldown: "%prefix%&c 您目前有拍賣物品的冷卻時間! (%cooldown% 剩餘)"
+    bid-cooldown: "%prefix%&c 您目前有一個競標物品的冷卻時間! (%cooldown% 剩餘)"
+    offer-cooldown: "%prefix%&c 您目前有一個出價的冷卻時間! (%cooldown% 剩餘)"
+    purchase-cooldown: "%prefix%&c 您目前有購買物品的冷卻時間! (%cooldown% 剩餘)"
+    no-player-joined: "%prefix% &c該玩家不存在!"
+    bidder-no-money: "%prefix% &c%player% 沒有足夠的錢購買您的 %item%，他們的報價已被刪除."
+    bid-no-money: "%prefix% &c您沒有足夠的錢用於 %item% 的出價，您的出價已被刪除."
+    min-bid: "%prefix% &c你不能提供那麼多！ 您可以出價的最低出價為 $1,000"
+    gui-cooldown: "%prefix% &c您需要等待幾秒鐘才能再次使用它."
+    not-enough-add-bid: "%prefix% &c您沒有足夠的錢將 %amount% 添加到 %bid%"
+    cancel-bid: "%prefix% &c您無法在有人出價時取消此拍賣!"
+    auction-doesnt-exist: "%prefix% &cThat auction doesn't exist anymore!"
+    dbexec-failed: "%prefix% &c執行此查詢時出錯. %error%"
+
+# Here you can specify different types of messages per no-permission message, using the specific permission node.
+# Or you may set it to blank to not send a message at all.
+# no-permission:
+#   pa.purchase: "You do not have permission to purchase auctions!"
+
+n/a:
+  no-seller: "N/A"
+  no-expire: "N/A"
+  no-category: "N/A"
+  no-displayname: "%player%"
+
+# Here you can configure the item name formatting, please note that you will have to add the items below that you want to change
+# You can view the list of the items here: https://javadocs.olziedev.com/spigot/latest/org/bukkit/Material.html
+item-names:
+  AIR: 空氣
+  STONE: 石頭
+  GRANITE: 花崗岩
+  POLISHED_GRANITE: 拋光花崗岩
+  DIORITE: 閃長岩
+  POLISHED_DIORITE: 拋光閃長岩
+  ANDESITE: 安山岩
+  POLISHED_ANDESITE: 拋光安山岩
+  GRASS_BLOCK: 草地
+  DIRT: 泥土
+  COARSE_DIRT: 粗泥
+  PODZOL: 灰壤
+  CRIMSON_NYLIUM: 緋紅菌絲石
+  WARPED_NYLIUM: 扭曲菌絲石
+  COBBLESTONE: 鵝卵石
+  OAK_PLANKS: 橡木材
+  SPRUCE_PLANKS: 杉木材
+  BIRCH_PLANKS: 樺木材
+  JUNGLE_PLANKS: 叢林木材
+  ACACIA_PLANKS: 相思木材
+  DARK_OAK_PLANKS: 黑橡木材
+  CRIMSON_PLANKS: 緋紅蕈木材
+  WARPED_PLANKS: 扭曲蕈木材
+  OAK_SAPLING: 橡木樹苗
+  SPRUCE_SAPLING: 杉木樹苗
+  BIRCH_SAPLING: 樺木樹苗
+  JUNGLE_SAPLING: 叢林木樹苗
+  ACACIA_SAPLING: 相思木樹苗
+  DARK_OAK_SAPLING: 黑橡木樹苗
+  BEDROCK: 基岩
+  SAND: 沙
+  RED_SAND: 紅沙
+  GRAVEL: 礫石
+  GOLD_ORE: 金礦
+  IRON_ORE: 鐵礦
+  COAL_ORE: 煤礦
+  NETHER_GOLD_ORE: 地獄金礦
+  OAK_LOG: 橡木原木
+  SPRUCE_LOG: 杉木原木
+  BIRCH_LOG: 樺木原木
+  JUNGLE_LOG: 叢林木原木
+  ACACIA_LOG: 相思木原木
+  DARK_OAK_LOG: 黑橡木原木
+  CRIMSON_STEM: 緋紅蕈柄
+  WARPED_STEM: 扭曲蕈柄
+  STRIPPED_OAK_LOG: 剝皮橡木原木
+  STRIPPED_SPRUCE_LOG: 剝皮杉木原木
+  STRIPPED_BIRCH_LOG: 剝皮樺木原木
+  STRIPPED_JUNGLE_LOG: 剝皮叢林木原木
+  STRIPPED_ACACIA_LOG: 剝皮相思木原木
+  STRIPPED_DARK_OAK_LOG: 剝皮黑橡木原木
+  STRIPPED_CRIMSON_STEM: 剝皮緋紅蕈柄
+  STRIPPED_WARPED_STEM: 剝皮扭曲蕈柄
+  STRIPPED_OAK_WOOD: 剝皮橡木塊
+  STRIPPED_SPRUCE_WOOD: 剝皮杉木塊
+  STRIPPED_BIRCH_WOOD: 剝皮樺木塊
+  STRIPPED_JUNGLE_WOOD: 剝皮叢林木塊
+  STRIPPED_ACACIA_WOOD: 剝皮相思木塊
+  STRIPPED_DARK_OAK_WOOD: 剝皮黑橡木塊
+  STRIPPED_CRIMSON_HYPHAE: 剝皮緋紅菌絲體
+  STRIPPED_WARPED_HYPHAE: 剝皮扭曲菌絲體
+  OAK_WOOD: 橡木塊
+  SPRUCE_WOOD: 杉木塊
+  BIRCH_WOOD: 樺木塊
+  JUNGLE_WOOD: 叢林木塊
+  ACACIA_WOOD: 相思木塊
+  DARK_OAK_WOOD: 黑橡木塊
+  CRIMSON_HYPHAE: 緋紅菌絲體
+  WARPED_HYPHAE: 扭曲菌絲體
+  OAK_LEAVES: 橡木樹葉
+  SPRUCE_LEAVES: 杉木樹葉
+  BIRCH_LEAVES: 樺木樹葉
+  JUNGLE_LEAVES: 叢林木樹葉
+  ACACIA_LEAVES: 相思木樹葉
+  DARK_OAK_LEAVES: 黑橡木樹葉
+  SPONGE: 海綿
+  WET_SPONGE: 濕海綿
+  GLASS: 玻璃
+  LAPIS_ORE: 青金石礦
+  LAPIS_BLOCK: 青金石方塊
+  DISPENSER: 發射器
+  SANDSTONE: 砂岩
+  CHISELED_SANDSTONE: 浮雕砂岩
+  CUT_SANDSTONE: 切割砂岩
+  NOTE_BLOCK: 音階盒
+  POWERED_RAIL: 動力鐵軌
+  DETECTOR_RAIL: 感測鐵軌
+  STICKY_PISTON: 黏性活塞
+  COBWEB: 蜘蛛網
+  GRASS: 草
+  FERN: 蕨
+  DEAD_BUSH: 枯灌木
+  SEAGRASS: 海草
+  SEA_PICKLE: 海鞘
+  PISTON: 活塞
+  WHITE_WOOL: 白色羊毛
+  ORANGE_WOOL: 橙色羊毛
+  MAGENTA_WOOL: 洋紅色羊毛
+  LIGHT_BLUE_WOOL: 淺藍色羊毛
+  YELLOW_WOOL: 黃色羊毛
+  LIME_WOOL: 淺綠色羊毛
+  PINK_WOOL: 粉紅色羊毛
+  GRAY_WOOL: 灰色羊毛
+  LIGHT_GRAY_WOOL: 淺灰色羊毛
+  CYAN_WOOL: 青色羊毛
+  PURPLE_WOOL: 紫色羊毛
+  BLUE_WOOL: 藍色羊毛
+  BROWN_WOOL: 棕色羊毛
+  GREEN_WOOL: 綠色羊毛
+  RED_WOOL: 紅色羊毛
+  BLACK_WOOL: 黑色羊毛
+  DANDELION: 蒲公英
+  POPPY: 罌粟
+  BLUE_ORCHID: 藍色蝴蝶蘭
+  ALLIUM: 紫紅球花
+  AZURE_BLUET: 雛草
+  RED_TULIP: 紅色鬱金香
+  ORANGE_TULIP: 橙色鬱金香
+  WHITE_TULIP: 白色鬱金香
+  PINK_TULIP: 粉紅色鬱金香
+  OXEYE_DAISY: 雛菊
+  CORNFLOWER: 矢車菊
+  LILY_OF_THE_VALLEY: 鈴蘭
+  WITHER_ROSE: 凋零玫瑰
+  BROWN_MUSHROOM: 棕色蘑菇
+  RED_MUSHROOM: 紅色蘑菇
+  CRIMSON_FUNGUS: 緋紅蕈菇
+  WARPED_FUNGUS: 扭曲蕈菇
+  CRIMSON_ROOTS: 緋紅蕈根
+  WARPED_ROOTS: 扭曲蕈根
+  NETHER_SPROUTS: 地獄芽
+  WEEPING_VINES: 垂泣藤
+  TWISTING_VINES: 扭曲藤
+  SUGAR_CANE: 甘蔗
+  KELP: 海帶
+  BAMBOO: 竹子
+  GOLD_BLOCK: 黃金方塊
+  IRON_BLOCK: 鐵方塊
+  OAK_SLAB: 橡木半磚
+  SPRUCE_SLAB: 杉木半磚
+  BIRCH_SLAB: 樺木半磚
+  JUNGLE_SLAB: 叢林木半磚
+  ACACIA_SLAB: 相思木半磚
+  DARK_OAK_SLAB: 黑橡木半磚
+  CRIMSON_SLAB: 緋紅蕈木半磚
+  WARPED_SLAB: 扭曲蕈木半磚
+  STONE_SLAB: 石半磚
+  SMOOTH_STONE_SLAB: 平滑石半磚
+  SANDSTONE_SLAB: 砂岩半磚
+  CUT_SANDSTONE_SLAB: 切割砂岩半磚
+  PETRIFIED_OAK_SLAB: 石化橡木半磚
+  COBBLESTONE_SLAB: 鵝卵石半磚
+  BRICK_SLAB: 紅磚半磚
+  STONE_BRICK_SLAB: 石磚半磚
+  NETHER_BRICK_SLAB: 地獄磚半磚
+  QUARTZ_SLAB: 石英半磚
+  RED_SANDSTONE_SLAB: 紅砂岩半磚
+  CUT_RED_SANDSTONE_SLAB: 切割紅砂岩半磚
+  PURPUR_SLAB: 紫珀半磚
+  PRISMARINE_SLAB: 海磷石半磚
+  PRISMARINE_BRICK_SLAB: 海磷石磚半磚
+  DARK_PRISMARINE_SLAB: 暗海磷石半磚
+  SMOOTH_QUARTZ: 平滑石英方塊
+  SMOOTH_RED_SANDSTONE: 平滑紅砂岩
+  SMOOTH_SANDSTONE: 平滑砂岩
+  SMOOTH_STONE: 平滑石頭
+  BRICKS: 紅磚
+  TNT: TNT
+  BOOKSHELF: 書櫃
+  MOSSY_COBBLESTONE: 青苔鵝卵石
+  OBSIDIAN: 黑曜石
+  TORCH: 火把
+  END_ROD: 終界燭
+  CHORUS_PLANT: 歌萊枝
+  CHORUS_FLOWER: 歌萊花
+  PURPUR_BLOCK: 紫珀方塊
+  PURPUR_PILLAR: 紫珀柱
+  PURPUR_STAIRS: 紫珀階梯
+  SPAWNER: 生怪磚
+  OAK_STAIRS: 橡木階梯
+  CHEST: 儲物箱
+  DIAMOND_ORE: 鑽石礦
+  DIAMOND_BLOCK: 鑽石方塊
+  CRAFTING_TABLE: 工作台
+  FARMLAND: 耕地
+  FURNACE: 熔爐
+  LADDER: 梯子
+  RAIL: 鐵軌
+  COBBLESTONE_STAIRS: 鵝卵石階梯
+  LEVER: 控制桿
+  STONE_PRESSURE_PLATE: 石製壓力板
+  OAK_PRESSURE_PLATE: 橡木壓力板
+  SPRUCE_PRESSURE_PLATE: 杉木壓力板
+  BIRCH_PRESSURE_PLATE: 樺木壓力板
+  JUNGLE_PRESSURE_PLATE: 叢林木壓力板
+  ACACIA_PRESSURE_PLATE: 相思木壓力板
+  DARK_OAK_PRESSURE_PLATE: 黑橡木壓力板
+  CRIMSON_PRESSURE_PLATE: 緋紅蕈木壓力板
+  WARPED_PRESSURE_PLATE: 扭曲蕈木壓力板
+  POLISHED_BLACKSTONE_PRESSURE_PLATE: 拋光黑石壓力板
+  REDSTONE_ORE: 紅石礦
+  REDSTONE_TORCH: 紅石火把
+  SNOW: 雪
+  ICE: 冰
+  SNOW_BLOCK: 雪塊
+  CACTUS: 仙人掌
+  CLAY: 黏土
+  JUKEBOX: 唱片機
+  OAK_FENCE: 橡木柵欄
+  SPRUCE_FENCE: 杉木柵欄
+  BIRCH_FENCE: 樺木柵欄
+  JUNGLE_FENCE: 叢林木柵欄
+  ACACIA_FENCE: 相思木柵欄
+  DARK_OAK_FENCE: 黑橡木柵欄
+  CRIMSON_FENCE: 緋紅蕈木柵欄
+  WARPED_FENCE: 扭曲蕈木柵欄
+  PUMPKIN: 南瓜
+  CARVED_PUMPKIN: 雕刻過的南瓜
+  NETHERRACK: 地獄石
+  SOUL_SAND: 靈魂砂
+  SOUL_SOIL: 靈魂土
+  BASALT: 玄武岩
+  POLISHED_BASALT: 拋光玄武岩
+  SOUL_TORCH: 靈魂火把
+  GLOWSTONE: 螢光石
+  JACK_O_LANTERN: 南瓜燈
+  OAK_TRAPDOOR: 橡木地板門
+  SPRUCE_TRAPDOOR: 杉木地板門
+  BIRCH_TRAPDOOR: 樺木地板門
+  JUNGLE_TRAPDOOR: 叢林木地板門
+  ACACIA_TRAPDOOR: 相思木地板門
+  DARK_OAK_TRAPDOOR: 黑橡木地板門
+  CRIMSON_TRAPDOOR: 緋紅蕈木地板門
+  WARPED_TRAPDOOR: 扭曲蕈木地板門
+  INFESTED_STONE: 蛀蝕的石頭
+  INFESTED_COBBLESTONE: 蛀蝕的鵝卵石
+  INFESTED_STONE_BRICKS: 蛀蝕的石磚
+  INFESTED_MOSSY_STONE_BRICKS: 蛀蝕的青苔石磚
+  INFESTED_CRACKED_STONE_BRICKS: 蛀蝕的裂紋石磚
+  INFESTED_CHISELED_STONE_BRICKS: 蛀蝕的浮雕石磚
+  STONE_BRICKS: 石磚
+  MOSSY_STONE_BRICKS: 青苔石磚
+  CRACKED_STONE_BRICKS: 裂紋石磚
+  CHISELED_STONE_BRICKS: 浮雕石磚
+  BROWN_MUSHROOM_BLOCK: 棕色蘑菇方塊
+  RED_MUSHROOM_BLOCK: 紅色蘑菇方塊
+  MUSHROOM_STEM: 蘑菇柄
+  IRON_BARS: 鐵柵欄
+  CHAIN: 鎖鏈
+  GLASS_PANE: 玻璃片
+  MELON: 西瓜
+  VINE: 藤蔓
+  OAK_FENCE_GATE: 橡木柵欄門
+  SPRUCE_FENCE_GATE: 杉木柵欄門
+  BIRCH_FENCE_GATE: 樺木柵欄門
+  JUNGLE_FENCE_GATE: 叢林木柵欄門
+  ACACIA_FENCE_GATE: 相思木柵欄門
+  DARK_OAK_FENCE_GATE: 黑橡木柵欄門
+  CRIMSON_FENCE_GATE: 緋紅蕈木柵欄門
+  WARPED_FENCE_GATE: 扭曲蕈木柵欄門
+  BRICK_STAIRS: 紅磚階梯
+  STONE_BRICK_STAIRS: 石磚階梯
+  MYCELIUM: 菌絲土
+  LILY_PAD: 荷葉
+  NETHER_BRICKS: 地獄磚
+  CRACKED_NETHER_BRICKS: 裂紋地獄磚
+  CHISELED_NETHER_BRICKS: 浮雕地獄磚
+  NETHER_BRICK_FENCE: 地獄磚柵欄
+  NETHER_BRICK_STAIRS: 地獄磚階梯
+  ENCHANTING_TABLE: 附魔台
+  END_PORTAL_FRAME: 終界傳送門框架
+  END_STONE: 終界石
+  END_STONE_BRICKS: 終界石磚
+  DRAGON_EGG: 龍蛋
+  REDSTONE_LAMP: 紅石燈
+  SANDSTONE_STAIRS: 砂岩階梯
+  EMERALD_ORE: 綠寶石礦
+  ENDER_CHEST: 終界箱
+  TRIPWIRE_HOOK: 絆線鉤
+  EMERALD_BLOCK: 綠寶石方塊
+  SPRUCE_STAIRS: 杉木階梯
+  BIRCH_STAIRS: 樺木階梯
+  JUNGLE_STAIRS: 叢林木階梯
+  CRIMSON_STAIRS: 緋紅蕈木階梯
+  WARPED_STAIRS: 扭曲蕈木階梯
+  COMMAND_BLOCK: 指令方塊
+  BEACON: 烽火台
+  COBBLESTONE_WALL: 鵝卵石牆
+  MOSSY_COBBLESTONE_WALL: 青苔鵝卵石牆
+  BRICK_WALL: 紅磚牆
+  PRISMARINE_WALL: 海磷石牆
+  RED_SANDSTONE_WALL: 紅砂岩牆
+  MOSSY_STONE_BRICK_WALL: 青苔石磚牆
+  GRANITE_WALL: 花崗岩牆
+  STONE_BRICK_WALL: 石磚牆
+  NETHER_BRICK_WALL: 地獄磚牆
+  ANDESITE_WALL: 安山岩牆
+  RED_NETHER_BRICK_WALL: 紅地獄磚牆
+  SANDSTONE_WALL: 砂岩牆
+  END_STONE_BRICK_WALL: 終界石磚牆
+  DIORITE_WALL: 閃長岩牆
+  BLACKSTONE_WALL: 黑石牆
+  POLISHED_BLACKSTONE_WALL: 拋光黑石牆
+  POLISHED_BLACKSTONE_BRICK_WALL: 拋光黑石磚牆
+  STONE_BUTTON: 石製按鈕
+  OAK_BUTTON: 橡木按鈕
+  SPRUCE_BUTTON: 杉木按鈕
+  BIRCH_BUTTON: 樺木按鈕
+  JUNGLE_BUTTON: 叢林木按鈕
+  ACACIA_BUTTON: 相思木按鈕
+  DARK_OAK_BUTTON: 黑橡木按鈕
+  CRIMSON_BUTTON: 緋紅蕈木按鈕
+  WARPED_BUTTON: 扭曲蕈木按鈕
+  POLISHED_BLACKSTONE_BUTTON: 拋光黑石按鈕
+  ANVIL: 鐵砧
+  CHIPPED_ANVIL: 微損的鐵砧
+  DAMAGED_ANVIL: 耗損的鐵砧
+  TRAPPED_CHEST: 陷阱儲物箱
+  LIGHT_WEIGHTED_PRESSURE_PLATE: 輕質測重壓力板
+  HEAVY_WEIGHTED_PRESSURE_PLATE: 重質測重壓力板
+  DAYLIGHT_DETECTOR: 日光感測器
+  REDSTONE_BLOCK: 紅石方塊
+  NETHER_QUARTZ_ORE: 地獄石英礦
+  HOPPER: 漏斗
+  CHISELED_QUARTZ_BLOCK: 浮雕石英方塊
+  QUARTZ_BLOCK: 石英方塊
+  QUARTZ_BRICKS: 石英磚
+  QUARTZ_PILLAR: 石英柱
+  QUARTZ_STAIRS: 石英階梯
+  ACTIVATOR_RAIL: 觸發鐵軌
+  DROPPER: 投擲器
+  WHITE_TERRACOTTA: 白色陶土
+  ORANGE_TERRACOTTA: 橙色陶土
+  MAGENTA_TERRACOTTA: 洋紅色陶土
+  LIGHT_BLUE_TERRACOTTA: 淺藍色陶土
+  YELLOW_TERRACOTTA: 黃色陶土
+  LIME_TERRACOTTA: 淺綠色陶土
+  PINK_TERRACOTTA: 粉紅色陶土
+  GRAY_TERRACOTTA: 灰色陶土
+  LIGHT_GRAY_TERRACOTTA: 淺灰色陶土
+  CYAN_TERRACOTTA: 青色陶土
+  PURPLE_TERRACOTTA: 紫色陶土
+  BLUE_TERRACOTTA: 藍色陶土
+  BROWN_TERRACOTTA: 棕色陶土
+  GREEN_TERRACOTTA: 綠色陶土
+  RED_TERRACOTTA: 紅色陶土
+  BLACK_TERRACOTTA: 黑色陶土
+  BARRIER: 屏障
+  IRON_TRAPDOOR: 鐵製地板門
+  HAY_BLOCK: 乾草捆
+  WHITE_CARPET: 白色地毯
+  ORANGE_CARPET: 橙色地毯
+  MAGENTA_CARPET: 洋紅色地毯
+  LIGHT_BLUE_CARPET: 淺藍色地毯
+  YELLOW_CARPET: 黃色地毯
+  LIME_CARPET: 淺綠色地毯
+  PINK_CARPET: 粉紅色地毯
+  GRAY_CARPET: 灰色地毯
+  LIGHT_GRAY_CARPET: 淺灰色地毯
+  CYAN_CARPET: 青色地毯
+  PURPLE_CARPET: 紫色地毯
+  BLUE_CARPET: 藍色地毯
+  BROWN_CARPET: 棕色地毯
+  GREEN_CARPET: 綠色地毯
+  RED_CARPET: 紅色地毯
+  BLACK_CARPET: 黑色地毯
+  TERRACOTTA: 陶土
+  COAL_BLOCK: 煤炭方塊
+  PACKED_ICE: 冰磚
+  ACACIA_STAIRS: 相思木階梯
+  DARK_OAK_STAIRS: 黑橡木階梯
+  SLIME_BLOCK: 史萊姆方塊
+  GRASS_PATH: 草徑
+  SUNFLOWER: 向日葵
+  LILAC: 紫丁香
+  ROSE_BUSH: 玫瑰叢
+  PEONY: 牡丹花
+  TALL_GRASS: 芒草
+  LARGE_FERN: 大型蕨類
+  WHITE_STAINED_GLASS: 白色玻璃
+  ORANGE_STAINED_GLASS: 橙色玻璃
+  MAGENTA_STAINED_GLASS: 洋紅色玻璃
+  LIGHT_BLUE_STAINED_GLASS: 淺藍色玻璃
+  YELLOW_STAINED_GLASS: 黃色玻璃
+  LIME_STAINED_GLASS: 淺綠色玻璃
+  PINK_STAINED_GLASS: 粉紅色玻璃
+  GRAY_STAINED_GLASS: 灰色玻璃
+  LIGHT_GRAY_STAINED_GLASS: 淺灰色玻璃
+  CYAN_STAINED_GLASS: 青色玻璃
+  PURPLE_STAINED_GLASS: 紫色玻璃
+  BLUE_STAINED_GLASS: 藍色玻璃
+  BROWN_STAINED_GLASS: 棕色玻璃
+  GREEN_STAINED_GLASS: 綠色玻璃
+  RED_STAINED_GLASS: 紅色玻璃
+  BLACK_STAINED_GLASS: 黑色玻璃
+  WHITE_STAINED_GLASS_PANE: 白色玻璃片
+  ORANGE_STAINED_GLASS_PANE: 橙色玻璃片
+  MAGENTA_STAINED_GLASS_PANE: 洋紅色玻璃片
+  LIGHT_BLUE_STAINED_GLASS_PANE: 淺藍色玻璃片
+  YELLOW_STAINED_GLASS_PANE: 黃色玻璃片
+  LIME_STAINED_GLASS_PANE: 淺綠色玻璃片
+  PINK_STAINED_GLASS_PANE: 粉紅色玻璃片
+  GRAY_STAINED_GLASS_PANE: 灰色玻璃片
+  LIGHT_GRAY_STAINED_GLASS_PANE: 淺灰色玻璃片
+  CYAN_STAINED_GLASS_PANE: 青色玻璃片
+  PURPLE_STAINED_GLASS_PANE: 紫色玻璃片
+  BLUE_STAINED_GLASS_PANE: 藍色玻璃片
+  BROWN_STAINED_GLASS_PANE: 棕色玻璃片
+  GREEN_STAINED_GLASS_PANE: 綠色玻璃片
+  RED_STAINED_GLASS_PANE: 紅色玻璃片
+  BLACK_STAINED_GLASS_PANE: 黑色玻璃片
+  PRISMARINE: 海磷石
+  PRISMARINE_BRICKS: 海磷石磚
+  DARK_PRISMARINE: 暗海磷石
+  PRISMARINE_STAIRS: 海磷石階梯
+  PRISMARINE_BRICK_STAIRS: 海磷石磚階梯
+  DARK_PRISMARINE_STAIRS: 暗海磷石階梯
+  SEA_LANTERN: 海燈籠
+  RED_SANDSTONE: 紅砂岩
+  CHISELED_RED_SANDSTONE: 浮雕紅砂岩
+  CUT_RED_SANDSTONE: 切割紅砂岩
+  RED_SANDSTONE_STAIRS: 紅砂岩階梯
+  REPEATING_COMMAND_BLOCK: 重複型指令方塊
+  CHAIN_COMMAND_BLOCK: 連鎖式指令方塊
+  MAGMA_BLOCK: 岩漿塊
+  NETHER_WART_BLOCK: 地獄疙瘩塊
+  WARPED_WART_BLOCK: 扭曲疙瘩塊
+  RED_NETHER_BRICKS: 紅地獄磚
+  BONE_BLOCK: 骨塊
+  STRUCTURE_VOID: 結構空位
+  OBSERVER: 偵測器
+  SHULKER_BOX: 界伏盒
+  WHITE_SHULKER_BOX: 白色界伏盒
+  ORANGE_SHULKER_BOX: 橙色界伏盒
+  MAGENTA_SHULKER_BOX: 洋紅色界伏盒
+  LIGHT_BLUE_SHULKER_BOX: 淺藍色界伏盒
+  YELLOW_SHULKER_BOX: 黃色界伏盒
+  LIME_SHULKER_BOX: 淺綠色界伏盒
+  PINK_SHULKER_BOX: 粉紅色界伏盒
+  GRAY_SHULKER_BOX: 灰色界伏盒
+  LIGHT_GRAY_SHULKER_BOX: 淺灰色界伏盒
+  CYAN_SHULKER_BOX: 青色界伏盒
+  PURPLE_SHULKER_BOX: 紫色界伏盒
+  BLUE_SHULKER_BOX: 藍色界伏盒
+  BROWN_SHULKER_BOX: 棕色界伏盒
+  GREEN_SHULKER_BOX: 綠色界伏盒
+  RED_SHULKER_BOX: 紅色界伏盒
+  BLACK_SHULKER_BOX: 黑色界伏盒
+  WHITE_GLAZED_TERRACOTTA: 白色釉陶
+  ORANGE_GLAZED_TERRACOTTA: 橙色釉陶
+  MAGENTA_GLAZED_TERRACOTTA: 洋紅色釉陶
+  LIGHT_BLUE_GLAZED_TERRACOTTA: 淺藍色釉陶
+  YELLOW_GLAZED_TERRACOTTA: 黃色釉陶
+  LIME_GLAZED_TERRACOTTA: 淺綠色釉陶
+  PINK_GLAZED_TERRACOTTA: 粉紅色釉陶
+  GRAY_GLAZED_TERRACOTTA: 灰色釉陶
+  LIGHT_GRAY_GLAZED_TERRACOTTA: 淺灰色釉陶
+  CYAN_GLAZED_TERRACOTTA: 青色釉陶
+  PURPLE_GLAZED_TERRACOTTA: 紫色釉陶
+  BLUE_GLAZED_TERRACOTTA: 藍色釉陶
+  BROWN_GLAZED_TERRACOTTA: 棕色釉陶
+  GREEN_GLAZED_TERRACOTTA: 綠色釉陶
+  RED_GLAZED_TERRACOTTA: 紅色釉陶
+  BLACK_GLAZED_TERRACOTTA: 黑色釉陶
+  WHITE_CONCRETE: 白色混凝土
+  ORANGE_CONCRETE: 橙色混凝土
+  MAGENTA_CONCRETE: 洋紅色混凝土
+  LIGHT_BLUE_CONCRETE: 淺藍色混凝土
+  YELLOW_CONCRETE: 黃色混凝土
+  LIME_CONCRETE: 淺綠色混凝土
+  PINK_CONCRETE: 粉紅色混凝土
+  GRAY_CONCRETE: 灰色混凝土
+  LIGHT_GRAY_CONCRETE: 淺灰色混凝土
+  CYAN_CONCRETE: 青色混凝土
+  PURPLE_CONCRETE: 紫色混凝土
+  BLUE_CONCRETE: 藍色混凝土
+  BROWN_CONCRETE: 棕色混凝土
+  GREEN_CONCRETE: 綠色混凝土
+  RED_CONCRETE: 紅色混凝土
+  BLACK_CONCRETE: 黑色混凝土
+  WHITE_CONCRETE_POWDER: 白色混凝土粉末
+  ORANGE_CONCRETE_POWDER: 橙色混凝土粉末
+  MAGENTA_CONCRETE_POWDER: 洋紅色混凝土粉末
+  LIGHT_BLUE_CONCRETE_POWDER: 淺藍色混凝土粉末
+  YELLOW_CONCRETE_POWDER: 黃色混凝土粉末
+  LIME_CONCRETE_POWDER: 淺綠色混凝土粉末
+  PINK_CONCRETE_POWDER: 粉紅色混凝土粉末
+  GRAY_CONCRETE_POWDER: 灰色混凝土粉末
+  LIGHT_GRAY_CONCRETE_POWDER: 淺灰色混凝土粉末
+  CYAN_CONCRETE_POWDER: 青色混凝土粉末
+  PURPLE_CONCRETE_POWDER: 紫色混凝土粉末
+  BLUE_CONCRETE_POWDER: 藍色混凝土粉末
+  BROWN_CONCRETE_POWDER: 棕色混凝土粉末
+  GREEN_CONCRETE_POWDER: 綠色混凝土粉末
+  RED_CONCRETE_POWDER: 紅色混凝土粉末
+  BLACK_CONCRETE_POWDER: 黑色混凝土粉末
+  TURTLE_EGG: 海龜蛋
+  DEAD_TUBE_CORAL_BLOCK: 死亡的管珊瑚方塊
+  DEAD_BRAIN_CORAL_BLOCK: 死亡的腦珊瑚方塊
+  DEAD_BUBBLE_CORAL_BLOCK: 死亡的氣泡珊瑚方塊
+  DEAD_FIRE_CORAL_BLOCK: 死亡的火珊瑚方塊
+  DEAD_HORN_CORAL_BLOCK: 死亡的角珊瑚方塊
+  TUBE_CORAL_BLOCK: 管珊瑚方塊
+  BRAIN_CORAL_BLOCK: 腦珊瑚方塊
+  BUBBLE_CORAL_BLOCK: 氣泡珊瑚方塊
+  FIRE_CORAL_BLOCK: 火珊瑚方塊
+  HORN_CORAL_BLOCK: 角珊瑚方塊
+  TUBE_CORAL: 管珊瑚
+  BRAIN_CORAL: 腦珊瑚
+  BUBBLE_CORAL: 氣泡珊瑚
+  FIRE_CORAL: 火珊瑚
+  HORN_CORAL: 角珊瑚
+  DEAD_BRAIN_CORAL: 死亡的腦珊瑚
+  DEAD_BUBBLE_CORAL: 死亡的氣泡珊瑚
+  DEAD_FIRE_CORAL: 死亡的火珊瑚
+  DEAD_HORN_CORAL: 死亡的角珊瑚
+  DEAD_TUBE_CORAL: 死亡的管珊瑚
+  TUBE_CORAL_FAN: 扇狀管珊瑚
+  BRAIN_CORAL_FAN: 扇狀腦珊瑚
+  BUBBLE_CORAL_FAN: 扇狀氣泡珊瑚
+  FIRE_CORAL_FAN: 扇狀火珊瑚
+  HORN_CORAL_FAN: 扇狀角珊瑚
+  DEAD_TUBE_CORAL_FAN: 死亡的扇狀管珊瑚
+  DEAD_BRAIN_CORAL_FAN: 死亡的扇狀腦珊瑚
+  DEAD_BUBBLE_CORAL_FAN: 死亡的扇狀氣泡珊瑚
+  DEAD_FIRE_CORAL_FAN: 死亡的扇狀火珊瑚
+  DEAD_HORN_CORAL_FAN: 死亡的扇狀角珊瑚
+  BLUE_ICE: 藍冰
+  CONDUIT: 海靈核心
+  POLISHED_GRANITE_STAIRS: 拋光花崗岩階梯
+  SMOOTH_RED_SANDSTONE_STAIRS: 平滑紅砂岩階梯
+  MOSSY_STONE_BRICK_STAIRS: 青苔石磚階梯
+  POLISHED_DIORITE_STAIRS: 拋光閃長岩階梯
+  MOSSY_COBBLESTONE_STAIRS: 青苔鵝卵石階梯
+  END_STONE_BRICK_STAIRS: 終界石磚階梯
+  STONE_STAIRS: 石頭階梯
+  SMOOTH_SANDSTONE_STAIRS: 平滑砂岩階梯
+  SMOOTH_QUARTZ_STAIRS: 平滑石英階梯
+  GRANITE_STAIRS: 花崗岩階梯
+  ANDESITE_STAIRS: 安山岩階梯
+  RED_NETHER_BRICK_STAIRS: 紅地獄磚階梯
+  POLISHED_ANDESITE_STAIRS: 拋光安山岩階梯
+  DIORITE_STAIRS: 閃長岩階梯
+  POLISHED_GRANITE_SLAB: 拋光花崗岩半磚
+  SMOOTH_RED_SANDSTONE_SLAB: 平滑紅砂岩半磚
+  MOSSY_STONE_BRICK_SLAB: 青苔石磚半磚
+  POLISHED_DIORITE_SLAB: 拋光閃長岩半磚
+  MOSSY_COBBLESTONE_SLAB: 青苔鵝卵石半磚
+  END_STONE_BRICK_SLAB: 終界石磚半磚
+  SMOOTH_SANDSTONE_SLAB: 平滑砂岩半磚
+  SMOOTH_QUARTZ_SLAB: 平滑石英半磚
+  GRANITE_SLAB: 花崗岩半磚
+  ANDESITE_SLAB: 安山岩半磚
+  RED_NETHER_BRICK_SLAB: 紅地獄磚半磚
+  POLISHED_ANDESITE_SLAB: 拋光安山岩半磚
+  DIORITE_SLAB: 閃長岩半磚
+  SCAFFOLDING: 鷹架
+  IRON_DOOR: 鐵門
+  OAK_DOOR: 橡木門
+  SPRUCE_DOOR: 杉木門
+  BIRCH_DOOR: 樺木門
+  JUNGLE_DOOR: 叢林木門
+  ACACIA_DOOR: 相思木門
+  DARK_OAK_DOOR: 黑橡木門
+  CRIMSON_DOOR: 緋紅蕈木門
+  WARPED_DOOR: 扭曲蕈木門
+  REPEATER: 紅石中繼器
+  COMPARATOR: 紅石比較器
+  STRUCTURE_BLOCK: 結構方塊
+  JIGSAW: 拼圖方塊
+  TURTLE_HELMET: 海龜殼
+  SCUTE: 鱗甲
+  FLINT_AND_STEEL: 打火石
+  APPLE: 蘋果
+  BOW: 弓
+  ARROW: 箭矢
+  COAL: 煤炭
+  CHARCOAL: 木炭
+  DIAMOND: 鑽石
+  IRON_INGOT: 鐵錠
+  GOLD_INGOT: 金錠
+  NETHERITE_INGOT: 獄髓錠
+  NETHERITE_SCRAP: 獄髓碎片
+  WOODEN_SWORD: 木劍
+  WOODEN_SHOVEL: 木鏟
+  WOODEN_PICKAXE: 木鎬
+  WOODEN_AXE: 木斧
+  WOODEN_HOE: 木鋤
+  STONE_SWORD: 石劍
+  STONE_SHOVEL: 石鏟
+  STONE_PICKAXE: 石鎬
+  STONE_AXE: 石斧
+  STONE_HOE: 石鋤
+  GOLDEN_SWORD: 金劍
+  GOLDEN_SHOVEL: 金鏟
+  GOLDEN_PICKAXE: 金鎬
+  GOLDEN_AXE: 金斧
+  GOLDEN_HOE: 金鋤
+  IRON_SWORD: 鐵劍
+  IRON_SHOVEL: 鐵鏟
+  IRON_PICKAXE: 鐵鎬
+  IRON_AXE: 鐵斧
+  IRON_HOE: 鐵鋤
+  DIAMOND_SWORD: 鑽石劍
+  DIAMOND_SHOVEL: 鑽石鏟
+  DIAMOND_PICKAXE: 鑽石鎬
+  DIAMOND_AXE: 鑽石斧
+  DIAMOND_HOE: 鑽石鋤
+  NETHERITE_SWORD: 獄髓劍
+  NETHERITE_SHOVEL: 獄髓鏟
+  NETHERITE_PICKAXE: 獄髓鎬
+  NETHERITE_AXE: 獄髓斧
+  NETHERITE_HOE: 獄髓鋤
+  STICK: 木棒
+  BOWL: 碗
+  MUSHROOM_STEW: 蘑菇湯
+  STRING: 線
+  FEATHER: 羽毛
+  GUNPOWDER: 火藥
+  WHEAT_SEEDS: 小麥種子
+  WHEAT: 小麥
+  BREAD: 麵包
+  LEATHER_HELMET: 皮革帽子
+  LEATHER_CHESTPLATE: 皮革上衣
+  LEATHER_LEGGINGS: 皮革褲子
+  LEATHER_BOOTS: 皮革靴子
+  CHAINMAIL_HELMET: 鎖鏈頭盔
+  CHAINMAIL_CHESTPLATE: 鎖鏈胸甲
+  CHAINMAIL_LEGGINGS: 鎖鏈護腿
+  CHAINMAIL_BOOTS: 鎖鏈靴子
+  IRON_HELMET: 鐵製頭盔
+  IRON_CHESTPLATE: 鐵製胸甲
+  IRON_LEGGINGS: 鐵製護腿
+  IRON_BOOTS: 鐵製靴子
+  DIAMOND_HELMET: 鑽石頭盔
+  DIAMOND_CHESTPLATE: 鑽石胸甲
+  DIAMOND_LEGGINGS: 鑽石護腿
+  DIAMOND_BOOTS: 鑽石靴子
+  GOLDEN_HELMET: 黃金頭盔
+  GOLDEN_CHESTPLATE: 黃金胸甲
+  GOLDEN_LEGGINGS: 黃金護腿
+  GOLDEN_BOOTS: 黃金靴子
+  NETHERITE_HELMET: 獄髓頭盔
+  NETHERITE_CHESTPLATE: 獄髓胸甲
+  NETHERITE_LEGGINGS: 獄髓護腿
+  NETHERITE_BOOTS: 獄髓靴子
+  FLINT: 燧石
+  PORKCHOP: 生豬肉
+  COOKED_PORKCHOP: 烤豬肉
+  PAINTING: 繪畫
+  GOLDEN_APPLE: 金蘋果
+  ENCHANTED_GOLDEN_APPLE: 附魔金蘋果
+  OAK_SIGN: 橡木告示牌
+  SPRUCE_SIGN: 杉木告示牌
+  BIRCH_SIGN: 樺木告示牌
+  JUNGLE_SIGN: 叢林木告示牌
+  ACACIA_SIGN: 相思木告示牌
+  DARK_OAK_SIGN: 黑橡木告示牌
+  CRIMSON_SIGN: 緋紅蕈木告示牌
+  WARPED_SIGN: 扭曲蕈木告示牌
+  BUCKET: 鐵桶
+  WATER_BUCKET: 水桶
+  LAVA_BUCKET: 熔岩桶
+  MINECART: 礦車
+  SADDLE: 鞍
+  REDSTONE: 紅石粉
+  SNOWBALL: 雪球
+  OAK_BOAT: 橡木船
+  LEATHER: 皮革
+  MILK_BUCKET: 牛奶桶
+  PUFFERFISH_BUCKET: 河豚桶
+  SALMON_BUCKET: 鮭魚桶
+  COD_BUCKET: 鱈魚桶
+  TROPICAL_FISH_BUCKET: 熱帶魚桶
+  BRICK: 紅磚頭
+  CLAY_BALL: 黏土球
+  DRIED_KELP_BLOCK: 海帶乾塊
+  PAPER: 紙
+  BOOK: 書
+  SLIME_BALL: 史萊姆球
+  CHEST_MINECART: 儲物箱礦車
+  FURNACE_MINECART: 熔爐礦車
+  EGG: 雞蛋
+  COMPASS: 羅盤
+  FISHING_ROD: 釣竿
+  CLOCK: 時鐘
+  GLOWSTONE_DUST: 螢石粉
+  COD: 生鱈魚
+  SALMON: 生鮭魚
+  TROPICAL_FISH: 熱帶魚
+  PUFFERFISH: 河豚
+  COOKED_COD: 烤鱈魚
+  COOKED_SALMON: 烤鮭魚
+  INK_SAC: 墨囊
+  COCOA_BEANS: 可可豆
+  LAPIS_LAZULI: 青金石
+  WHITE_DYE: 白色染料
+  ORANGE_DYE: 橙色染料
+  MAGENTA_DYE: 洋紅色染料
+  LIGHT_BLUE_DYE: 淺藍色染料
+  YELLOW_DYE: 黃色染料
+  LIME_DYE: 淺綠色染料
+  PINK_DYE: 粉紅色染料
+  GRAY_DYE: 灰色染料
+  LIGHT_GRAY_DYE: 淺灰色染料
+  CYAN_DYE: 青色染料
+  PURPLE_DYE: 紫色染料
+  BLUE_DYE: 藍色染料
+  BROWN_DYE: 棕色染料
+  GREEN_DYE: 綠色染料
+  RED_DYE: 紅色染料
+  BLACK_DYE: 黑色染料
+  BONE_MEAL: 骨粉
+  BONE: 骨頭
+  SUGAR: 糖
+  CAKE: 蛋糕
+  WHITE_BED: 白色床
+  ORANGE_BED: 橙色床
+  MAGENTA_BED: 洋紅色床
+  LIGHT_BLUE_BED: 淺藍色床
+  YELLOW_BED: 黃色床
+  LIME_BED: 淺綠色床
+  PINK_BED: 粉紅色床
+  GRAY_BED: 灰色床
+  LIGHT_GRAY_BED: 淺灰色床
+  CYAN_BED: 青色床
+  PURPLE_BED: 紫色床
+  BLUE_BED: 藍色床
+  BROWN_BED: 棕色床
+  GREEN_BED: 綠色床
+  RED_BED: 紅色床
+  BLACK_BED: 黑色床
+  COOKIE: 餅乾
+  FILLED_MAP: 地圖
+  SHEARS: 剪刀
+  MELON_SLICE: 西瓜片
+  DRIED_KELP: 海帶乾
+  PUMPKIN_SEEDS: 南瓜種子
+  MELON_SEEDS: 西瓜種子
+  BEEF: 生牛肉
+  COOKED_BEEF: 牛排
+  CHICKEN: 生雞肉
+  COOKED_CHICKEN: 烤雞
+  ROTTEN_FLESH: 腐肉
+  ENDER_PEARL: 終界珍珠
+  BLAZE_ROD: 烈焰桿
+  GHAST_TEAR: 幽靈之淚
+  GOLD_NUGGET: 金粒
+  NETHER_WART: 地獄疙瘩
+  POTION: 藥水
+  GLASS_BOTTLE: 玻璃瓶
+  SPIDER_EYE: 蜘蛛眼
+  FERMENTED_SPIDER_EYE: 發酵蜘蛛眼
+  BLAZE_POWDER: 烈焰粉
+  MAGMA_CREAM: 岩漿球
+  BREWING_STAND: 釀造台
+  CAULDRON: 鍋釜
+  ENDER_EYE: 終界之眼
+  GLISTERING_MELON_SLICE: 鑲金西瓜片
+  BAT_SPAWN_EGG: 蝙蝠 生怪蛋
+  BEE_SPAWN_EGG: 蜜蜂 生怪蛋
+  BLAZE_SPAWN_EGG: 烈焰使者 生怪蛋
+  CAT_SPAWN_EGG: 貓 生怪蛋
+  CAVE_SPIDER_SPAWN_EGG: 洞穴蜘蛛 生怪蛋
+  CHICKEN_SPAWN_EGG: 雞 生怪蛋
+  COD_SPAWN_EGG: 鱈魚 生怪蛋
+  COW_SPAWN_EGG: 牛 生怪蛋
+  CREEPER_SPAWN_EGG: 苦力怕 生怪蛋
+  DOLPHIN_SPAWN_EGG: 海豚 生怪蛋
+  DONKEY_SPAWN_EGG: 驢子 生怪蛋
+  DROWNED_SPAWN_EGG: 沉屍 生怪蛋
+  ELDER_GUARDIAN_SPAWN_EGG: 遠古深海守衛 生怪蛋
+  ENDERMAN_SPAWN_EGG: 終界使者 生怪蛋
+  ENDERMITE_SPAWN_EGG: 終界蟎 生怪蛋
+  EVOKER_SPAWN_EGG: 喚魔者 生怪蛋
+  FOX_SPAWN_EGG: 狐狸 生怪蛋
+  GHAST_SPAWN_EGG: 地獄幽靈 生怪蛋
+  GUARDIAN_SPAWN_EGG: 深海守衛 生怪蛋
+  HOGLIN_SPAWN_EGG: 豬布獸 生怪蛋
+  HORSE_SPAWN_EGG: 馬 生怪蛋
+  HUSK_SPAWN_EGG: 屍殼 生怪蛋
+  LLAMA_SPAWN_EGG: 駱馬 生怪蛋
+  MAGMA_CUBE_SPAWN_EGG: 岩漿立方怪 生怪蛋
+  MOOSHROOM_SPAWN_EGG: 哞菇 生怪蛋
+  MULE_SPAWN_EGG: 騾子 生怪蛋
+  OCELOT_SPAWN_EGG: 山貓 生怪蛋
+  PANDA_SPAWN_EGG: 貓熊 生怪蛋
+  PARROT_SPAWN_EGG: 鸚鵡 生怪蛋
+  PHANTOM_SPAWN_EGG: 夜魅 生怪蛋
+  PIG_SPAWN_EGG: 豬 生怪蛋
+  PIGLIN_SPAWN_EGG: 豬布林 生怪蛋
+  PIGLIN_BRUTE_SPAWN_EGG: 豬布林蠻兵 生怪蛋
+  PILLAGER_SPAWN_EGG: 掠奪者 生怪蛋
+  POLAR_BEAR_SPAWN_EGG: 北極熊 生怪蛋
+  PUFFERFISH_SPAWN_EGG: 河豚 生怪蛋
+  RABBIT_SPAWN_EGG: 兔子 生怪蛋
+  RAVAGER_SPAWN_EGG: 劫毀獸 生怪蛋
+  SALMON_SPAWN_EGG: 鮭魚 生怪蛋
+  SHEEP_SPAWN_EGG: 綿羊 生怪蛋
+  SHULKER_SPAWN_EGG: 界伏蚌 生怪蛋
+  SILVERFISH_SPAWN_EGG: 蠹魚 生怪蛋
+  SKELETON_SPAWN_EGG: 骷髏 生怪蛋
+  SKELETON_HORSE_SPAWN_EGG: 骷髏馬 生怪蛋
+  SLIME_SPAWN_EGG: 史萊姆 生怪蛋
+  SPIDER_SPAWN_EGG: 蜘蛛 生怪蛋
+  SQUID_SPAWN_EGG: 魷魚 生怪蛋
+  STRAY_SPAWN_EGG: 流髑 生怪蛋
+  STRIDER_SPAWN_EGG: 熾足獸 生怪蛋
+  TRADER_LLAMA_SPAWN_EGG: 商駝 生怪蛋
+  TROPICAL_FISH_SPAWN_EGG: 熱帶魚 生怪蛋
+  TURTLE_SPAWN_EGG: 海龜 生怪蛋
+  VEX_SPAWN_EGG: 惱鬼 生怪蛋
+  VILLAGER_SPAWN_EGG: 村民 生怪蛋
+  VINDICATOR_SPAWN_EGG: 衛道士 生怪蛋
+  WANDERING_TRADER_SPAWN_EGG: 流浪商人 生怪蛋
+  WITCH_SPAWN_EGG: 女巫 生怪蛋
+  WITHER_SKELETON_SPAWN_EGG: 凋零骷髏 生怪蛋
+  WOLF_SPAWN_EGG: 狼 生怪蛋
+  ZOGLIN_SPAWN_EGG: 豬屍獸 生怪蛋
+  ZOMBIE_SPAWN_EGG: 殭屍 生怪蛋
+  ZOMBIE_HORSE_SPAWN_EGG: 殭屍馬 生怪蛋
+  ZOMBIE_VILLAGER_SPAWN_EGG: 殭屍村民 生怪蛋
+  ZOMBIFIED_PIGLIN_SPAWN_EGG: 殭屍化豬布林 生怪蛋
+  EXPERIENCE_BOTTLE: 經驗瓶
+  FIRE_CHARGE: 火焰彈
+  WRITABLE_BOOK: 書和羽毛筆
+  WRITTEN_BOOK: 完成的書
+  EMERALD: 綠寶石
+  ITEM_FRAME: 物品展示框
+  FLOWER_POT: 花盆
+  CARROT: 胡蘿蔔
+  POTATO: 馬鈴薯
+  BAKED_POTATO: 烤馬鈴薯
+  POISONOUS_POTATO: 毒馬鈴薯
+  MAP: 空白地圖
+  GOLDEN_CARROT: 金胡蘿蔔
+  SKELETON_SKULL: 骷髏頭顱
+  WITHER_SKELETON_SKULL: 凋零骷髏頭顱
+  PLAYER_HEAD: 玩家頭顱
+  ZOMBIE_HEAD: 殭屍頭顱
+  CREEPER_HEAD: 苦力怕頭顱
+  DRAGON_HEAD: 龍首
+  CARROT_ON_A_STICK: 胡蘿蔔釣竿
+  WARPED_FUNGUS_ON_A_STICK: 扭曲蕈菇釣竿
+  NETHER_STAR: 地獄之星
+  PUMPKIN_PIE: 南瓜派
+  FIREWORK_ROCKET: 煙火
+  FIREWORK_STAR: 火藥球
+  ENCHANTED_BOOK: 附魔書
+  NETHER_BRICK: 地獄磚頭
+  QUARTZ: 地獄石英
+  TNT_MINECART: TNT 礦車
+  HOPPER_MINECART: 漏斗礦車
+  PRISMARINE_SHARD: 海磷碎片
+  PRISMARINE_CRYSTALS: 海磷晶體
+  RABBIT: 生兔肉
+  COOKED_RABBIT: 烤兔肉
+  RABBIT_STEW: 兔肉湯
+  RABBIT_FOOT: 兔子腳
+  RABBIT_HIDE: 兔子皮
+  ARMOR_STAND: 盔甲座
+  IRON_HORSE_ARMOR: 鐵製馬鎧
+  GOLDEN_HORSE_ARMOR: 黃金製馬鎧
+  DIAMOND_HORSE_ARMOR: 鑽石製馬鎧
+  LEATHER_HORSE_ARMOR: 皮革製馬鎧
+  LEAD: 拴繩
+  NAME_TAG: 命名牌
+  COMMAND_BLOCK_MINECART: 指令方塊礦車
+  MUTTON: 生羊肉
+  COOKED_MUTTON: 烤羊肉
+  WHITE_BANNER: 白色旗幟
+  ORANGE_BANNER: 橙色旗幟
+  MAGENTA_BANNER: 洋紅色旗幟
+  LIGHT_BLUE_BANNER: 淺藍色旗幟
+  YELLOW_BANNER: 黃色旗幟
+  LIME_BANNER: 淺綠色旗幟
+  PINK_BANNER: 粉紅色旗幟
+  GRAY_BANNER: 灰色旗幟
+  LIGHT_GRAY_BANNER: 淺灰色旗幟
+  CYAN_BANNER: 青色旗幟
+  PURPLE_BANNER: 紫色旗幟
+  BLUE_BANNER: 藍色旗幟
+  BROWN_BANNER: 棕色旗幟
+  GREEN_BANNER: 綠色旗幟
+  RED_BANNER: 紅色旗幟
+  BLACK_BANNER: 黑色旗幟
+  END_CRYSTAL: 終界水晶
+  CHORUS_FRUIT: 歌萊果
+  POPPED_CHORUS_FRUIT: 爆開的歌萊果
+  BEETROOT: 甜菜根
+  BEETROOT_SEEDS: 甜菜種子
+  BEETROOT_SOUP: 甜菜湯
+  DRAGON_BREATH: 龍之吐息
+  SPLASH_POTION: 飛濺藥水
+  SPECTRAL_ARROW: 追跡之箭
+  TIPPED_ARROW: 藥水箭
+  LINGERING_POTION: 滯留藥水
+  SHIELD: 盾牌
+  ELYTRA: 鞘翅
+  SPRUCE_BOAT: 杉木船
+  BIRCH_BOAT: 樺木船
+  JUNGLE_BOAT: 叢林木船
+  ACACIA_BOAT: 相思木船
+  DARK_OAK_BOAT: 黑橡木船
+  TOTEM_OF_UNDYING: 不死圖騰
+  SHULKER_SHELL: 界伏殼
+  IRON_NUGGET: 鐵粒
+  KNOWLEDGE_BOOK: 知識之書
+  DEBUG_STICK: 除錯棒
+  MUSIC_DISC_13: 唱片
+  MUSIC_DISC_CAT: 唱片
+  MUSIC_DISC_BLOCKS: 唱片
+  MUSIC_DISC_CHIRP: 唱片
+  MUSIC_DISC_FAR: 唱片
+  MUSIC_DISC_MALL: 唱片
+  MUSIC_DISC_MELLOHI: 唱片
+  MUSIC_DISC_STAL: 唱片
+  MUSIC_DISC_STRAD: 唱片
+  MUSIC_DISC_WARD: 唱片
+  MUSIC_DISC_11: 唱片
+  MUSIC_DISC_WAIT: 唱片
+  MUSIC_DISC_PIGSTEP: 唱片
+  TRIDENT: 三叉戟
+  PHANTOM_MEMBRANE: 夜魅皮膜
+  NAUTILUS_SHELL: 鸚鵡螺殼
+  HEART_OF_THE_SEA: 海洋之心
+  CROSSBOW: 弩
+  SUSPICIOUS_STEW: 可疑的燉湯
+  LOOM: 紡織機
+  FLOWER_BANNER_PATTERN: 旗幟圖案
+  CREEPER_BANNER_PATTERN: 旗幟圖案
+  SKULL_BANNER_PATTERN: 旗幟圖案
+  MOJANG_BANNER_PATTERN: 旗幟圖案
+  GLOBE_BANNER_PATTERN: 旗幟圖案
+  PIGLIN_BANNER_PATTERN: 旗幟圖案
+  COMPOSTER: 堆肥箱
+  BARREL: 木桶
+  SMOKER: 煙燻爐
+  BLAST_FURNACE: 高爐
+  CARTOGRAPHY_TABLE: 製圖台
+  FLETCHING_TABLE: 製箭台
+  GRINDSTONE: 砂輪
+  LECTERN: 講台
+  SMITHING_TABLE: 鍛造台
+  STONECUTTER: 切石機
+  BELL: 鐘
+  LANTERN: 燈籠
+  SOUL_LANTERN: 靈魂燈籠
+  SWEET_BERRIES: 甜莓
+  CAMPFIRE: 營火
+  SOUL_CAMPFIRE: 靈魂營火
+  SHROOMLIGHT: 蕈光體
+  HONEYCOMB: 蜂巢
+  BEE_NEST: 蜂窩
+  BEEHIVE: 蜂箱
+  HONEY_BOTTLE: 蜂蜜瓶
+  HONEY_BLOCK: 蜂蜜塊
+  HONEYCOMB_BLOCK: 蜂巢塊
+  LODESTONE: 磁石
+  NETHERITE_BLOCK: 獄髓方塊
+  ANCIENT_DEBRIS: 遠古遺骸
+  TARGET: 標靶
+  CRYING_OBSIDIAN: 哭泣的黑曜石
+  BLACKSTONE: 黑石
+  BLACKSTONE_SLAB: 黑石半磚
+  BLACKSTONE_STAIRS: 黑石階梯
+  GILDED_BLACKSTONE: 鑲金黑石
+  POLISHED_BLACKSTONE: 拋光黑石
+  POLISHED_BLACKSTONE_SLAB: 拋光黑石半磚
+  POLISHED_BLACKSTONE_STAIRS: 拋光黑石階梯
+  CHISELED_POLISHED_BLACKSTONE: 浮雕拋光黑石
+  POLISHED_BLACKSTONE_BRICKS: 拋光黑石磚
+  POLISHED_BLACKSTONE_BRICK_SLAB: 拋光黑石磚半磚
+  POLISHED_BLACKSTONE_BRICK_STAIRS: 拋光黑石磚階梯
+  CRACKED_POLISHED_BLACKSTONE_BRICKS: 裂紋拋光黑石磚
+  RESPAWN_ANCHOR: 重生錨
+  WATER: 水
+  LAVA: 熔岩
+  TALL_SEAGRASS: 高海草
+  PISTON_HEAD: 活塞頭
+  MOVING_PISTON: 移動中的活塞
+  WALL_TORCH: 牆上的火把
+  FIRE: 火
+  SOUL_FIRE: 靈魂火
+  REDSTONE_WIRE: 紅石線
+  OAK_WALL_SIGN: 牆上的橡木告示牌
+  SPRUCE_WALL_SIGN: 牆上的杉木告示牌
+  BIRCH_WALL_SIGN: 牆上的樺木告示牌
+  ACACIA_WALL_SIGN: 牆上的相思木告示牌
+  JUNGLE_WALL_SIGN: 牆上的叢林木告示牌
+  DARK_OAK_WALL_SIGN: 牆上的黑橡木告示牌
+  REDSTONE_WALL_TORCH: 牆上的紅石火把
+  SOUL_WALL_TORCH: 牆上的靈魂火把
+  NETHER_PORTAL: 地獄傳送門
+  ATTACHED_PUMPKIN_STEM: 連接的南瓜梗
+  ATTACHED_MELON_STEM: 連接的西瓜梗
+  PUMPKIN_STEM: 南瓜梗
+  MELON_STEM: 西瓜梗
+  END_PORTAL: 終界傳送門
+  COCOA: 可可豆
+  TRIPWIRE: 絆線
+  POTTED_OAK_SAPLING: 橡木樹苗盆栽
+  POTTED_SPRUCE_SAPLING: 杉木樹苗盆栽
+  POTTED_BIRCH_SAPLING: 樺木樹苗盆栽
+  POTTED_JUNGLE_SAPLING: 叢林木樹苗盆栽
+  POTTED_ACACIA_SAPLING: 相思木樹苗盆栽
+  POTTED_DARK_OAK_SAPLING: 黑橡木樹苗盆栽
+  POTTED_FERN: 蕨類盆栽
+  POTTED_DANDELION: 蒲公英盆栽
+  POTTED_POPPY: 罌粟盆栽
+  POTTED_BLUE_ORCHID: 藍色蝴蝶蘭盆栽
+  POTTED_ALLIUM: 紫紅球花盆栽
+  POTTED_AZURE_BLUET: 雛草盆栽
+  POTTED_RED_TULIP: 紅色鬱金香盆栽
+  POTTED_ORANGE_TULIP: 橙色鬱金香盆栽
+  POTTED_WHITE_TULIP: 白色鬱金香盆栽
+  POTTED_PINK_TULIP: 粉紅色鬱金香盆栽
+  POTTED_OXEYE_DAISY: 雛菊盆栽
+  POTTED_CORNFLOWER: 矢車菊盆栽
+  POTTED_LILY_OF_THE_VALLEY: 鈴蘭盆栽
+  POTTED_WITHER_ROSE: 凋零玫瑰盆栽
+  POTTED_RED_MUSHROOM: 紅色蘑菇盆栽
+  POTTED_BROWN_MUSHROOM: 棕色蘑菇盆栽
+  POTTED_DEAD_BUSH: 枯灌木盆栽
+  POTTED_CACTUS: 仙人掌盆栽
+  CARROTS: 胡蘿蔔
+  POTATOES: 馬鈴薯
+  SKELETON_WALL_SKULL: 牆上的骷髏頭顱
+  WITHER_SKELETON_WALL_SKULL: 牆上的凋零骷髏頭顱
+  ZOMBIE_WALL_HEAD: 牆上的殭屍頭顱
+  PLAYER_WALL_HEAD: 牆上的玩家頭顱
+  CREEPER_WALL_HEAD: 牆上的苦力怕頭顱
+  DRAGON_WALL_HEAD: 牆上的終界龍頭顱
+  WHITE_WALL_BANNER: White Wall Banner
+  ORANGE_WALL_BANNER: Orange Wall Banner
+  MAGENTA_WALL_BANNER: Magenta Wall Banner
+  LIGHT_BLUE_WALL_BANNER: Light Blue Wall Banner
+  YELLOW_WALL_BANNER: Yellow Wall Banner
+  LIME_WALL_BANNER: Lime Wall Banner
+  PINK_WALL_BANNER: Pink Wall Banner
+  GRAY_WALL_BANNER: Gray Wall Banner
+  LIGHT_GRAY_WALL_BANNER: Light Gray Wall Banner
+  CYAN_WALL_BANNER: Cyan Wall Banner
+  PURPLE_WALL_BANNER: Purple Wall Banner
+  BLUE_WALL_BANNER: Blue Wall Banner
+  BROWN_WALL_BANNER: Brown Wall Banner
+  GREEN_WALL_BANNER: Green Wall Banner
+  RED_WALL_BANNER: Red Wall Banner
+  BLACK_WALL_BANNER: Black Wall Banner
+  BEETROOTS: 甜菜根
+  END_GATEWAY: 終界折躍門
+  FROSTED_ICE: 霜冰
+  KELP_PLANT: 海帶植株
+  DEAD_TUBE_CORAL_WALL_FAN: 牆上死亡的扇狀管珊瑚
+  DEAD_BRAIN_CORAL_WALL_FAN: 牆上死亡的扇狀腦珊瑚
+  DEAD_BUBBLE_CORAL_WALL_FAN: 牆上死亡的扇狀氣泡珊瑚
+  DEAD_FIRE_CORAL_WALL_FAN: 牆上死亡的扇狀火珊瑚
+  DEAD_HORN_CORAL_WALL_FAN: 牆上死亡的扇狀角珊瑚
+  TUBE_CORAL_WALL_FAN: 牆上的扇狀管珊瑚
+  BRAIN_CORAL_WALL_FAN: 牆上的扇狀腦珊瑚
+  BUBBLE_CORAL_WALL_FAN: 牆上的扇狀氣泡珊瑚
+  FIRE_CORAL_WALL_FAN: 牆上的扇狀火珊瑚
+  HORN_CORAL_WALL_FAN: 牆上的扇狀角珊瑚
+  BAMBOO_SAPLING: 竹筍
+  POTTED_BAMBOO: 竹子盆栽
+  VOID_AIR: 虛空空氣
+  CAVE_AIR: 洞穴空氣
+  BUBBLE_COLUMN: 氣泡柱
+  SWEET_BERRY_BUSH: 甜莓灌木叢
+  WEEPING_VINES_PLANT: 垂泣藤植株
+  TWISTING_VINES_PLANT: 扭曲藤植株
+  CRIMSON_WALL_SIGN: 牆上的緋紅蕈木告示牌
+  WARPED_WALL_SIGN: 牆上的扭曲蕈木告示牌
+  POTTED_CRIMSON_FUNGUS: 緋紅蕈菇盆栽
+  POTTED_WARPED_FUNGUS: 扭曲蕈菇盆栽
+  POTTED_CRIMSON_ROOTS: 緋紅蕈根盆栽
+  POTTED_WARPED_ROOTS: 扭曲蕈根盆栽
+  DEEPSLATE: Deepslate
+  COBBLED_DEEPSLATE: Cobbled Deepslate
+  POLISHED_DEEPSLATE: Polished Deepslate
+  CALCITE: Calcite
+  TUFF: Tuff
+  DRIPSTONE_BLOCK: Dripstone Block
+  ROOTED_DIRT: Rooted Dirt
+  DEEPSLATE_COAL_ORE: Deepslate Coal Ore
+  DEEPSLATE_IRON_ORE: Deepslate Iron Ore
+  COPPER_ORE: Copper Ore
+  DEEPSLATE_COPPER_ORE: Deepslate Copper Ore
+  DEEPSLATE_GOLD_ORE: Deepslate Gold Ore
+  DEEPSLATE_REDSTONE_ORE: Deepslate Redstone Ore
+  DEEPSLATE_EMERALD_ORE: Deepslate Emerald Ore
+  DEEPSLATE_LAPIS_ORE: Deepslate Lapis Ore
+  DEEPSLATE_DIAMOND_ORE: Deepslate Diamond Ore
+  RAW_IRON_BLOCK: Raw Iron Block
+  RAW_COPPER_BLOCK: Raw Copper Block
+  RAW_GOLD_BLOCK: Raw Gold Block
+  AMETHYST_BLOCK: Amethyst Block
+  BUDDING_AMETHYST: Budding Amethyst
+  COPPER_BLOCK: Copper Block
+  EXPOSED_COPPER: Exposed Copper
+  WEATHERED_COPPER: Weathered Copper
+  OXIDIZED_COPPER: Oxidized Copper
+  CUT_COPPER: Cut Copper
+  EXPOSED_CUT_COPPER: Exposed Cut Copper
+  WEATHERED_CUT_COPPER: Weathered Cut Copper
+  OXIDIZED_CUT_COPPER: Oxidized Cut Copper
+  CUT_COPPER_STAIRS: Cut Copper Stairs
+  EXPOSED_CUT_COPPER_STAIRS: Exposed Cut Copper Stairs
+  WEATHERED_CUT_COPPER_STAIRS: Weathered Cut Copper Stairs
+  OXIDIZED_CUT_COPPER_STAIRS: Oxidized Cut Copper Stairs
+  CUT_COPPER_SLAB: Cut Copper Slab
+  EXPOSED_CUT_COPPER_SLAB: Exposed Cut Copper Slab
+  WEATHERED_CUT_COPPER_SLAB: Weathered Cut Copper Slab
+  OXIDIZED_CUT_COPPER_SLAB: Oxidized Cut Copper Slab
+  WAXED_COPPER_BLOCK: Waxed Copper Block
+  WAXED_EXPOSED_COPPER: Waxed Exposed Copper
+  WAXED_WEATHERED_COPPER: Waxed Weathered Copper
+  WAXED_OXIDIZED_COPPER: Waxed Oxidized Copper
+  WAXED_CUT_COPPER: Waxed Cut Copper
+  WAXED_EXPOSED_CUT_COPPER: Waxed Exposed Cut Copper
+  WAXED_WEATHERED_CUT_COPPER: Waxed Weathered Cut Copper
+  WAXED_OXIDIZED_CUT_COPPER: Waxed Oxidized Cut Copper
+  WAXED_CUT_COPPER_STAIRS: Waxed Cut Copper Stairs
+  WAXED_EXPOSED_CUT_COPPER_STAIRS: Waxed Exposed Cut Copper Stairs
+  WAXED_WEATHERED_CUT_COPPER_STAIRS: Waxed Weathered Cut Copper Stairs
+  WAXED_OXIDIZED_CUT_COPPER_STAIRS: Waxed Oxidized Cut Copper Stairs
+  WAXED_CUT_COPPER_SLAB: Waxed Cut Copper Slab
+  WAXED_EXPOSED_CUT_COPPER_SLAB: Waxed Exposed Cut Copper Slab
+  WAXED_WEATHERED_CUT_COPPER_SLAB: Waxed Weathered Cut Copper Slab
+  WAXED_OXIDIZED_CUT_COPPER_SLAB: Waxed Oxidized Cut Copper Slab
+  AZALEA_LEAVES: Azalea Leaves
+  FLOWERING_AZALEA_LEAVES: Flowering Azalea Leaves
+  TINTED_GLASS: Tinted Glass
+  AZALEA: Azalea
+  FLOWERING_AZALEA: Flowering Azalea
+  SPORE_BLOSSOM: Spore Blossom
+  MOSS_CARPET: Moss Carpet
+  MOSS_BLOCK: Moss Block
+  HANGING_ROOTS: Hanging Roots
+  BIG_DRIPLEAF: Big Dripleaf
+  SMALL_DRIPLEAF: Small Dripleaf
+  SMOOTH_BASALT: Smooth Basalt
+  INFESTED_DEEPSLATE: Infested Deepslate
+  DEEPSLATE_BRICKS: Deepslate Bricks
+  CRACKED_DEEPSLATE_BRICKS: Cracked Deepslate Bricks
+  DEEPSLATE_TILES: Deepslate Tiles
+  CRACKED_DEEPSLATE_TILES: Cracked Deepslate Tiles
+  CHISELED_DEEPSLATE: Chiseled Deepslate
+  GLOW_LICHEN: Glow Lichen
+  COBBLED_DEEPSLATE_WALL: Cobbled Deepslate Wall
+  POLISHED_DEEPSLATE_WALL: Polished Deepslate Wall
+  DEEPSLATE_BRICK_WALL: Deepslate Brick Wall
+  DEEPSLATE_TILE_WALL: Deepslate Tile Wall
+  LIGHT: Light
+  DIRT_PATH: Dirt Path
+  COBBLED_DEEPSLATE_STAIRS: Cobbled Deepslate Stairs
+  POLISHED_DEEPSLATE_STAIRS: Polished Deepslate Stairs
+  DEEPSLATE_BRICK_STAIRS: Deepslate Brick Stairs
+  DEEPSLATE_TILE_STAIRS: Deepslate Tile Stairs
+  COBBLED_DEEPSLATE_SLAB: Cobbled Deepslate Slab
+  POLISHED_DEEPSLATE_SLAB: Polished Deepslate Slab
+  DEEPSLATE_BRICK_SLAB: Deepslate Brick Slab
+  DEEPSLATE_TILE_SLAB: Deepslate Tile Slab
+  LIGHTNING_ROD: Lightning Rod
+  SCULK_SENSOR: Sculk Sensor
+  AMETHYST_SHARD: Amethyst Shard
+  RAW_IRON: Raw Iron
+  RAW_COPPER: Raw Copper
+  COPPER_INGOT: Copper Ingot
+  RAW_GOLD: Raw Gold
+  POWDER_SNOW_BUCKET: Powder Snow Bucket
+  AXOLOTL_BUCKET: Axolotl Bucket
+  BUNDLE: Bundle
+  SPYGLASS: Spyglass
+  GLOW_INK_SAC: Glow Ink Sac
+  AXOLOTL_SPAWN_EGG: Axolotl Spawn Egg
+  GLOW_SQUID_SPAWN_EGG: Glow Squid Spawn Egg
+  GOAT_SPAWN_EGG: Goat Spawn Egg
+  GLOW_ITEM_FRAME: Glow Item Frame
+  GLOW_BERRIES: Glow Berries
+  CANDLE: Candle
+  WHITE_CANDLE: White Candle
+  ORANGE_CANDLE: Orange Candle
+  MAGENTA_CANDLE: Magenta Candle
+  LIGHT_BLUE_CANDLE: Light Blue Candle
+  YELLOW_CANDLE: Yellow Candle
+  LIME_CANDLE: Lime Candle
+  PINK_CANDLE: Pink Candle
+  GRAY_CANDLE: Gray Candle
+  LIGHT_GRAY_CANDLE: Light Gray Candle
+  CYAN_CANDLE: Cyan Candle
+  PURPLE_CANDLE: Purple Candle
+  BLUE_CANDLE: Blue Candle
+  BROWN_CANDLE: Brown Candle
+  GREEN_CANDLE: Green Candle
+  RED_CANDLE: Red Candle
+  BLACK_CANDLE: Black Candle
+  SMALL_AMETHYST_BUD: Small Amethyst Bud
+  MEDIUM_AMETHYST_BUD: Medium Amethyst Bud
+  LARGE_AMETHYST_BUD: Large Amethyst Bud
+  AMETHYST_CLUSTER: Amethyst Cluster
+  POINTED_DRIPSTONE: Pointed Dripstone
+  WATER_CAULDRON: Water Cauldron
+  LAVA_CAULDRON: Lava Cauldron
+  POWDER_SNOW_CAULDRON: Powder Snow Cauldron
+  CANDLE_CAKE: Candle Cake
+  WHITE_CANDLE_CAKE: White Candle Cake
+  ORANGE_CANDLE_CAKE: Orange Candle Cake
+  MAGENTA_CANDLE_CAKE: Magenta Candle Cake
+  LIGHT_BLUE_CANDLE_CAKE: Light Blue Candle Cake
+  YELLOW_CANDLE_CAKE: Yellow Candle Cake
+  LIME_CANDLE_CAKE: Lime Candle Cake
+  PINK_CANDLE_CAKE: Pink Candle Cake
+  GRAY_CANDLE_CAKE: Gray Candle Cake
+  LIGHT_GRAY_CANDLE_CAKE: Light Gray Candle Cake
+  CYAN_CANDLE_CAKE: Cyan Candle Cake
+  PURPLE_CANDLE_CAKE: Purple Candle Cake
+  BLUE_CANDLE_CAKE: Blue Candle Cake
+  BROWN_CANDLE_CAKE: Brown Candle Cake
+  GREEN_CANDLE_CAKE: Green Candle Cake
+  RED_CANDLE_CAKE: Red Candle Cake
+  BLACK_CANDLE_CAKE: Black Candle Cake
+  POWDER_SNOW: Powder Snow
+  CAVE_VINES: Cave Vines
+  CAVE_VINES_PLANT: Cave Vines Plant
+  BIG_DRIPLEAF_STEM: Big Dripleaf Stem
+  POTTED_AZALEA_BUSH: Potted Azalea Bush
+  POTTED_FLOWERING_AZALEA_BUSH: Potted Flowering Azalea Bush
+  MUSIC_DISC_OTHERSIDE: 唱片
+  MUD: 泥巴
+  MANGROVE_PLANKS: 紅樹林木材
+  MANGROVE_PROPAGULE: 紅樹林木胎生苗
+  MANGROVE_LOG: 紅樹林木原木
+  MANGROVE_ROOTS: 紅樹林木根
+  MUDDY_MANGROVE_ROOTS: 淤泥紅樹林木根
+  STRIPPED_MANGROVE_LOG: 剝皮紅樹林木原木
+  STRIPPED_MANGROVE_WOOD: 剝皮紅樹林木塊
+  MANGROVE_WOOD: 紅樹林木塊
+  MANGROVE_LEAVES: 紅樹林木樹葉
+  MANGROVE_SLAB: 紅樹林木半磚
+  MUD_BRICK_SLAB: 泥磚半磚
+  MANGROVE_FENCE: 紅樹林木柵欄
+  PACKED_MUD: 泥坯
+  MUD_BRICKS: 泥磚
+  REINFORCED_DEEPSLATE: 強化深板岩
+  MUD_BRICK_STAIRS: 泥磚階梯
+  SCULK: 伏聆
+  SCULK_VEIN: 伏聆脈絡
+  SCULK_CATALYST: 伏聆觸媒
+  SCULK_SHRIEKER: 伏聆嘯口
+  MANGROVE_STAIRS: 紅樹林木階梯
+  MUD_BRICK_WALL: 泥磚牆
+  MANGROVE_BUTTON: 紅樹林木按鈕
+  MANGROVE_PRESSURE_PLATE: 紅樹林木壓力板
+  MANGROVE_DOOR: 紅樹林木門
+  MANGROVE_TRAPDOOR: 紅樹林木地板門
+  MANGROVE_FENCE_GATE: 紅樹林木柵欄門
+  OAK_CHEST_BOAT: 儲物箱橡木船
+  SPRUCE_CHEST_BOAT: 儲物箱杉木船
+  BIRCH_CHEST_BOAT: 儲物箱樺木船
+  JUNGLE_CHEST_BOAT: 儲物箱叢林木船
+  ACACIA_CHEST_BOAT: 儲物箱相思木船
+  DARK_OAK_CHEST_BOAT: 儲物箱黑橡木船
+  MANGROVE_BOAT: 紅樹林木船
+  MANGROVE_CHEST_BOAT: 儲物箱紅樹林木船
+  MANGROVE_SIGN: 紅樹林木告示牌
+  TADPOLE_BUCKET: 蝌蚪桶
+  RECOVERY_COMPASS: 回生羅盤
+  ALLAY_SPAWN_EGG: 悅靈 生怪蛋
+  FROG_SPAWN_EGG: 青蛙 生怪蛋
+  TADPOLE_SPAWN_EGG: 蝌蚪 生怪蛋
+  WARDEN_SPAWN_EGG: 伏守者 生怪蛋
+  MUSIC_DISC_5: 唱片
+  DISC_FRAGMENT_5: 唱片碎片
+  GOAT_HORN: 山羊角
+  OCHRE_FROGLIGHT: 赭黃蛙光體
+  VERDANT_FROGLIGHT: 蒼翠蛙光體
+  PEARLESCENT_FROGLIGHT: 珠紫蛙光體
+  FROGSPAWN: 青蛙卵
+  ECHO_SHARD: 回聲碎片
+  MANGROVE_WALL_SIGN: 牆上的紅樹林木告示牌
+  POTTED_MANGROVE_PROPAGULE: 紅樹林木胎生苗盆栽

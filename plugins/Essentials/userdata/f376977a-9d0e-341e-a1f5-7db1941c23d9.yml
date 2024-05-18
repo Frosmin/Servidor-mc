@@ -1,0 +1,87 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 181.115.171.235
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1715230507586
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1715361621258
+  login: 1715359334520
+money: '4197.0'
+lastlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: -1227.300000011921
+  y: -2.0
+  z: -1626.7507164033445
+  yaw: -89.23272705078125
+  pitch: 10.035896301269531
+homes:
+  arriba:
+    world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+    world-name: mundo
+    x: -282.2091100309667
+    y: 121.0
+    z: 129.08028699788167
+    yaw: 90.63348388671875
+    pitch: 24.211803436279297
+  cel:
+    world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+    world-name: mundo
+    x: -281.95261951205987
+    y: 121.0
+    z: 127.89967514884859
+    yaw: 90.63348388671875
+    pitch: 24.211803436279297
+  blaze:
+    world: f7c54e39-a24f-4eaf-8fa1-0d8f667c7ee3
+    world-name: inicio_nether
+    x: -141.76322280233114
+    y: 73.0
+    z: 671.866950480003
+    yaw: -94.020751953125
+    pitch: 60.66159439086914
+  warden:
+    world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+    world-name: mundo
+    x: -160.58767466255148
+    y: -15.0
+    z: 508.5476642973615
+    yaw: 169.75579833984375
+    pitch: 17.808059692382812
+  endalitas:
+    world: bcc1ad21-819e-4792-9982-70525727639f
+    world-name: inicio_the_end
+    x: 854.4090508840902
+    y: 63.0
+    z: -591.9908837639482
+    yaw: -88.60877227783203
+    pitch: 9.156570434570312
+  endalgo2:
+    world: bcc1ad21-819e-4792-9982-70525727639f
+    world-name: inicio_the_end
+    x: 477.90599066917275
+    y: 57.0
+    z: -1292.874267671367
+    yaw: -155.0203857421875
+    pitch: 21.18843650817871
+logoutlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: -249.00896649567665
+  y: 121.17675927506424
+  z: 116.44241762585423
+  yaw: -0.379150390625
+  pitch: 3.209193706512451
+last-account-name: Jh0nD

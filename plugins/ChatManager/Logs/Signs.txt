@@ -1,0 +1,388 @@
+[Fri May 03 04:07:25 UTC 2024] Jh0nD | Location: X: -436 Y: 64 Z: 178 | Line: 0 | [sell]
+[Fri May 03 04:07:25 UTC 2024] Jh0nD | Location: X: -436 Y: 64 Z: 178 | Line: 1 | 64
+[Fri May 03 04:07:25 UTC 2024] Jh0nD | Location: X: -436 Y: 64 Z: 178 | Line: 2 | Dirt
+[Fri May 03 04:07:25 UTC 2024] Jh0nD | Location: X: -436 Y: 64 Z: 178 | Line: 3 | $1
+[Sun May 05 03:05:57 UTC 2024] sikimon | Location: X: -371 Y: 99 Z: 159 | Line: 0 | 
+[Sun May 05 03:05:57 UTC 2024] sikimon | Location: X: -371 Y: 99 Z: 159 | Line: 1 | 
+[Sun May 05 03:05:57 UTC 2024] sikimon | Location: X: -371 Y: 99 Z: 159 | Line: 2 | 
+[Sun May 05 03:05:57 UTC 2024] sikimon | Location: X: -371 Y: 99 Z: 159 | Line: 3 | 
+[Sun May 05 03:05:58 UTC 2024] sikimon | Location: X: -371 Y: 100 Z: 159 | Line: 0 | 
+[Sun May 05 03:05:58 UTC 2024] sikimon | Location: X: -371 Y: 100 Z: 159 | Line: 1 | 
+[Sun May 05 03:05:58 UTC 2024] sikimon | Location: X: -371 Y: 100 Z: 159 | Line: 2 | 
+[Sun May 05 03:05:58 UTC 2024] sikimon | Location: X: -371 Y: 100 Z: 159 | Line: 3 | 
+[Sun May 05 03:08:06 UTC 2024] sikimon | Location: X: -371 Y: 100 Z: 159 | Line: 0 | 
+[Sun May 05 03:08:06 UTC 2024] sikimon | Location: X: -371 Y: 100 Z: 159 | Line: 1 | 
+[Sun May 05 03:08:06 UTC 2024] sikimon | Location: X: -371 Y: 100 Z: 159 | Line: 2 | 
+[Sun May 05 03:08:06 UTC 2024] sikimon | Location: X: -371 Y: 100 Z: 159 | Line: 3 | 
+[Sun May 05 03:08:08 UTC 2024] sikimon | Location: X: -371 Y: 99 Z: 159 | Line: 0 | 
+[Sun May 05 03:08:08 UTC 2024] sikimon | Location: X: -371 Y: 99 Z: 159 | Line: 1 | 
+[Sun May 05 03:08:08 UTC 2024] sikimon | Location: X: -371 Y: 99 Z: 159 | Line: 2 | 
+[Sun May 05 03:08:08 UTC 2024] sikimon | Location: X: -371 Y: 99 Z: 159 | Line: 3 | 
+[Sun May 05 03:25:24 UTC 2024] sikimon | Location: X: -370 Y: 78 Z: 151 | Line: 0 | 
+[Sun May 05 03:25:24 UTC 2024] sikimon | Location: X: -370 Y: 78 Z: 151 | Line: 1 | 
+[Sun May 05 03:25:24 UTC 2024] sikimon | Location: X: -370 Y: 78 Z: 151 | Line: 2 | 
+[Sun May 05 03:25:24 UTC 2024] sikimon | Location: X: -370 Y: 78 Z: 151 | Line: 3 | 
+[Sun May 05 03:25:25 UTC 2024] sikimon | Location: X: -370 Y: 79 Z: 151 | Line: 0 | 
+[Sun May 05 03:25:25 UTC 2024] sikimon | Location: X: -370 Y: 79 Z: 151 | Line: 1 | 
+[Sun May 05 03:25:25 UTC 2024] sikimon | Location: X: -370 Y: 79 Z: 151 | Line: 2 | 
+[Sun May 05 03:25:25 UTC 2024] sikimon | Location: X: -370 Y: 79 Z: 151 | Line: 3 | 
+[Sun May 05 22:19:26 UTC 2024] BrunoHD11 | Location: X: -390 Y: 69 Z: 100 | Line: 0 | egg
+[Sun May 05 22:19:26 UTC 2024] BrunoHD11 | Location: X: -390 Y: 69 Z: 100 | Line: 1 | 
+[Sun May 05 22:19:26 UTC 2024] BrunoHD11 | Location: X: -390 Y: 69 Z: 100 | Line: 2 | 
+[Sun May 05 22:19:26 UTC 2024] BrunoHD11 | Location: X: -390 Y: 69 Z: 100 | Line: 3 | 
+[Sun May 05 22:26:19 UTC 2024] BrunoHD11 | Location: X: -333 Y: 81 Z: 260 | Line: 0 | 
+[Sun May 05 22:26:19 UTC 2024] BrunoHD11 | Location: X: -333 Y: 81 Z: 260 | Line: 1 | Be happy
+[Sun May 05 22:26:19 UTC 2024] BrunoHD11 | Location: X: -333 Y: 81 Z: 260 | Line: 2 | 
+[Sun May 05 22:26:19 UTC 2024] BrunoHD11 | Location: X: -333 Y: 81 Z: 260 | Line: 3 | 
+[Mon May 06 18:37:39 UTC 2024] sikimon | Location: X: 0 Y: 158 Z: 3 | Line: 0 | /registre 
+[Mon May 06 18:37:39 UTC 2024] sikimon | Location: X: 0 Y: 158 Z: 3 | Line: 1 | <contra>
+[Mon May 06 18:37:39 UTC 2024] sikimon | Location: X: 0 Y: 158 Z: 3 | Line: 2 | <contra>
+[Mon May 06 18:37:39 UTC 2024] sikimon | Location: X: 0 Y: 158 Z: 3 | Line: 3 | 
+[Mon May 06 18:37:52 UTC 2024] sikimon | Location: X: -1 Y: 158 Z: 3 | Line: 0 | /login
+[Mon May 06 18:37:52 UTC 2024] sikimon | Location: X: -1 Y: 158 Z: 3 | Line: 1 | <contra>
+[Mon May 06 18:37:52 UTC 2024] sikimon | Location: X: -1 Y: 158 Z: 3 | Line: 2 | 
+[Mon May 06 18:37:52 UTC 2024] sikimon | Location: X: -1 Y: 158 Z: 3 | Line: 3 | 
+[Mon May 06 18:38:09 UTC 2024] sikimon | Location: X: 1 Y: 158 Z: 2 | Line: 0 | leer el chat
+[Mon May 06 18:38:09 UTC 2024] sikimon | Location: X: 1 Y: 158 Z: 2 | Line: 1 | 
+[Mon May 06 18:38:09 UTC 2024] sikimon | Location: X: 1 Y: 158 Z: 2 | Line: 2 | 
+[Mon May 06 18:38:09 UTC 2024] sikimon | Location: X: 1 Y: 158 Z: 2 | Line: 3 | 
+[Mon May 06 20:43:05 UTC 2024] sikimon | Location: X: -320 Y: 122 Z: 139 | Line: 0 | 
+[Mon May 06 20:43:05 UTC 2024] sikimon | Location: X: -320 Y: 122 Z: 139 | Line: 1 | 
+[Mon May 06 20:43:05 UTC 2024] sikimon | Location: X: -320 Y: 122 Z: 139 | Line: 2 | 
+[Mon May 06 20:43:05 UTC 2024] sikimon | Location: X: -320 Y: 122 Z: 139 | Line: 3 | 
+[Mon May 06 20:43:07 UTC 2024] sikimon | Location: X: -320 Y: 121 Z: 139 | Line: 0 | 
+[Mon May 06 20:43:07 UTC 2024] sikimon | Location: X: -320 Y: 121 Z: 139 | Line: 1 | 
+[Mon May 06 20:43:07 UTC 2024] sikimon | Location: X: -320 Y: 121 Z: 139 | Line: 2 | 
+[Mon May 06 20:43:07 UTC 2024] sikimon | Location: X: -320 Y: 121 Z: 139 | Line: 3 | 
+[Mon May 06 20:43:10 UTC 2024] sikimon | Location: X: -318 Y: 122 Z: 139 | Line: 0 | 
+[Mon May 06 20:43:10 UTC 2024] sikimon | Location: X: -318 Y: 122 Z: 139 | Line: 1 | 
+[Mon May 06 20:43:10 UTC 2024] sikimon | Location: X: -318 Y: 122 Z: 139 | Line: 2 | 
+[Mon May 06 20:43:10 UTC 2024] sikimon | Location: X: -318 Y: 122 Z: 139 | Line: 3 | 
+[Mon May 06 20:43:12 UTC 2024] sikimon | Location: X: -318 Y: 121 Z: 139 | Line: 0 | 
+[Mon May 06 20:43:12 UTC 2024] sikimon | Location: X: -318 Y: 121 Z: 139 | Line: 1 | 
+[Mon May 06 20:43:12 UTC 2024] sikimon | Location: X: -318 Y: 121 Z: 139 | Line: 2 | 
+[Mon May 06 20:43:12 UTC 2024] sikimon | Location: X: -318 Y: 121 Z: 139 | Line: 3 | 
+[Mon May 06 20:59:58 UTC 2024] sikimon | Location: X: -314 Y: 127 Z: 139 | Line: 0 | 
+[Mon May 06 20:59:58 UTC 2024] sikimon | Location: X: -314 Y: 127 Z: 139 | Line: 1 | 
+[Mon May 06 20:59:58 UTC 2024] sikimon | Location: X: -314 Y: 127 Z: 139 | Line: 2 | 
+[Mon May 06 20:59:58 UTC 2024] sikimon | Location: X: -314 Y: 127 Z: 139 | Line: 3 | 
+[Mon May 06 20:59:59 UTC 2024] sikimon | Location: X: -314 Y: 126 Z: 139 | Line: 0 | 
+[Mon May 06 20:59:59 UTC 2024] sikimon | Location: X: -314 Y: 126 Z: 139 | Line: 1 | 
+[Mon May 06 20:59:59 UTC 2024] sikimon | Location: X: -314 Y: 126 Z: 139 | Line: 2 | 
+[Mon May 06 20:59:59 UTC 2024] sikimon | Location: X: -314 Y: 126 Z: 139 | Line: 3 | 
+[Mon May 06 21:00:03 UTC 2024] sikimon | Location: X: -313 Y: 126 Z: 139 | Line: 0 | e
+[Mon May 06 21:00:03 UTC 2024] sikimon | Location: X: -313 Y: 126 Z: 139 | Line: 1 | 
+[Mon May 06 21:00:03 UTC 2024] sikimon | Location: X: -313 Y: 126 Z: 139 | Line: 2 | 
+[Mon May 06 21:00:03 UTC 2024] sikimon | Location: X: -313 Y: 126 Z: 139 | Line: 3 | 
+[Mon May 06 21:00:05 UTC 2024] sikimon | Location: X: -312 Y: 126 Z: 139 | Line: 0 | 
+[Mon May 06 21:00:05 UTC 2024] sikimon | Location: X: -312 Y: 126 Z: 139 | Line: 1 | 
+[Mon May 06 21:00:05 UTC 2024] sikimon | Location: X: -312 Y: 126 Z: 139 | Line: 2 | 
+[Mon May 06 21:00:05 UTC 2024] sikimon | Location: X: -312 Y: 126 Z: 139 | Line: 3 | 
+[Mon May 06 21:00:07 UTC 2024] sikimon | Location: X: -312 Y: 127 Z: 139 | Line: 0 | 
+[Mon May 06 21:00:07 UTC 2024] sikimon | Location: X: -312 Y: 127 Z: 139 | Line: 1 | 
+[Mon May 06 21:00:07 UTC 2024] sikimon | Location: X: -312 Y: 127 Z: 139 | Line: 2 | 
+[Mon May 06 21:00:07 UTC 2024] sikimon | Location: X: -312 Y: 127 Z: 139 | Line: 3 | 
+[Tue May 07 01:15:02 UTC 2024] Cel | Location: X: 1 Y: 158 Z: 2 | Line: 0 | leer el chat
+[Tue May 07 01:15:02 UTC 2024] Cel | Location: X: 1 Y: 158 Z: 2 | Line: 1 | 
+[Tue May 07 01:15:02 UTC 2024] Cel | Location: X: 1 Y: 158 Z: 2 | Line: 2 | 
+[Tue May 07 01:15:02 UTC 2024] Cel | Location: X: 1 Y: 158 Z: 2 | Line: 3 | 
+[Tue May 07 01:15:08 UTC 2024] Cel | Location: X: 0 Y: 158 Z: 3 | Line: 0 | /registre 
+[Tue May 07 01:15:08 UTC 2024] Cel | Location: X: 0 Y: 158 Z: 3 | Line: 1 | <contra>
+[Tue May 07 01:15:08 UTC 2024] Cel | Location: X: 0 Y: 158 Z: 3 | Line: 2 | <contra>
+[Tue May 07 01:15:08 UTC 2024] Cel | Location: X: 0 Y: 158 Z: 3 | Line: 3 | 
+[Tue May 07 01:15:11 UTC 2024] Cel | Location: X: -1 Y: 158 Z: 3 | Line: 0 | /login
+[Tue May 07 01:15:11 UTC 2024] Cel | Location: X: -1 Y: 158 Z: 3 | Line: 1 | <contra>
+[Tue May 07 01:15:11 UTC 2024] Cel | Location: X: -1 Y: 158 Z: 3 | Line: 2 | 
+[Tue May 07 01:15:11 UTC 2024] Cel | Location: X: -1 Y: 158 Z: 3 | Line: 3 | 
+[Tue May 07 01:15:36 UTC 2024] Cel | Location: X: 0 Y: 158 Z: 3 | Line: 0 | /registre 
+[Tue May 07 01:15:36 UTC 2024] Cel | Location: X: 0 Y: 158 Z: 3 | Line: 1 | <contra>
+[Tue May 07 01:15:36 UTC 2024] Cel | Location: X: 0 Y: 158 Z: 3 | Line: 2 | <contra>
+[Tue May 07 01:15:36 UTC 2024] Cel | Location: X: 0 Y: 158 Z: 3 | Line: 3 | 
+[Tue May 07 04:47:23 UTC 2024] Slend7thx | Location: X: -259 Y: 118 Z: 124 | Line: 0 | daye cuida
+[Tue May 07 04:47:23 UTC 2024] Slend7thx | Location: X: -259 Y: 118 Z: 124 | Line: 1 | mi caballo
+[Tue May 07 04:47:23 UTC 2024] Slend7thx | Location: X: -259 Y: 118 Z: 124 | Line: 2 | plox :3
+[Tue May 07 04:47:23 UTC 2024] Slend7thx | Location: X: -259 Y: 118 Z: 124 | Line: 3 | 
+[Wed May 08 16:02:37 UTC 2024] Dayana | Location: X: 0 Y: 158 Z: 3 | Line: 0 | /registre 
+[Wed May 08 16:02:37 UTC 2024] Dayana | Location: X: 0 Y: 158 Z: 3 | Line: 1 | <contra>
+[Wed May 08 16:02:37 UTC 2024] Dayana | Location: X: 0 Y: 158 Z: 3 | Line: 2 | <contra>
+[Wed May 08 16:02:37 UTC 2024] Dayana | Location: X: 0 Y: 158 Z: 3 | Line: 3 | 
+[Wed May 08 16:02:40 UTC 2024] Dayana | Location: X: -1 Y: 158 Z: 3 | Line: 0 | /login
+[Wed May 08 16:02:40 UTC 2024] Dayana | Location: X: -1 Y: 158 Z: 3 | Line: 1 | <contra>
+[Wed May 08 16:02:40 UTC 2024] Dayana | Location: X: -1 Y: 158 Z: 3 | Line: 2 | 
+[Wed May 08 16:02:40 UTC 2024] Dayana | Location: X: -1 Y: 158 Z: 3 | Line: 3 | 
+[Wed May 08 23:53:40 UTC 2024] rmzamorano | Location: X: -438 Y: 87 Z: 1445 | Line: 0 | 
+[Wed May 08 23:53:40 UTC 2024] rmzamorano | Location: X: -438 Y: 87 Z: 1445 | Line: 1 | 
+[Wed May 08 23:53:40 UTC 2024] rmzamorano | Location: X: -438 Y: 87 Z: 1445 | Line: 2 | 
+[Wed May 08 23:53:40 UTC 2024] rmzamorano | Location: X: -438 Y: 87 Z: 1445 | Line: 3 | 
+[Wed May 08 23:54:45 UTC 2024] rmzamorano | Location: X: -438 Y: 90 Z: 1449 | Line: 0 | 
+[Wed May 08 23:54:45 UTC 2024] rmzamorano | Location: X: -438 Y: 90 Z: 1449 | Line: 1 | 
+[Wed May 08 23:54:45 UTC 2024] rmzamorano | Location: X: -438 Y: 90 Z: 1449 | Line: 2 | 
+[Wed May 08 23:54:45 UTC 2024] rmzamorano | Location: X: -438 Y: 90 Z: 1449 | Line: 3 | 
+[Wed May 08 23:54:46 UTC 2024] rmzamorano | Location: X: -438 Y: 90 Z: 1448 | Line: 0 | 
+[Wed May 08 23:54:46 UTC 2024] rmzamorano | Location: X: -438 Y: 90 Z: 1448 | Line: 1 | 
+[Wed May 08 23:54:46 UTC 2024] rmzamorano | Location: X: -438 Y: 90 Z: 1448 | Line: 2 | 
+[Wed May 08 23:54:46 UTC 2024] rmzamorano | Location: X: -438 Y: 90 Z: 1448 | Line: 3 | 
+[Wed May 08 23:54:47 UTC 2024] rmzamorano | Location: X: -438 Y: 90 Z: 1447 | Line: 0 | 
+[Wed May 08 23:54:47 UTC 2024] rmzamorano | Location: X: -438 Y: 90 Z: 1447 | Line: 1 | 
+[Wed May 08 23:54:47 UTC 2024] rmzamorano | Location: X: -438 Y: 90 Z: 1447 | Line: 2 | 
+[Wed May 08 23:54:47 UTC 2024] rmzamorano | Location: X: -438 Y: 90 Z: 1447 | Line: 3 | 
+[Wed May 08 23:54:47 UTC 2024] rmzamorano | Location: X: -438 Y: 90 Z: 1446 | Line: 0 | 
+[Wed May 08 23:54:47 UTC 2024] rmzamorano | Location: X: -438 Y: 90 Z: 1446 | Line: 1 | 
+[Wed May 08 23:54:47 UTC 2024] rmzamorano | Location: X: -438 Y: 90 Z: 1446 | Line: 2 | 
+[Wed May 08 23:54:47 UTC 2024] rmzamorano | Location: X: -438 Y: 90 Z: 1446 | Line: 3 | 
+[Wed May 08 23:54:49 UTC 2024] rmzamorano | Location: X: -438 Y: 90 Z: 1445 | Line: 0 | 
+[Wed May 08 23:54:49 UTC 2024] rmzamorano | Location: X: -438 Y: 90 Z: 1445 | Line: 1 | 
+[Wed May 08 23:54:49 UTC 2024] rmzamorano | Location: X: -438 Y: 90 Z: 1445 | Line: 2 | 
+[Wed May 08 23:54:49 UTC 2024] rmzamorano | Location: X: -438 Y: 90 Z: 1445 | Line: 3 | 
+[Wed May 08 23:55:05 UTC 2024] rmzamorano | Location: X: -439 Y: 91 Z: 1445 | Line: 0 | 
+[Wed May 08 23:55:05 UTC 2024] rmzamorano | Location: X: -439 Y: 91 Z: 1445 | Line: 1 | 
+[Wed May 08 23:55:05 UTC 2024] rmzamorano | Location: X: -439 Y: 91 Z: 1445 | Line: 2 | 
+[Wed May 08 23:55:05 UTC 2024] rmzamorano | Location: X: -439 Y: 91 Z: 1445 | Line: 3 | 
+[Wed May 08 23:55:06 UTC 2024] rmzamorano | Location: X: -439 Y: 91 Z: 1446 | Line: 0 | 
+[Wed May 08 23:55:06 UTC 2024] rmzamorano | Location: X: -439 Y: 91 Z: 1446 | Line: 1 | 
+[Wed May 08 23:55:06 UTC 2024] rmzamorano | Location: X: -439 Y: 91 Z: 1446 | Line: 2 | 
+[Wed May 08 23:55:06 UTC 2024] rmzamorano | Location: X: -439 Y: 91 Z: 1446 | Line: 3 | 
+[Wed May 08 23:55:07 UTC 2024] rmzamorano | Location: X: -439 Y: 91 Z: 1447 | Line: 0 | 
+[Wed May 08 23:55:07 UTC 2024] rmzamorano | Location: X: -439 Y: 91 Z: 1447 | Line: 1 | 
+[Wed May 08 23:55:07 UTC 2024] rmzamorano | Location: X: -439 Y: 91 Z: 1447 | Line: 2 | 
+[Wed May 08 23:55:07 UTC 2024] rmzamorano | Location: X: -439 Y: 91 Z: 1447 | Line: 3 | 
+[Wed May 08 23:55:08 UTC 2024] rmzamorano | Location: X: -439 Y: 91 Z: 1448 | Line: 0 | 
+[Wed May 08 23:55:08 UTC 2024] rmzamorano | Location: X: -439 Y: 91 Z: 1448 | Line: 1 | 
+[Wed May 08 23:55:08 UTC 2024] rmzamorano | Location: X: -439 Y: 91 Z: 1448 | Line: 2 | 
+[Wed May 08 23:55:08 UTC 2024] rmzamorano | Location: X: -439 Y: 91 Z: 1448 | Line: 3 | 
+[Wed May 08 23:55:10 UTC 2024] rmzamorano | Location: X: -439 Y: 91 Z: 1449 | Line: 0 | 
+[Wed May 08 23:55:10 UTC 2024] rmzamorano | Location: X: -439 Y: 91 Z: 1449 | Line: 1 | 
+[Wed May 08 23:55:10 UTC 2024] rmzamorano | Location: X: -439 Y: 91 Z: 1449 | Line: 2 | 
+[Wed May 08 23:55:10 UTC 2024] rmzamorano | Location: X: -439 Y: 91 Z: 1449 | Line: 3 | 
+[Thu May 09 00:05:41 UTC 2024] rmzamorano | Location: X: -438 Y: 89 Z: 1445 | Line: 0 | 
+[Thu May 09 00:05:41 UTC 2024] rmzamorano | Location: X: -438 Y: 89 Z: 1445 | Line: 1 | 
+[Thu May 09 00:05:41 UTC 2024] rmzamorano | Location: X: -438 Y: 89 Z: 1445 | Line: 2 | 
+[Thu May 09 00:05:41 UTC 2024] rmzamorano | Location: X: -438 Y: 89 Z: 1445 | Line: 3 | 
+[Thu May 09 00:05:41 UTC 2024] rmzamorano | Location: X: -438 Y: 89 Z: 1446 | Line: 0 | 
+[Thu May 09 00:05:41 UTC 2024] rmzamorano | Location: X: -438 Y: 89 Z: 1446 | Line: 1 | 
+[Thu May 09 00:05:41 UTC 2024] rmzamorano | Location: X: -438 Y: 89 Z: 1446 | Line: 2 | 
+[Thu May 09 00:05:41 UTC 2024] rmzamorano | Location: X: -438 Y: 89 Z: 1446 | Line: 3 | 
+[Thu May 09 00:05:42 UTC 2024] rmzamorano | Location: X: -438 Y: 89 Z: 1447 | Line: 0 | 
+[Thu May 09 00:05:42 UTC 2024] rmzamorano | Location: X: -438 Y: 89 Z: 1447 | Line: 1 | 
+[Thu May 09 00:05:42 UTC 2024] rmzamorano | Location: X: -438 Y: 89 Z: 1447 | Line: 2 | 
+[Thu May 09 00:05:42 UTC 2024] rmzamorano | Location: X: -438 Y: 89 Z: 1447 | Line: 3 | 
+[Thu May 09 00:05:43 UTC 2024] rmzamorano | Location: X: -438 Y: 89 Z: 1448 | Line: 0 | d
+[Thu May 09 00:05:43 UTC 2024] rmzamorano | Location: X: -438 Y: 89 Z: 1448 | Line: 1 | 
+[Thu May 09 00:05:43 UTC 2024] rmzamorano | Location: X: -438 Y: 89 Z: 1448 | Line: 2 | 
+[Thu May 09 00:05:43 UTC 2024] rmzamorano | Location: X: -438 Y: 89 Z: 1448 | Line: 3 | 
+[Thu May 09 00:05:44 UTC 2024] rmzamorano | Location: X: -438 Y: 89 Z: 1449 | Line: 0 | 
+[Thu May 09 00:05:44 UTC 2024] rmzamorano | Location: X: -438 Y: 89 Z: 1449 | Line: 1 | 
+[Thu May 09 00:05:44 UTC 2024] rmzamorano | Location: X: -438 Y: 89 Z: 1449 | Line: 2 | 
+[Thu May 09 00:05:44 UTC 2024] rmzamorano | Location: X: -438 Y: 89 Z: 1449 | Line: 3 | 
+[Thu May 09 00:47:44 UTC 2024] sikimon | Location: X: -7 Y: 276 Z: -4 | Line: 0 | d
+[Thu May 09 00:47:44 UTC 2024] sikimon | Location: X: -7 Y: 276 Z: -4 | Line: 1 | 
+[Thu May 09 00:47:44 UTC 2024] sikimon | Location: X: -7 Y: 276 Z: -4 | Line: 2 | 
+[Thu May 09 00:47:44 UTC 2024] sikimon | Location: X: -7 Y: 276 Z: -4 | Line: 3 | 
+[Thu May 09 00:47:50 UTC 2024] sikimon | Location: X: -6 Y: 276 Z: -4 | Line: 0 | 
+[Thu May 09 00:47:50 UTC 2024] sikimon | Location: X: -6 Y: 276 Z: -4 | Line: 1 | 
+[Thu May 09 00:47:50 UTC 2024] sikimon | Location: X: -6 Y: 276 Z: -4 | Line: 2 | 
+[Thu May 09 00:47:50 UTC 2024] sikimon | Location: X: -6 Y: 276 Z: -4 | Line: 3 | 
+[Thu May 09 00:48:03 UTC 2024] sikimon | Location: X: -6 Y: 277 Z: -4 | Line: 0 | 
+[Thu May 09 00:48:03 UTC 2024] sikimon | Location: X: -6 Y: 277 Z: -4 | Line: 1 | 
+[Thu May 09 00:48:03 UTC 2024] sikimon | Location: X: -6 Y: 277 Z: -4 | Line: 2 | 
+[Thu May 09 00:48:03 UTC 2024] sikimon | Location: X: -6 Y: 277 Z: -4 | Line: 3 | 
+[Thu May 09 00:48:05 UTC 2024] sikimon | Location: X: -7 Y: 277 Z: -4 | Line: 0 | 
+[Thu May 09 00:48:05 UTC 2024] sikimon | Location: X: -7 Y: 277 Z: -4 | Line: 1 | 
+[Thu May 09 00:48:05 UTC 2024] sikimon | Location: X: -7 Y: 277 Z: -4 | Line: 2 | 
+[Thu May 09 00:48:05 UTC 2024] sikimon | Location: X: -7 Y: 277 Z: -4 | Line: 3 | 
+[Thu May 09 00:48:10 UTC 2024] sikimon | Location: X: -7 Y: 276 Z: -4 | Line: 0 | 
+[Thu May 09 00:48:10 UTC 2024] sikimon | Location: X: -7 Y: 276 Z: -4 | Line: 1 | 
+[Thu May 09 00:48:10 UTC 2024] sikimon | Location: X: -7 Y: 276 Z: -4 | Line: 2 | 
+[Thu May 09 00:48:10 UTC 2024] sikimon | Location: X: -7 Y: 276 Z: -4 | Line: 3 | 
+[Thu May 09 01:05:48 UTC 2024] Jh0nD | Location: X: -1 Y: 65 Z: 12 | Line: 0 | 
+[Thu May 09 01:05:48 UTC 2024] Jh0nD | Location: X: -1 Y: 65 Z: 12 | Line: 1 | 
+[Thu May 09 01:05:48 UTC 2024] Jh0nD | Location: X: -1 Y: 65 Z: 12 | Line: 2 | 
+[Thu May 09 01:05:48 UTC 2024] Jh0nD | Location: X: -1 Y: 65 Z: 12 | Line: 3 | 
+[Thu May 09 01:10:53 UTC 2024] rmzamorano | Location: X: -11 Y: 283 Z: 0 | Line: 0 | 
+[Thu May 09 01:10:53 UTC 2024] rmzamorano | Location: X: -11 Y: 283 Z: 0 | Line: 1 | 
+[Thu May 09 01:10:53 UTC 2024] rmzamorano | Location: X: -11 Y: 283 Z: 0 | Line: 2 | 
+[Thu May 09 01:10:53 UTC 2024] rmzamorano | Location: X: -11 Y: 283 Z: 0 | Line: 3 | 
+[Thu May 09 01:10:54 UTC 2024] rmzamorano | Location: X: -11 Y: 283 Z: -1 | Line: 0 | 
+[Thu May 09 01:10:54 UTC 2024] rmzamorano | Location: X: -11 Y: 283 Z: -1 | Line: 1 | 
+[Thu May 09 01:10:54 UTC 2024] rmzamorano | Location: X: -11 Y: 283 Z: -1 | Line: 2 | 
+[Thu May 09 01:10:54 UTC 2024] rmzamorano | Location: X: -11 Y: 283 Z: -1 | Line: 3 | 
+[Thu May 09 01:10:55 UTC 2024] rmzamorano | Location: X: -11 Y: 283 Z: -2 | Line: 0 | 
+[Thu May 09 01:10:55 UTC 2024] rmzamorano | Location: X: -11 Y: 283 Z: -2 | Line: 1 | 
+[Thu May 09 01:10:55 UTC 2024] rmzamorano | Location: X: -11 Y: 283 Z: -2 | Line: 2 | 
+[Thu May 09 01:10:55 UTC 2024] rmzamorano | Location: X: -11 Y: 283 Z: -2 | Line: 3 | 
+[Thu May 09 01:10:56 UTC 2024] rmzamorano | Location: X: -12 Y: 283 Z: -2 | Line: 0 | 
+[Thu May 09 01:10:56 UTC 2024] rmzamorano | Location: X: -12 Y: 283 Z: -2 | Line: 1 | 
+[Thu May 09 01:10:56 UTC 2024] rmzamorano | Location: X: -12 Y: 283 Z: -2 | Line: 2 | 
+[Thu May 09 01:10:56 UTC 2024] rmzamorano | Location: X: -12 Y: 283 Z: -2 | Line: 3 | 
+[Thu May 09 01:10:58 UTC 2024] rmzamorano | Location: X: -12 Y: 283 Z: -1 | Line: 0 | 
+[Thu May 09 01:10:58 UTC 2024] rmzamorano | Location: X: -12 Y: 283 Z: -1 | Line: 1 | 
+[Thu May 09 01:10:58 UTC 2024] rmzamorano | Location: X: -12 Y: 283 Z: -1 | Line: 2 | 
+[Thu May 09 01:10:58 UTC 2024] rmzamorano | Location: X: -12 Y: 283 Z: -1 | Line: 3 | 
+[Thu May 09 01:10:59 UTC 2024] rmzamorano | Location: X: -13 Y: 283 Z: -1 | Line: 0 | 
+[Thu May 09 01:10:59 UTC 2024] rmzamorano | Location: X: -13 Y: 283 Z: -1 | Line: 1 | 
+[Thu May 09 01:10:59 UTC 2024] rmzamorano | Location: X: -13 Y: 283 Z: -1 | Line: 2 | 
+[Thu May 09 01:10:59 UTC 2024] rmzamorano | Location: X: -13 Y: 283 Z: -1 | Line: 3 | 
+[Thu May 09 01:11:00 UTC 2024] rmzamorano | Location: X: -12 Y: 283 Z: 0 | Line: 0 | 
+[Thu May 09 01:11:00 UTC 2024] rmzamorano | Location: X: -12 Y: 283 Z: 0 | Line: 1 | 
+[Thu May 09 01:11:00 UTC 2024] rmzamorano | Location: X: -12 Y: 283 Z: 0 | Line: 2 | 
+[Thu May 09 01:11:00 UTC 2024] rmzamorano | Location: X: -12 Y: 283 Z: 0 | Line: 3 | 
+[Thu May 09 01:11:01 UTC 2024] rmzamorano | Location: X: -13 Y: 283 Z: 0 | Line: 0 | 
+[Thu May 09 01:11:01 UTC 2024] rmzamorano | Location: X: -13 Y: 283 Z: 0 | Line: 1 | 
+[Thu May 09 01:11:01 UTC 2024] rmzamorano | Location: X: -13 Y: 283 Z: 0 | Line: 2 | 
+[Thu May 09 01:11:01 UTC 2024] rmzamorano | Location: X: -13 Y: 283 Z: 0 | Line: 3 | 
+[Thu May 09 01:11:03 UTC 2024] rmzamorano | Location: X: -13 Y: 283 Z: -2 | Line: 0 | 
+[Thu May 09 01:11:03 UTC 2024] rmzamorano | Location: X: -13 Y: 283 Z: -2 | Line: 1 | 
+[Thu May 09 01:11:03 UTC 2024] rmzamorano | Location: X: -13 Y: 283 Z: -2 | Line: 2 | 
+[Thu May 09 01:11:03 UTC 2024] rmzamorano | Location: X: -13 Y: 283 Z: -2 | Line: 3 | 
+[Thu May 09 01:24:29 UTC 2024] Jh0nD | Location: X: 1 Y: 65 Z: 12 | Line: 0 | 
+[Thu May 09 01:24:29 UTC 2024] Jh0nD | Location: X: 1 Y: 65 Z: 12 | Line: 1 | 
+[Thu May 09 01:24:29 UTC 2024] Jh0nD | Location: X: 1 Y: 65 Z: 12 | Line: 2 | 
+[Thu May 09 01:24:29 UTC 2024] Jh0nD | Location: X: 1 Y: 65 Z: 12 | Line: 3 | 
+[Thu May 09 03:11:09 UTC 2024] BrunoHD11 | Location: X: 1 Y: 158 Z: 2 | Line: 0 | leer el chat
+[Thu May 09 03:11:09 UTC 2024] BrunoHD11 | Location: X: 1 Y: 158 Z: 2 | Line: 1 | 
+[Thu May 09 03:11:09 UTC 2024] BrunoHD11 | Location: X: 1 Y: 158 Z: 2 | Line: 2 | 
+[Thu May 09 03:11:09 UTC 2024] BrunoHD11 | Location: X: 1 Y: 158 Z: 2 | Line: 3 | 
+[Thu May 09 04:43:29 UTC 2024] BrunoHD11 | Location: X: -15 Y: 83 Z: -80 | Line: 0 | luna
+[Thu May 09 04:43:29 UTC 2024] BrunoHD11 | Location: X: -15 Y: 83 Z: -80 | Line: 1 | 
+[Thu May 09 04:43:29 UTC 2024] BrunoHD11 | Location: X: -15 Y: 83 Z: -80 | Line: 2 | 
+[Thu May 09 04:43:29 UTC 2024] BrunoHD11 | Location: X: -15 Y: 83 Z: -80 | Line: 3 | 
+[Thu May 09 04:43:34 UTC 2024] BrunoHD11 | Location: X: -18 Y: 83 Z: -77 | Line: 0 | luna
+[Thu May 09 04:43:34 UTC 2024] BrunoHD11 | Location: X: -18 Y: 83 Z: -77 | Line: 1 | 
+[Thu May 09 04:43:34 UTC 2024] BrunoHD11 | Location: X: -18 Y: 83 Z: -77 | Line: 2 | 
+[Thu May 09 04:43:34 UTC 2024] BrunoHD11 | Location: X: -18 Y: 83 Z: -77 | Line: 3 | 
+[Thu May 09 04:43:38 UTC 2024] BrunoHD11 | Location: X: -21 Y: 83 Z: -80 | Line: 0 | luna
+[Thu May 09 04:43:38 UTC 2024] BrunoHD11 | Location: X: -21 Y: 83 Z: -80 | Line: 1 | 
+[Thu May 09 04:43:38 UTC 2024] BrunoHD11 | Location: X: -21 Y: 83 Z: -80 | Line: 2 | 
+[Thu May 09 04:43:38 UTC 2024] BrunoHD11 | Location: X: -21 Y: 83 Z: -80 | Line: 3 | 
+[Thu May 09 04:48:12 UTC 2024] Jh0nD | Location: X: 60 Y: 83 Z: -41 | Line: 0 | d
+[Thu May 09 04:48:12 UTC 2024] Jh0nD | Location: X: 60 Y: 83 Z: -41 | Line: 1 | 
+[Thu May 09 04:48:12 UTC 2024] Jh0nD | Location: X: 60 Y: 83 Z: -41 | Line: 2 | 
+[Thu May 09 04:48:12 UTC 2024] Jh0nD | Location: X: 60 Y: 83 Z: -41 | Line: 3 | 
+[Thu May 09 04:48:12 UTC 2024] Jh0nD | Location: X: 60 Y: 83 Z: -42 | Line: 0 | 
+[Thu May 09 04:48:12 UTC 2024] Jh0nD | Location: X: 60 Y: 83 Z: -42 | Line: 1 | 
+[Thu May 09 04:48:12 UTC 2024] Jh0nD | Location: X: 60 Y: 83 Z: -42 | Line: 2 | 
+[Thu May 09 04:48:12 UTC 2024] Jh0nD | Location: X: 60 Y: 83 Z: -42 | Line: 3 | 
+[Thu May 09 04:48:13 UTC 2024] Jh0nD | Location: X: 60 Y: 84 Z: -42 | Line: 0 | 
+[Thu May 09 04:48:13 UTC 2024] Jh0nD | Location: X: 60 Y: 84 Z: -42 | Line: 1 | 
+[Thu May 09 04:48:13 UTC 2024] Jh0nD | Location: X: 60 Y: 84 Z: -42 | Line: 2 | 
+[Thu May 09 04:48:13 UTC 2024] Jh0nD | Location: X: 60 Y: 84 Z: -42 | Line: 3 | 
+[Thu May 09 04:48:14 UTC 2024] Jh0nD | Location: X: 60 Y: 84 Z: -41 | Line: 0 | 
+[Thu May 09 04:48:14 UTC 2024] Jh0nD | Location: X: 60 Y: 84 Z: -41 | Line: 1 | 
+[Thu May 09 04:48:14 UTC 2024] Jh0nD | Location: X: 60 Y: 84 Z: -41 | Line: 2 | 
+[Thu May 09 04:48:14 UTC 2024] Jh0nD | Location: X: 60 Y: 84 Z: -41 | Line: 3 | 
+[Thu May 09 04:48:15 UTC 2024] Jh0nD | Location: X: 60 Y: 83 Z: -41 | Line: 0 | s
+[Thu May 09 04:48:15 UTC 2024] Jh0nD | Location: X: 60 Y: 83 Z: -41 | Line: 1 | 
+[Thu May 09 04:48:15 UTC 2024] Jh0nD | Location: X: 60 Y: 83 Z: -41 | Line: 2 | 
+[Thu May 09 04:48:15 UTC 2024] Jh0nD | Location: X: 60 Y: 83 Z: -41 | Line: 3 | 
+[Thu May 09 04:48:16 UTC 2024] Jh0nD | Location: X: 60 Y: 83 Z: -41 | Line: 0 | s
+[Thu May 09 04:48:16 UTC 2024] Jh0nD | Location: X: 60 Y: 83 Z: -41 | Line: 1 | 
+[Thu May 09 04:48:16 UTC 2024] Jh0nD | Location: X: 60 Y: 83 Z: -41 | Line: 2 | 
+[Thu May 09 04:48:16 UTC 2024] Jh0nD | Location: X: 60 Y: 83 Z: -41 | Line: 3 | 
+[Thu May 09 04:48:17 UTC 2024] Jh0nD | Location: X: 60 Y: 83 Z: -41 | Line: 0 | 
+[Thu May 09 04:48:17 UTC 2024] Jh0nD | Location: X: 60 Y: 83 Z: -41 | Line: 1 | 
+[Thu May 09 04:48:17 UTC 2024] Jh0nD | Location: X: 60 Y: 83 Z: -41 | Line: 2 | 
+[Thu May 09 04:48:17 UTC 2024] Jh0nD | Location: X: 60 Y: 83 Z: -41 | Line: 3 | 
+[Thu May 09 19:55:10 UTC 2024] rmzamorano | Location: X: -385 Y: 66 Z: 1413 | Line: 0 | BUSCA 
+[Thu May 09 19:55:10 UTC 2024] rmzamorano | Location: X: -385 Y: 66 Z: 1413 | Line: 1 | REPARACION
+[Thu May 09 19:55:10 UTC 2024] rmzamorano | Location: X: -385 Y: 66 Z: 1413 | Line: 2 | DURABILIDAD
+[Thu May 09 19:55:10 UTC 2024] rmzamorano | Location: X: -385 Y: 66 Z: 1413 | Line: 3 | PROTECION IV
+[Thu May 09 19:55:23 UTC 2024] rmzamorano | Location: X: -385 Y: 65 Z: 1413 | Line: 0 | 
+[Thu May 09 19:55:23 UTC 2024] rmzamorano | Location: X: -385 Y: 65 Z: 1413 | Line: 1 | 
+[Thu May 09 19:55:23 UTC 2024] rmzamorano | Location: X: -385 Y: 65 Z: 1413 | Line: 2 | 
+[Thu May 09 19:55:23 UTC 2024] rmzamorano | Location: X: -385 Y: 65 Z: 1413 | Line: 3 | 
+[Thu May 09 19:55:43 UTC 2024] rmzamorano | Location: X: -385 Y: 65 Z: 1413 | Line: 0 | EFICIENCIA 5
+[Thu May 09 19:55:43 UTC 2024] rmzamorano | Location: X: -385 Y: 65 Z: 1413 | Line: 1 | FORTUNA 3
+[Thu May 09 19:55:43 UTC 2024] rmzamorano | Location: X: -385 Y: 65 Z: 1413 | Line: 2 | 
+[Thu May 09 19:55:43 UTC 2024] rmzamorano | Location: X: -385 Y: 65 Z: 1413 | Line: 3 | 
+[Thu May 09 20:17:24 UTC 2024] marjho | Location: X: -397 Y: 65 Z: 1405 | Line: 0 | de marjho :3
+[Thu May 09 20:17:24 UTC 2024] marjho | Location: X: -397 Y: 65 Z: 1405 | Line: 1 | 
+[Thu May 09 20:17:24 UTC 2024] marjho | Location: X: -397 Y: 65 Z: 1405 | Line: 2 | 
+[Thu May 09 20:17:24 UTC 2024] marjho | Location: X: -397 Y: 65 Z: 1405 | Line: 3 | 
+[Thu May 09 20:17:30 UTC 2024] marjho | Location: X: -397 Y: 65 Z: 1406 | Line: 0 | tetas
+[Thu May 09 20:17:30 UTC 2024] marjho | Location: X: -397 Y: 65 Z: 1406 | Line: 1 | 
+[Thu May 09 20:17:30 UTC 2024] marjho | Location: X: -397 Y: 65 Z: 1406 | Line: 2 | 
+[Thu May 09 20:17:30 UTC 2024] marjho | Location: X: -397 Y: 65 Z: 1406 | Line: 3 | 
+[Thu May 09 20:17:39 UTC 2024] marjho | Location: X: -397 Y: 65 Z: 1407 | Line: 0 | ?uwu
+[Thu May 09 20:17:39 UTC 2024] marjho | Location: X: -397 Y: 65 Z: 1407 | Line: 1 | 
+[Thu May 09 20:17:39 UTC 2024] marjho | Location: X: -397 Y: 65 Z: 1407 | Line: 2 | 
+[Thu May 09 20:17:39 UTC 2024] marjho | Location: X: -397 Y: 65 Z: 1407 | Line: 3 | 
+[Thu May 09 21:26:52 UTC 2024] rmzamorano | Location: X: 0 Y: 158 Z: 2 | Line: 0 | 
+[Thu May 09 21:26:52 UTC 2024] rmzamorano | Location: X: 0 Y: 158 Z: 2 | Line: 1 | 
+[Thu May 09 21:26:52 UTC 2024] rmzamorano | Location: X: 0 Y: 158 Z: 2 | Line: 2 | 
+[Thu May 09 21:26:52 UTC 2024] rmzamorano | Location: X: 0 Y: 158 Z: 2 | Line: 3 | 
+[Fri May 10 00:50:29 UTC 2024] rmzamorano | Location: X: -384 Y: 66 Z: 1413 | Line: 0 | BUSCA FILIO V
+[Fri May 10 00:50:29 UTC 2024] rmzamorano | Location: X: -384 Y: 66 Z: 1413 | Line: 1 | DURABILIDAD 111
+[Fri May 10 00:50:29 UTC 2024] rmzamorano | Location: X: -384 Y: 66 Z: 1413 | Line: 2 | FORTUNA 3
+[Fri May 10 00:50:29 UTC 2024] rmzamorano | Location: X: -384 Y: 66 Z: 1413 | Line: 3 | PROTE 1V 
+[Fri May 10 00:51:01 UTC 2024] rmzamorano | Location: X: -384 Y: 66 Z: 1413 | Line: 0 | BUSCA FILIO V
+[Fri May 10 00:51:01 UTC 2024] rmzamorano | Location: X: -384 Y: 66 Z: 1413 | Line: 1 | DURABILIDAD 3
+[Fri May 10 00:51:01 UTC 2024] rmzamorano | Location: X: -384 Y: 66 Z: 1413 | Line: 2 | FORTUNA 3
+[Fri May 10 00:51:01 UTC 2024] rmzamorano | Location: X: -384 Y: 66 Z: 1413 | Line: 3 | PROTE 4
+[Fri May 10 19:39:04 UTC 2024] rmzamorano | Location: X: -384 Y: 66 Z: 1409 | Line: 0 | botin 3
+[Fri May 10 19:39:04 UTC 2024] rmzamorano | Location: X: -384 Y: 66 Z: 1409 | Line: 1 | durabiidad 3(irro
+[Fri May 10 19:39:04 UTC 2024] rmzamorano | Location: X: -384 Y: 66 Z: 1409 | Line: 2 | mpibilidad 3)
+[Fri May 10 19:39:04 UTC 2024] rmzamorano | Location: X: -384 Y: 66 Z: 1409 | Line: 3 | eficiencia 5
+[Fri May 10 20:03:26 UTC 2024] marjho | Location: X: -384 Y: 66 Z: 1409 | Line: 0 | botin 3              
+[Fri May 10 20:03:26 UTC 2024] marjho | Location: X: -384 Y: 66 Z: 1409 | Line: 1 | durabiidad 3(irro
+[Fri May 10 20:03:26 UTC 2024] marjho | Location: X: -384 Y: 66 Z: 1409 | Line: 2 | mpibilidad 3)
+[Fri May 10 20:03:26 UTC 2024] marjho | Location: X: -384 Y: 66 Z: 1409 | Line: 3 | eficiencia 5
+[Sun May 12 16:02:31 UTC 2024] marjho | Location: X: -397 Y: 65 Z: 1405 | Line: 0 | de marjho :3
+[Sun May 12 16:02:31 UTC 2024] marjho | Location: X: -397 Y: 65 Z: 1405 | Line: 1 | 
+[Sun May 12 16:02:31 UTC 2024] marjho | Location: X: -397 Y: 65 Z: 1405 | Line: 2 | 
+[Sun May 12 16:02:31 UTC 2024] marjho | Location: X: -397 Y: 65 Z: 1405 | Line: 3 | 
+[Sun May 12 22:21:42 UTC 2024] marjho | Location: X: -397 Y: 65 Z: 1406 | Line: 0 | tetase
+[Sun May 12 22:21:42 UTC 2024] marjho | Location: X: -397 Y: 65 Z: 1406 | Line: 1 | 
+[Sun May 12 22:21:42 UTC 2024] marjho | Location: X: -397 Y: 65 Z: 1406 | Line: 2 | 
+[Sun May 12 22:21:42 UTC 2024] marjho | Location: X: -397 Y: 65 Z: 1406 | Line: 3 | 
+[Mon May 13 19:27:43 UTC 2024] sikimon | Location: X: -390 Y: 69 Z: 100 | Line: 0 | eggew
+[Mon May 13 19:27:43 UTC 2024] sikimon | Location: X: -390 Y: 69 Z: 100 | Line: 1 | 
+[Mon May 13 19:27:43 UTC 2024] sikimon | Location: X: -390 Y: 69 Z: 100 | Line: 2 | 
+[Mon May 13 19:27:43 UTC 2024] sikimon | Location: X: -390 Y: 69 Z: 100 | Line: 3 | 
+[Mon May 13 19:58:58 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1160 | Line: 0 | 
+[Mon May 13 19:58:58 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1160 | Line: 1 | 
+[Mon May 13 19:58:58 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1160 | Line: 2 | 
+[Mon May 13 19:58:58 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1160 | Line: 3 | 
+[Mon May 13 19:58:58 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1159 | Line: 0 | 
+[Mon May 13 19:58:58 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1159 | Line: 1 | 
+[Mon May 13 19:58:58 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1159 | Line: 2 | 
+[Mon May 13 19:58:58 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1159 | Line: 3 | 
+[Mon May 13 19:58:59 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1158 | Line: 0 | 
+[Mon May 13 19:58:59 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1158 | Line: 1 | 
+[Mon May 13 19:58:59 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1158 | Line: 2 | 
+[Mon May 13 19:58:59 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1158 | Line: 3 | 
+[Mon May 13 19:59:00 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1157 | Line: 0 | 
+[Mon May 13 19:59:00 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1157 | Line: 1 | 
+[Mon May 13 19:59:00 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1157 | Line: 2 | 
+[Mon May 13 19:59:00 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1157 | Line: 3 | 
+[Mon May 13 19:59:01 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1156 | Line: 0 | 
+[Mon May 13 19:59:01 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1156 | Line: 1 | 
+[Mon May 13 19:59:01 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1156 | Line: 2 | 
+[Mon May 13 19:59:01 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1156 | Line: 3 | 
+[Mon May 13 19:59:03 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1155 | Line: 0 | 
+[Mon May 13 19:59:03 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1155 | Line: 1 | 
+[Mon May 13 19:59:03 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1155 | Line: 2 | 
+[Mon May 13 19:59:03 UTC 2024] rmzamorano | Location: X: 61 Y: -51 Z: 1155 | Line: 3 | 
+[Mon May 13 20:02:38 UTC 2024] 3lpotato | Location: X: 60 Y: -53 Z: 1152 | Line: 0 | 
+[Mon May 13 20:02:38 UTC 2024] 3lpotato | Location: X: 60 Y: -53 Z: 1152 | Line: 1 | 
+[Mon May 13 20:02:38 UTC 2024] 3lpotato | Location: X: 60 Y: -53 Z: 1152 | Line: 2 | 
+[Mon May 13 20:02:38 UTC 2024] 3lpotato | Location: X: 60 Y: -53 Z: 1152 | Line: 3 | 
+[Mon May 13 20:02:53 UTC 2024] rmzamorano | Location: X: 53 Y: -46 Z: 1140 | Line: 0 | 
+[Mon May 13 20:02:53 UTC 2024] rmzamorano | Location: X: 53 Y: -46 Z: 1140 | Line: 1 | 
+[Mon May 13 20:02:53 UTC 2024] rmzamorano | Location: X: 53 Y: -46 Z: 1140 | Line: 2 | 
+[Mon May 13 20:02:53 UTC 2024] rmzamorano | Location: X: 53 Y: -46 Z: 1140 | Line: 3 | 
+[Mon May 13 20:03:24 UTC 2024] 3lpotato | Location: X: 60 Y: -53 Z: 1152 | Line: 0 | 
+[Mon May 13 20:03:24 UTC 2024] 3lpotato | Location: X: 60 Y: -53 Z: 1152 | Line: 1 | 
+[Mon May 13 20:03:24 UTC 2024] 3lpotato | Location: X: 60 Y: -53 Z: 1152 | Line: 2 | 
+[Mon May 13 20:03:24 UTC 2024] 3lpotato | Location: X: 60 Y: -53 Z: 1152 | Line: 3 | 
+[Mon May 13 20:04:30 UTC 2024] rmzamorano | Location: X: 54 Y: -53 Z: 1152 | Line: 0 | 
+[Mon May 13 20:04:30 UTC 2024] rmzamorano | Location: X: 54 Y: -53 Z: 1152 | Line: 1 | 
+[Mon May 13 20:04:30 UTC 2024] rmzamorano | Location: X: 54 Y: -53 Z: 1152 | Line: 2 | 
+[Mon May 13 20:04:30 UTC 2024] rmzamorano | Location: X: 54 Y: -53 Z: 1152 | Line: 3 | 
+[Mon May 13 20:05:28 UTC 2024] rmzamorano | Location: X: 60 Y: -53 Z: 1152 | Line: 0 | 
+[Mon May 13 20:05:28 UTC 2024] rmzamorano | Location: X: 60 Y: -53 Z: 1152 | Line: 1 | 
+[Mon May 13 20:05:28 UTC 2024] rmzamorano | Location: X: 60 Y: -53 Z: 1152 | Line: 2 | 
+[Mon May 13 20:05:28 UTC 2024] rmzamorano | Location: X: 60 Y: -53 Z: 1152 | Line: 3 | 
+[Mon May 13 21:50:49 UTC 2024] rmzamorano | Location: X: 54 Y: -52 Z: 1152 | Line: 0 | 
+[Mon May 13 21:50:49 UTC 2024] rmzamorano | Location: X: 54 Y: -52 Z: 1152 | Line: 1 | 
+[Mon May 13 21:50:49 UTC 2024] rmzamorano | Location: X: 54 Y: -52 Z: 1152 | Line: 2 | 
+[Mon May 13 21:50:49 UTC 2024] rmzamorano | Location: X: 54 Y: -52 Z: 1152 | Line: 3 | 

@@ -1,0 +1,150 @@
+{
+    "name": "Hot Desert Dunes Red",
+    "color": "#DBD155",
+    "rarity": 1,
+    "derivative": "DESERT",
+    "vanillaDerivative": "DESERT",
+    "children": ["hot/mountain-cliffs"],
+   "childShrinkFactor": 1.5,
+    "childStyle":{
+        "style": "IRIS",
+        "zoom": 1.5
+    },
+    "jigsawStructures": [
+        {
+            "structure": "village-desert",
+            "rarity": 1200
+        }
+    ],
+    "generators": [{
+        "generator": "smooth-dunes",
+        "max": 35,
+        "min": 30
+    }],
+    "layers": [
+        {
+            "minHeight": 3,
+            "maxHeight": 10,
+            "slopeCondition": {
+                "minimumSlope": 4.5,
+                "maximumSlope": 20
+            },
+            "palette": [{"block": "minecraft:orange_terracotta"}]
+        },
+        {
+            "minHeight": 5,
+            "maxHeight": 5,
+            "zoom": 0.7,
+            "palette": [{
+                "weight": 1,
+                "block": "minecraft:red_sand"
+            }]
+        }
+    ],
+
+    "objects": [
+        {
+            "chance": 0.001,
+            "density": 3,
+            "place": [
+                "clutter/rdesertpost1",
+                "clutter/rdesertpost2",
+                "clutter/rdesertpost3"
+            ]
+        },
+        {
+            "chance": 0.0018,
+            "mode": "MIN_HEIGHT",
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+                        "edit": [
+                {
+                    "find": [
+                        {
+                            "block": "minecraft:glass"
+                        }
+                    ],
+                    "replace":
+                    {
+                        "palette": [
+                            {
+                                "block": "minecraft:air"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "place": [
+                "jigsaw/pyramid/pyramid-red-extreme",
+                "jigsaw/pyramid/pyramid-red"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -10,
+                "z": 0
+            }
+        },
+        {
+            "mode": "MIN_HEIGHT",
+            "place": [
+                "structures/ruins-desert-1",
+                "structures/ruins-desert-2"
+            ],
+            "chance": 0.005,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            }
+        },
+        {
+            "chance": 0.0014,
+            "mode": "MIN_HEIGHT",
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 270,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": [
+                "clutter/rsphinx1",
+                "clutter/rbrksphinx1"
+            ],
+            "translate": {
+                "x": 0,
+                "y": -2,
+                "z": 0
+            }
+        }
+    ],
+    "decorators": [
+        {
+            "verticalZoom": 5,
+            "chance": 0.004,
+            "variance": {"style": "STATIC"},
+            "stackMax": 5,
+            "style": {"style": "STATIC"},
+            "palette": [{"block": "minecraft:cactus"}],
+            "heightVariance": {"style": "NOWHERE"},
+            "stackMin": 1
+        },
+        {
+            "chance": 0.005,
+            "palette": [{"block": "minecraft:dead_bush"}]
+        }
+    ]
+}

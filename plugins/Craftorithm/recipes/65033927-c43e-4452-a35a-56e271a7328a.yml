@@ -1,0 +1,17 @@
+type: shaped
+shape:
+- abc
+- def
+- ghi
+source:
+  a: minecraft:leather
+  b: minecraft:iron_ingot
+  c: minecraft:leather
+  d: minecraft:bucket
+  e: minecraft:chest
+  f: minecraft:bucket
+  g: minecraft:leather
+  h: minecraft:lapis_block
+  i: minecraft:leather
+unlock: true
+result: items:gui_items:e7600c3d-d178-4717-ab0b-9298f8b1d7a6

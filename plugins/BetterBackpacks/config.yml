@@ -1,0 +1,175 @@
+#    ___      _   _           ___          _                 _             Our plugins: https://alonsoaliaga.com/plugins
+#   | _ ) ___| |_| |_ ___ _ _| _ ) __ _ __| |___ __  __ _ __| |__ ___      Support server: https://alonsoaliaga.com/discord
+#   | _ \/ -_)  _|  _/ -_) '_| _ \/ _` / _| / / '_ \/ _` / _| / /(_-<      Youtube: https://alonsoaliaga.com/play
+#   |___/\___|\__|\__\___|_| |___/\__,_\__|_\_\ .__/\__,_\__|_\_\/__/      Test server: plugins.alonsoaliaga.com
+#                          by AlonsoAliaga   |_|                           Twitch: https://alonsoaliaga.com/twitch
+#           Considering donating? https://alonsoaliaga.com/donate          Want more features? Check our premium version on https://alonsoaliaga/BetterBackpacksPro
+# ======================================================================================================================================
+# |              Downloaded this jar in a server setup? Tell the author he is NOT allowed to upload someone else work!                 |
+# |   Update to latest version as soon as possible. Support WON'T be given when using old versions. Specially from downloaded setups.  |
+# | Remember: Support is only provided for .jar files downloaded DIRECTLY from spigotmc.org! Other files will be considered as invalid |
+# |        as they are NOT the same .jar file the developer (me) uploaded and I cannot guarantee that the file is safe or not.         |
+# |                   If you have issues with setup configs. Tell the setup author to update his config file.                          |
+# ======================================================================================================================================
+Messages:
+  No-permission: "&cYou don't have permission to do this."
+  Cooldown-message: "&cYou are using backpacks too fast. Wait some seconds!"
+  Corrupted-backpack: "&cThis backpack seems to be corrupted or was obtained illegally. Please destroy it :)"
+  Cannot-stacked: "&cYou cannot use stacked backpacks.."
+  Cannot-craft-stacked: "&cYou cannot craft stacked backpacks. Craft one by one.."
+  Reloaded: "&aSome messages and options have been reloaded. Other may require a restart!"
+  Invalid-player: "&cPlayer is not online!"
+  Invalid-tier: "&cTier is not valid. It must be a number between 1 and 6!"
+  Only-main-hand: "&cBackpacks can be used only in main hand!"
+  Unknown-error-crafting: "&cSomething weird occurred. Contact an administrator!"
+  #Can be set to "none" to disable message. Block sound will always be played.
+  Cannot-number-key: "&cYou cannot use number keys in backpacks!"
+  #Can be set to "none" to disable message. Block sound will always be played.
+  Cannot-right-click: "&cYou cannot right click this item in a backpack!"
+  Sorting-disabled: "&cYou cannot sort items when using backpacks!"
+  Usage:
+    Backpack-no-permission: "&cYou don't have permission to use backpacks."
+    Tank-left-no-permission: "&cYou don't have permission to use tanks on the left in backpacks."
+    Tank-right-no-permission: "&cYou don't have permission to use tank on the right in backpacks."
+    Unknown-error: "&cWoops! Something weird occurred. Contact an administrator! ({CODE})"
+    Disabled-world: "&cUsing backpacks in this dimension is not allowed!"
+    Backpack-title: "&8Backpack"
+  Build:
+    Success: "&6You gave {TARGET} one custom backpack!"
+    Success-other: "&aYou received a custom backpack!"
+  Give:
+    Received: "&6You received a tier {TIER} backpack for your items!"
+    Gave: "&aYou gave {TARGET} a tier {TIER} backpack!"
+  Recipe:
+    Disabled: "&cThere aren't available recipes to show."
+    Disabled-for-you: "&cLooks like you haven't unlocked any backpack recipe :("
+    Disabled-for-other: "&cLooks like target hasn't unlocked any backpack recipe :("
+    Opened-for-other: "&6You opened backpack recipes for {TARGET}."
+  Unique:
+    Disabled: "&cThis feature is currently disabled."
+    Opened-for-other: "&6Unique backpacks GUI opened for {TARGET}."
+  Help:
+    Admin:
+    - "&2 /betterbackpacks recipe <player> &f- &aOpen recipe for player"
+    - "&2 /betterbackpacks unique <player> &f- &aOpen unique backpacks for player"
+    - "&2 /betterbackpacks give <player> <tier> &f- &aGive backpack to player"
+    - "&2 /betterbackpacks build <player> <tier> <texture> &f- &aBuild backpack for player with texture"
+    - "&2 /betterbackpacks reload &f- &aReload configuration"
+    User:
+    - "&2 /betterbackpacks recipe &f- &aOpen recipe"
+    - "&2 /betterbackpacks unique &f- &aOpen unique backpacks"
+  WorldGuard:
+    Disabled-region: "&cYou cannot use backpacks in this region!"
+
+#Set to "none" if no permission is required. Admin permission will always be required, even if "none"
+Permissions:
+  Admin: "betterbackpacks.admin"
+  #This will allow players to open backpacks. This permission IS REQUIRED even if players have specific tier permissions.
+  #This is to allow rpg make the usage of backpacks an unlockable perk.
+  Use: "none" #Example: "betterbackpacks.use"
+  #This will allow players to craft backpacks of different types. {TYPE} will be replaced internally with 1,2,3,4,5 or 6.
+  Tier: "none" #Example: "betterbackpacks.tier.{TIER}"
+  Unique: "none"
+  #This will allow players to view recipes for the tiers they have permission for if they are available (If craftable)
+  Recipe: "none" #Example: "betterbackpacks.recipe"
+  #Allow players to use left tank.
+  Tank-left: "none" #Example: "betterbackpacks.tank.left"
+  #Allow players to use right tank.
+  Tank-right: "none" #Example: "betterbackpacks.tank.right"
+
+#What is this? This just adds an inventory filled with backpacks with custom textures defined in this config.
+#This is an easy way for admins to take custom backpacks to reward players in events. Or simply display players
+#available backpacks. Admins can obtain backpacks just by clicking on it and selecting tier.
+Unique-backpacks:
+  Enabled: true
+  Title: "&8Unique Backpacks"
+  #Max amount is 54
+  #You can add new textures in the following format:
+  # - "&cTexture name|texture"
+  Textures:
+    - "&5AlonsoAliaga|ewogICJ0aW1lc3RhbXAiIDogMTU5NDQ0NjkyMDI5NiwKICAicHJvZmlsZUlkIiA6ICJlMWMxYTE5NDdlODY0MTRmODZiYjQyZDgyYTIxY2ZiOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJBbG9uc29BbGlhZ2EiLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY4YWE3NGNjODg1NzgwNjBkMGZlM2JkOTA4YjM0ZjY5ZjEyZTA3ZjFmODljNWRkYzE1ZTZiZjYwZjA0Y2NjNiIKICAgIH0KICB9Cn0="
+    - "&dPink Bird|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmE3MmJhMzhlZTQ5NWRlNDk0ZTk5YTgzMWVjN2Q4YzU2MTMyOTcyMmNlMzI2MjQ0OGU0YjU2YThkMDljMjE0YSJ9fX0="
+    - "&2Orc|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGViMjgxZjZhMTg1ZWY3ZWQ3NzhjOTQyNmIyZWVmMzk5Y2VkNWEwZWU3YzViNzM2NWQ3MzRjMjE4MjU1NmIxYSJ9fX0="
+    - "&eSteve Moving Eyes|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGQxOGM5NTQ5ODAzMWZlYTNmZTc0OGIxN2M3YTVjOWU4OTI4YjNkN2M4ODllZGU3OTAyZDc4YmFhZDYyMmE5NCJ9fX0="
+    - "&bCookie Monster|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDdiNzY2MjAwOWU0NGE5ODRiNTUzMDRlNDNjMDI4MDRiZGYwNGMyODExZjJiNGNiMzkxNWI0NDMxYjc1NzJiZiJ9fX0="
+    - "&cElmo|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTQzOTE4OWU2MTM3NTMyMjkyYzg1OGY1NTIxMjI0MTMxMDhjZGNlNzI5ZTI2ZWU3YjEzNWVhN2NhNDI4ZWM1YiJ9fX0="
+    - "&dPig|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTgzZWIwNzMxM2MwZDJlZjcyNmMyNjdmMmIxMjg1ZmRhYmQwMjg2NDYwMzEwMjNmYWExYmQ0YzFlNmYwMWRmOCJ9fX0="
+    - "&5Strider|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTE5MDNlNGQ5ZWM1NjE3MTFhZDllMTcxYWY2Yjc5ZmZiNjllMjk1ZGNkOWJmMjMwNjhjOWFiYjdlMjE5NDkwZCJ9fX0="
+    - "&9Captain America|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmQ4ZGIyMzczODRjOTA2YTY5ODEzMDlkMjlmYzY4Mjc3ZDljN2U1OWY4NWM2MGMxMDgyYjYxZTExZGJmMGIwIn19fQ=="
+    - "&3Squidward|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGM1ZmZmYzJlOTc4ZDYzOWM3ODI2MjYyYTI1YzA4YTJiMGI5ZmZmNTM2MGUzNzVjMDA0Yjc5OWIzZmY2NzkyNiJ9fX0="
+    - "&dBuzz Lightyear|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2U2NDcwNjc3NmU4NGZhOGM5MGNmYjk1Nzc3NzU5YzFkMTc2ODc3MzBlYTUwMGNjYmU5OTMxOGIxOTU0OTc2MCJ9fX0="
+    - "&6Tank|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjNlZTVmMjhiYmMwM2QyNjEyZmM3NDRkOGEyMmNlMjZlYmRmMWU5OTIxZWM4YTEyNzk3MWRkMDUzMjhmYzhmNCJ9fX0="
+    - "&aTank|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjJkYTBkYWEzNzg3MTEyMzliMGRiZjY5MDhmMGE1ZjA0MzFiNTI4NzQ4NDE3YTM4MzE2YzQ2NzdjNWIyZDA5YSJ9fX0="
+    - "&eSoviet Union Flag|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODU5NTM5Y2U4MzRkOTJlM2Y3ODI1ZTQxM2FlOWNjYmQyNzg4MTUwMTg3MDNkYTgyMzJkMmUxNzczYTE4YjJiMyJ9fX0="
+    - "&4Lightning McQueen|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzhlMjJmMTk2ZWE5NmVmYzMzZDQ1NWQ5YzIyYTBjZDIwNTUxZjZkM2U3ZmI0ZTc2NmMzY2M0NjhkZjNjOTY4In19fQ=="
+    - "&6Mater|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTQxODkyNjg0NmQxNjg5NmZmOTQ0NjA5MmU4NGRjYjJkZDZhYWNhNGE3NWEzNDA3YmE2NjUzNTM2ZGRmIn19fQ=="
+    - "&cFrancesco Bernoulli|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzY2YjkyYzZkNjc3MzAzZDE2YmFhMWY3MzE1OWY0ZjQxYmVjZDAyZTNmZDRlNzQ3ZTMyY2NlM2ZmNGQ4MTdlNCJ9fX0="
+    - "&aChick Hicks|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2ViOGIxOGRiZDNhZmY0NWY4ZWY2OTc4YzI2NzNiMDIxODc1YzVlMTdiYmRkYTJmMjE4MTY0YTlkM2IzZCJ9fX0="
+    - "&6Legendary Egg|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjA0YzhjN2JhMWYwZGFlYTNiNDEwZWRkYjQ5OWQ1NjUwM2RkZGQ0NzQ2ZTgyMWE1YmRlNDUxM2I2Mjg3NGIxIn19fQ=="
+    - "&9Discord ping|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWQ4MzNiNTE1NjY1NjU2NThmOTAxMWRlODc4NGU5MGMxYWQ5YmE1ZDMzMzdmOGMwNjkyMTNiYmRlZTk4NjUyMyJ9fX0="
+    - "&cRed striped backpack|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWNlODMzYWE5YTI4YmNmMjA3ZTViMzZhNTkxY2VmMWY5OTdkZDJmNGE0YTIzNmFmNTBkZDA4MWYzYTVkOWM0YyJ9fX0="
+    - "&3Ender backpack|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjEyYzBhMzljZjQ2YTcyYzE4ZmJhMzA3YjgxNTQ2MmQxOTk3NGZlZWU3YTA3ODY0MzU2OWRlY2JmNWI3In19fQ=="
+    - "&5Weird backpack|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDA4N2M2NWQ3YmRlNjY1YjZlMTk1ZThkY2ZjMjFmNGFkZGNmOTJhOTA3MTQwYzM3ZDQ3NGMxMmFjY2Y3YWIifX19"
+    - "&7Bugs Bunny|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzNiMzg2MTQzYWNiZGE5NmQwNjkxNzg5OGZjYmI3YmMwYTJkY2VlOTNmNWU1OWNhNWI3M2U2NzgzZTVjMSJ9fX0="
+    - "&7Bugs Bunny meme|eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjM0Y2Q2YmJlYzViNDk3NmY5M2UzZjI0MTU1NjcyNDg2MjY4NzdmMTdiYWY4OWEzNzIyMDUwNmY1OTU3Yjk3YyJ9fX0="
+
+Options:
+  Debug-mode: false
+  #To apply changes for aliases you must RESTART the server.
+  #Plugman or similar plugins are NOT and will NEVER be supported.
+  #Use /reload or restart your server.
+  Aliases:
+  - "betterbackpack"
+  - "bbackpack"
+  - "bbackpacks"
+  - "bbp"
+  #Allow players to place backpacks inside backpacks?
+  #Highly recommended to leave this disabled. If players stack too many backpacks world MIGHT corrupt
+  #and player won't be able to join until you remove his data from the world.
+  #STRONGLY RECOMMENDED TO LEAVE IT DISABLED. IF ENABLED, IT COULD POTENTIALLY BREAK YOUR PLAYER DATA.
+  #You'll need to delete player data from main world to "fix" it. (Might potentially corrupt the whole world)
+  Backpackception: false
+  #Close backpacks inventories if player receives damage.
+  Close-on-damage: true
+  Disabled-worlds:
+    - "world_pvp"
+    - "world_safari"
+  WorldGuard:
+    Warning:
+    - "Default flag:"
+    - " This is the default behavior if the flag is not specified BUT you are inside in a WorldGuard region."
+    - "  true - Players can open backpacks."
+    - "  false - Players cannot open backpacks."
+    Default-flag: true
+  #Materials for which LEFT-CLICK will be disabled.
+  #This is to prevent issues from other plugins.
+  Disabled-click:
+  - "SHULKER_BOX"
+  - "BLACK_SHULKER_BOX"
+  - "WHITE_SHULKER_BOX"
+  - "ORANGE_SHULKER_BOX"
+  - "MAGENTA_SHULKER_BOX"
+  - "LIGHT_BLUE_SHULKER_BOX"
+  - "YELLOW_SHULKER_BOX"
+  - "LIME_SHULKER_BOX"
+  - "PINK_SHULKER_BOX"
+  - "GRAY_SHULKER_BOX"
+  - "SILVER_SHULKER_BOX"
+  - "CYAN_SHULKER_BOX"
+  - "PURPLE_SHULKER_BOX"
+  - "BLUE_SHULKER_BOX"
+  - "BROWN_SHULKER_BOX"
+  - "GREEN_SHULKER_BOX"
+  - "RED_SHULKER_BOX"
+
+Updates:
+  #Auto update configuration? Enabling will delete comments.
+  Auto-update-configuration: true
+  #Check for updates? Recommended to keep it enabled.
+  Check-updates: true
+  #Notify updates when player with permission joins the server?
+  Notify-updates: true
+  #Permission required to receive update message.
+  Permission: "betterbackpacks.update"
+  #Message to send when update is found.
+  Message: "&2[BetterBackpacks] &eA new update has been found! You are using version {CURRENT}. Download version {NEW} here &c{LINK}"

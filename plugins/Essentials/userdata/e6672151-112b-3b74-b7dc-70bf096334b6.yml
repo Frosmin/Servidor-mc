@@ -1,0 +1,47 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 189.28.74.142
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1715630812925
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1715636727457
+  login: 1715632724525
+money: '0.0'
+logoutlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: -469.28162
+  y: 80.5823
+  z: 229.69999
+  yaw: 131.56491088867188
+  pitch: 3.6697845458984375
+last-account-name: WalkedTomato109
+lastlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: -388.04147
+  y: 78.0
+  z: 134.20955
+  yaw: -172.58509826660156
+  pitch: 8.489028930664062
+homes:
+  home:
+    world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+    world-name: mundo
+    x: -387.6303
+    y: 78.0
+    z: 124.027176
+    yaw: 2.312774658203125
+    pitch: 12.222427368164062

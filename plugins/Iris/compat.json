@@ -1,0 +1,753 @@
+{
+    "blockFilters": [
+        {
+            "when": "WEEPING_VINES",
+            "supplement": "NETHER_FENCE",
+            "exact": false
+        },
+        {
+            "when": "WEEPING_VINES_PLANT",
+            "supplement": "NETHER_FENCE",
+            "exact": false
+        },
+        {
+            "when": "WARPED_WART_BLOCK",
+            "supplement": "NETHER_WART_BLOCK",
+            "exact": false
+        },
+        {
+            "when": "TWISTING_VINES",
+            "supplement": "BAMBOO",
+            "exact": false
+        },
+        {
+            "when": "TWISTING_VINES_PLANT",
+            "supplement": "BAMBOO",
+            "exact": false
+        },
+        {
+            "when": "TARGET",
+            "supplement": "COBBLESTONE",
+            "exact": false
+        },
+        {
+            "when": "SOUL_SOIL",
+            "supplement": "SOULSAND",
+            "exact": false
+        },
+        {
+            "when": "SOUL_TORCH",
+            "supplement": "TORCH",
+            "exact": false
+        },
+        {
+            "when": "SOUL_LANTERN",
+            "supplement": "LANTERN",
+            "exact": false
+        },
+        {
+            "when": "SOUL_FIRE",
+            "supplement": "FIRE",
+            "exact": false
+        },
+        {
+            "when": "SOUL_CAMPFIRE",
+            "supplement": "CAMPFIRE",
+            "exact": false
+        },
+        {
+            "when": "SHROOMLIGHT",
+            "supplement": "GLOWSTONE",
+            "exact": false
+        },
+        {
+            "when": "RESPAWN_ANCHOR",
+            "supplement": "OBSIDIAN",
+            "exact": false
+        },
+        {
+            "when": "NETHER_SPROUTS",
+            "supplement": "RED_MUSHROOM",
+            "exact": false
+        },
+        {
+            "when": "NETHER_GOLD_ORE",
+            "supplement": "GOLD_ORE",
+            "exact": false
+        },
+        {
+            "when": "LODESTONE",
+            "supplement": "STONE",
+            "exact": false
+        },
+        {
+            "when": "STRIPPED_WARPED_HYPHAE",
+            "supplement": "BROWN_MUSHROOM_BLOCK",
+            "exact": false
+        },
+        {
+            "when": "STRIPPED_CRIMSON_HYPHAE",
+            "supplement": "RED_MUSHROOM_BLOCK",
+            "exact": false
+        },
+        {
+            "when": "WARPED_HYPHAE",
+            "supplement": "MUSHROOM_STEM",
+            "exact": false
+        },
+        {
+            "when": "CRIMSON_HYPHAE",
+            "supplement": "RED_MUSHROOM_BLOCK",
+            "exact": false
+        },
+        {
+            "when": "GILDED_BLACKSTONE",
+            "supplement": "COBBLESTONE",
+            "exact": false
+        },
+        {
+            "when": "CRYING_OBSIDIAN",
+            "supplement": "OBSIDIAN",
+            "exact": false
+        },
+        {
+            "when": "STRIPPED_WARPED_STEM",
+            "supplement": "MUSHROOM_STEM",
+            "exact": false
+        },
+        {
+            "when": "STRIPPED_CRIMSON_STEM",
+            "supplement": "MUSHROOM_STEM",
+            "exact": false
+        },
+        {
+            "when": "WARPED_STEM",
+            "supplement": "MUSHROOM_STEM",
+            "exact": false
+        },
+        {
+            "when": "CRIMSON_STEM",
+            "supplement": "MUSHROOM_STEM",
+            "exact": false
+        },
+        {
+            "when": "CRIMSON_ROOTS",
+            "supplement": "RED_MUSHROOM",
+            "exact": false
+        },
+        {
+            "when": "WARPED_ROOTS",
+            "supplement": "BROWN_MUSHROOM",
+            "exact": false
+        },
+        {
+            "when": "CRIMSON_PLANKS",
+            "supplement": "OAK_PLANKS",
+            "exact": false
+        },
+        {
+            "when": "WARPED_PLANKS",
+            "supplement": "OAK_PLANKS",
+            "exact": false
+        },
+        {
+            "when": "WARPED_NYLIUM",
+            "supplement": "MYCELIUM",
+            "exact": false
+        },
+        {
+            "when": "CRIMSON_NYLIUM",
+            "supplement": "MYCELIUM",
+            "exact": false
+        },
+        {
+            "when": "WARPED_FUNGUS",
+            "supplement": "BROWN_MUSHROOM",
+            "exact": false
+        },
+        {
+            "when": "CRIMSON_FUNGUS",
+            "supplement": "RED_MUSHROOM",
+            "exact": false
+        },
+        {
+            "when": "CRACKED_NETHER_BRICKS",
+            "supplement": "NETHER_BRICKS",
+            "exact": false
+        },
+        {
+            "when": "CHISELED_NETHER_BRICKS",
+            "supplement": "NETHER_BRICKS",
+            "exact": false
+        },
+        {
+            "when": "NETHER_FENCE",
+            "supplement": "LEGACY_NETHER_FENCE",
+            "exact": false
+        },
+        {
+            "when": "CHAIN",
+            "supplement": "IRON_BARS",
+            "exact": false
+        },
+        {
+            "when": "NETHERITE_BLOCK",
+            "supplement": "QUARTZ_BLOCK",
+            "exact": false
+        },
+        {
+            "when": "BLACKSTONE",
+            "supplement": "COBBLESTONE",
+            "exact": false
+        },
+        {
+            "when": "BASALT",
+            "supplement": "STONE",
+            "exact": false
+        },
+        {
+            "when": "ANCIENT_DEBRIS",
+            "supplement": "NETHERRACK",
+            "exact": false
+        },
+        {
+            "when": "NETHERRACK",
+            "supplement": "LEGACY_NETHERRACK",
+            "exact": false
+        },
+        {
+            "when": "HONEY_BLOCK",
+            "supplement": "OAK_LEAVES",
+            "exact": false
+        },
+        {
+            "when": "BEEHIVE",
+            "supplement": "OAK_LEAVES",
+            "exact": false
+        },
+        {
+            "when": "BEE_NEST",
+            "supplement": "OAK_LEAVES",
+            "exact": false
+        },
+        {
+            "when": "GRANITE_WALL",
+            "supplement": "COBBLESTONE_WALL",
+            "exact": false
+        },
+        {
+            "when": "BLUE_ICE",
+            "supplement": "PACKED_ICE",
+            "exact": false
+        },
+        {
+            "when": "DIORITE_WALL",
+            "supplement": "COBBLESTONE_WALL",
+            "exact": false
+        },
+        {
+            "when": "ANDESITE_WALL",
+            "supplement": "COBBLESTONE_WALL",
+            "exact": false
+        },
+        {
+            "when": "SWEET_BERRY_BUSH",
+            "supplement": "GRASS",
+            "exact": false
+        },
+        {
+            "when": "STONECUTTER",
+            "supplement": "CRAFTING_TABLE",
+            "exact": false
+        },
+        {
+            "when": "SANDSTONE_STAIRS",
+            "supplement": "LEGACY_SANDSTONE_STAIRS",
+            "exact": false
+        },
+        {
+            "when": "SMOOTH_SANDSTONE_STAIRS",
+            "supplement": "LEGACY_SANDSTONE_STAIRS",
+            "exact": false
+        },
+        {
+            "when": "MOSSY_COBBLESTONE_STAIRS",
+            "supplement": "COBBLESTONE_STAIRS",
+            "exact": false
+        },
+        {
+            "when": "MOSSY_STONE_BRICK_STAIRS",
+            "supplement": "STONE_BRICK_STAIRS",
+            "exact": false
+        },
+        {
+            "when": "POLISHED_GRANITE_STAIRS",
+            "supplement": "COBBLESTONE_STAIRS",
+            "exact": false
+        },
+        {
+            "when": "GRANITE_STAIRS",
+            "supplement": "COBBLESTONE_STAIRS",
+            "exact": false
+        },
+        {
+            "when": "POLISHED_DIORITE_STAIRS",
+            "supplement": "COBBLESTONE_STAIRS",
+            "exact": false
+        },
+        {
+            "when": "DIORITE_STAIRS",
+            "supplement": "COBBLESTONE_STAIRS",
+            "exact": false
+        },
+        {
+            "when": "POLISHED_ANDESITE_STAIRS",
+            "supplement": "COBBLESTONE_STAIRS",
+            "exact": false
+        },
+        {
+            "when": "ANDESITE_STAIRS",
+            "supplement": "COBBLESTONE_STAIRS",
+            "exact": false
+        },
+        {
+            "when": "STONE_STAIRS",
+            "supplement": "COBBLESTONE_STAIRS",
+            "exact": false
+        },
+        {
+            "when": "END_STONE_BRICK_STAIRS",
+            "supplement": "LEGACY_SANDSTONE_STAIRS",
+            "exact": false
+        },
+        {
+            "when": "NETHER_BRICK_STAIRS",
+            "supplement": "LEGACY_NETHER_BRICK_STAIRS",
+            "exact": false
+        },
+        {
+            "when": "RED_NETHER_BRICK_STAIRS",
+            "supplement": "NETHER_BRICK_STAIRS",
+            "exact": false
+        },
+        {
+            "when": "SMOOTH_QUARTZ_STAIRS",
+            "supplement": "LEGACY_QUARTZ_STAIRS",
+            "exact": false
+        },
+        {
+            "when": "QUARTZ_STAIRS",
+            "supplement": "LEGACY_QUARTZ_STAIRS",
+            "exact": false
+        },
+        {
+            "when": "RED_SANDSTONE_STAIRS",
+            "supplement": "LEGACY_RED_SANDSTONE_STAIRS",
+            "exact": false
+        },
+        {
+            "when": "SMOOTH_RED_SANDSTONE_STAIRS",
+            "supplement": "LEGACY_RED_SANDSTONE_STAIRS",
+            "exact": false
+        },
+        {
+            "when": "STONE_SLAB",
+            "supplement": "SMOOTH_STONE_SLAB",
+            "exact": false
+        },
+        {
+            "when": "SMOKER",
+            "supplement": "FURNACE",
+            "exact": false
+        },
+        {
+            "when": "SMITHING_TABLE",
+            "supplement": "CRAFTING_TABLE",
+            "exact": false
+        },
+        {
+            "when": "END_STONE_BRICK_SLAB",
+            "supplement": "SANDSTONE_SLAB",
+            "exact": false
+        },
+        {
+            "when": "RED_NETHER_BRICK_SLAB",
+            "supplement": "NETHER_BRICK_SLAB",
+            "exact": false
+        },
+        {
+            "when": "SMOOTH_QUARTZ_SLAB",
+            "supplement": "QUARTZ_SLAB",
+            "exact": false
+        },
+        {
+            "when": "CUT_SANDSTONE_SLAB",
+            "supplement": "SANDSTONE_SLAB",
+            "exact": false
+        },
+        {
+            "when": "CUT_RED_SANDSTONE_SLAB",
+            "supplement": "RED_SANDSTONE_SLAB",
+            "exact": false
+        },
+        {
+            "when": "SMOOTH_RED_SANDSTONE_SLAB",
+            "supplement": "RED_SANDSTONE_SLAB",
+            "exact": false
+        },
+        {
+            "when": "SMOOTH_SANDSTONE_SLAB",
+            "supplement": "SANDSTONE_SLAB",
+            "exact": false
+        },
+        {
+            "when": "MOSSY_COBBLESTONE_SLAB",
+            "supplement": "COBBLESTONE_SLAB",
+            "exact": false
+        },
+        {
+            "when": "MOSSY_STONE_BRICK_SLAB",
+            "supplement": "STONE_BRICK_SLAB",
+            "exact": false
+        },
+        {
+            "when": "STONE_SLAB",
+            "supplement": "SMOOTH_STONE_SLAB",
+            "exact": false
+        },
+        {
+            "when": "ANDESITE_SLAB",
+            "supplement": "COBBLESTONE_SLAB",
+            "exact": false
+        },
+        {
+            "when": "ANDESITE_SLAB",
+            "supplement": "COBBLESTONE_SLAB",
+            "exact": false
+        },
+        {
+            "when": "DIORITE_SLAB",
+            "supplement": "COBBLESTONE_SLAB",
+            "exact": false
+        },
+        {
+            "when": "GRANITE_SLAB",
+            "supplement": "COBBLESTONE_SLAB",
+            "exact": false
+        },
+        {
+            "when": "POLISHED_ANDESITE_SLAB",
+            "supplement": "SMOOTH_STONE_SLAB",
+            "exact": false
+        },
+        {
+            "when": "POLISHED_DIORITE_SLAB",
+            "supplement": "SMOOTH_STONE_SLAB",
+            "exact": false
+        },
+        {
+            "when": "POLISHED_GRANITE_SLAB",
+            "supplement": "SMOOTH_STONE_SLAB",
+            "exact": false
+        },
+        {
+            "when": "WARPED_WALL_SIGN",
+            "supplement": "LEGACY_WALL_SIGN",
+            "exact": false
+        },
+        {
+            "when": "WARPED_SIGN",
+            "supplement": "LEGACY_SIGN_POST",
+            "exact": false
+        },
+        {
+            "when": "SPRUCE_WALL_SIGN",
+            "supplement": "LEGACY_WALL_SIGN",
+            "exact": false
+        },
+        {
+            "when": "SPRUCE_SIGN",
+            "supplement": "LEGACY_SIGN_POST",
+            "exact": false
+        },
+        {
+            "when": "OAK_WALL_SIGN",
+            "supplement": "LEGACY_WALL_SIGN",
+            "exact": false
+        },
+        {
+            "when": "OAK_SIGN",
+            "supplement": "LEGACY_SIGN_POST",
+            "exact": false
+        },
+        {
+            "when": "JUNGLE_WALL_SIGN",
+            "supplement": "LEGACY_WALL_SIGN",
+            "exact": false
+        },
+        {
+            "when": "JUNGLE_SIGN",
+            "supplement": "LEGACY_SIGN_POST",
+            "exact": false
+        },
+        {
+            "when": "DARK_OAK_WALL_SIGN",
+            "supplement": "LEGACY_WALL_SIGN",
+            "exact": false
+        },
+        {
+            "when": "DARK_OAK_SIGN",
+            "supplement": "LEGACY_SIGN_POST",
+            "exact": false
+        },
+        {
+            "when": "CRIMSON_WALL_SIGN",
+            "supplement": "LEGACY_WALL_SIGN",
+            "exact": false
+        },
+        {
+            "when": "CRIMSON_SIGN",
+            "supplement": "LEGACY_SIGN_POST",
+            "exact": false
+        },
+        {
+            "when": "BIRCH_WALL_SIGN",
+            "supplement": "LEGACY_WALL_SIGN",
+            "exact": false
+        },
+        {
+            "when": "BIRCH_SIGN",
+            "supplement": "LEGACY_SIGN_POST",
+            "exact": false
+        },
+        {
+            "when": "ACACIA_WALL_SIGN",
+            "supplement": "LEGACY_WALL_SIGN",
+            "exact": false
+        },
+        {
+            "when": "ACACIA_SIGN",
+            "supplement": "LEGACY_SIGN_POST",
+            "exact": false
+        },
+        {
+            "when": "SCAFFOLDING",
+            "supplement": "BIRCH_FENCE",
+            "exact": false
+        },
+        {
+            "when": "LECTERN",
+            "supplement": "BOOKSHELF",
+            "exact": false
+        },
+        {
+            "when": "LANTERN",
+            "supplement": "REDSTONE_LAMP",
+            "exact": false
+        },
+        {
+            "when": "JIGSAW",
+            "supplement": "AIR",
+            "exact": false
+        },
+        {
+            "when": "GRINDSTONE",
+            "supplement": "COBBLESTONE",
+            "exact": false
+        },
+        {
+            "when": "FLETCHING_TABLE",
+            "supplement": "CRAFTING_TABLE",
+            "exact": false
+        },
+        {
+            "when": "COMPOSTER",
+            "supplement": "CHEST",
+            "exact": false
+        },
+        {
+            "when": "CARTOGRAPHY_TABLE",
+            "supplement": "CRAFTING_TABLE",
+            "exact": false
+        },
+        {
+            "when": "CAMPFIRE",
+            "supplement": "DARK_OAK_SLAB",
+            "exact": false
+        },
+        {
+            "when": "BLAST_FURNACE",
+            "supplement": "FURNACE",
+            "exact": false
+        },
+        {
+            "when": "BELL",
+            "supplement": "REDSTONE_LAMP",
+            "exact": false
+        },
+        {
+            "when": "minecraft:barrel[facing=south]",
+            "supplement": "minecraft:hay_bale[axis=z]",
+            "exact": true
+        },
+        {
+            "when": "minecraft:barrel[facing=north]",
+            "supplement": "minecraft:hay_bale[axis=z]",
+            "exact": true
+        },
+        {
+            "when": "minecraft:barrel[facing=east]",
+            "supplement": "minecraft:hay_bale[axis=x]",
+            "exact": true
+        },
+        {
+            "when": "minecraft:barrel[facing=west]",
+            "supplement": "minecraft:hay_bale[axis=x]",
+            "exact": true
+        },
+        {
+            "when": "minecraft:barrel[facing=up]",
+            "supplement": "minecraft:hay_bale[axis=y]",
+            "exact": true
+        },
+        {
+            "when": "minecraft:barrel[facing=down]",
+            "supplement": "minecraft:hay_bale[axis=y]",
+            "exact": true
+        },
+        {
+            "when": "BAMBOO",
+            "supplement": "BIRCH_FENCE",
+            "exact": false
+        },
+        {
+            "when": "BAMBOO_SAPLING",
+            "supplement": "BIRCH_SAPLING",
+            "exact": false
+        },
+        {
+            "when": "POTTED_BAMBOO",
+            "supplement": "POTTED_BIRCH_SAPLING",
+            "exact": false
+        },
+        {
+            "when": "GRASS",
+            "supplement": "SHORT_GRASS",
+            "exact": false
+        }
+    ],
+    "itemFilters": [
+        {
+            "when": "NETHERITE_HELMET",
+            "supplement": "DIAMOND_HELMET"
+        },
+        {
+            "when": "NETHERITE_CHESTPLATE",
+            "supplement": "DIAMOND_CHESTPLATE"
+        },
+        {
+            "when": "NETHERITE_BOOTS",
+            "supplement": "DIAMOND_BOOTS"
+        },
+        {
+            "when": "NETHERITE_LEGGINGS",
+            "supplement": "DIAMOND_LEGGINGS"
+        },
+        {
+            "when": "MUSIC_DISC_PIGSTEP",
+            "supplement": "MUSIC_DISC_FAR"
+        },
+        {
+            "when": "NETHERITE_SWORD",
+            "supplement": "DIAMOND_SWORD"
+        },
+        {
+            "when": "NETHERITE_AXE",
+            "supplement": "DIAMOND_AXE"
+        },
+        {
+            "when": "NETHERITE_PICKAXE",
+            "supplement": "DIAMOND_PICKAXE"
+        },
+        {
+            "when": "NETHERITE_HOE",
+            "supplement": "DIAMOND_HOE"
+        },
+        {
+            "when": "NETHERITE_SHOVEL",
+            "supplement": "DIAMOND_SHOVEL"
+        },
+        {
+            "when": "NETHERITE_INGOT",
+            "supplement": "DIAMOND"
+        },
+        {
+            "when": "PIGLIN_BANNER_PATTERN",
+            "supplement": "PORKCHOP"
+        },
+        {
+            "when": "NETHERITE_SCRAP",
+            "supplement": "GOLD_INGOT"
+        },
+        {
+            "when": "WARPED_FUNGUS_ON_A_STICK",
+            "supplement": "CARROT_ON_A_STICK"
+        },
+        {
+            "when": "HONEY_BOTTLE",
+            "supplement": "GLASS_BOTTLE"
+        },
+        {
+            "when": "HONEYCOMB",
+            "supplement": "GLASS"
+        },
+        {
+            "when": "SWEET_BERRIES",
+            "supplement": "APPLE"
+        },
+        {
+            "when": "SUSPICIOUS_STEW",
+            "supplement": "MUSHROOM_STEW"
+        },
+        {
+            "when": "BLACK_DYE",
+            "supplement": "INK_SAC"
+        },
+        {
+            "when": "WHITE_DYE",
+            "supplement": "BONE_MEAL"
+        },
+        {
+            "when": "BROWN_DYE",
+            "supplement": "COCOA_BEANS"
+        },
+        {
+            "when": "BLUE_DYE",
+            "supplement": "LAPIS_LAZULI"
+        },
+        {
+            "when": "CROSSBOW",
+            "supplement": "BOW"
+        },
+        {
+            "when": "FLOWER_BANNER_PATTERN",
+            "supplement": "CORNFLOWER"
+        },
+        {
+            "when": "SKULL_BANNER_PATTERN",
+            "supplement": "BONE"
+        },
+        {
+            "when": "GLOBE_BANNER_PATTERN",
+            "supplement": "WHEAT_SEEDS"
+        },
+        {
+            "when": "MOJANG_BANNER_PATTERN",
+            "supplement": "DIRT"
+        },
+        {
+            "when": "CREEPER_BANNER_PATTERN",
+            "supplement": "CREEPER_HEAD"
+        }
+    ]
+}

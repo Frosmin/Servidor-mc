@@ -1,0 +1,259 @@
+#########################################################################################
+#                                                                                       #
+# HarvestEXP, a free resource by Norska @ https://norska.dev                            #
+#                                                                                       #
+# Wiki: https://norska.dev/docs/welcome/                                                #
+# Support: https://norska.dev/discord/                                                  #
+#                                                                                       #
+# You are editing the config.yml file of HarvestEXP.                                    #
+#                                                                                       #
+#########################################################################################
+
+#########################################################################################
+#                                                                                       #
+# NOTE: PLEASE READ BEFORE CONFIGURING!                                                 #
+#                                                                                       #
+# Please consult the wiki for any questions regarding the setup of this plugin, if you  #
+# still require help, open a ticket on my discord server!                               #
+#                                                                                       #
+#########################################################################################
+
+##################################
+#                                #
+#         CROP SETTINGS          #
+#                                #
+##################################
+
+settings:
+         
+   POTATO:
+   
+      general:
+         enabled: true
+
+      experience:
+         # Note: While true, dropOnlyIfRipe will alter experience only if the crop is fully ripe when harvested.
+         dropOnlyIfRipe: true
+         # Note: While true, dropOnBreak allows mending to function.
+         dropOnBreak: true
+         amount: 10
+         
+      # Note: Whether or not a permission is required to gain experience for this crop.
+      # Note: hexp.user.gain.potato
+      permission:
+         enabled: false
+         
+      # Note: In which worlds experience won't drop when harvesting this crop.
+      worlds:
+         blacklist:
+         - 'world_the_nether'
+         - 'another_world'
+         
+   ###############################
+         
+   CARROT:
+   
+      general:
+         enabled: true
+         
+      experience:
+         # Note: While true, dropOnlyIfRipe will alter experience only if the crop is fully ripe when harvested.
+         dropOnlyIfRipe: true
+         # Note: While true, dropOnBreak allows mending to function.
+         dropOnBreak: true
+         amount: 10
+         
+      # Note: Whether or not a permission is required to gain experience for this crop.
+      # Note: hexp.user.gain.carrot
+      permission:
+         enabled: false
+         
+      # Note: In which worlds experience won't drop when harvesting this crop.
+      worlds:
+         blacklist:
+         - 'world_the_nether'
+         - 'another_world'
+         
+   ###############################         
+         
+   WHEAT:
+   
+      general:
+         enabled: true
+         
+      experience:
+         # Note: While true, dropOnlyIfRipe will alter experience only if the crop is fully ripe when harvested.
+         dropOnlyIfRipe: true
+         # Note: While true, dropOnBreak allows mending to function.
+         dropOnBreak: true
+         amount: 10
+         
+      # Note: Whether or not a permission is required to gain experience for this crop.
+      # Note: hexp.user.gain.wheat
+      permission:
+         enabled: false
+         
+      # Note: In which worlds experience won't drop when harvesting this crop.
+      worlds:
+         blacklist:
+         - 'world_the_nether'
+         - 'another_world'
+         
+   ###############################
+    
+   NETHERWART:
+   
+      general:
+         enabled: true
+         
+      experience:
+         # Note: While true, dropOnlyIfRipe will alter experience only if the crop is fully ripe when harvested.
+         dropOnlyIfRipe: true
+         # Note: While true, dropOnBreak allows mending to function.
+         dropOnBreak: true
+         amount: 10
+         
+      # Note: Whether or not a permission is required to gain experience for this crop.
+      # Note: hexp.user.gain.netherwart
+      permission:
+         enabled: false
+         
+      # Note: In which worlds experience won't drop when harvesting this crop.
+      worlds:
+         blacklist:
+         - 'world_the_nether'
+         - 'another_world' 
+         
+   ###############################   
+         
+   BEETROOT:
+   
+      general:
+         enabled: true
+         
+      experience:
+         # Note: While true, dropOnlyIfRipe will alter experience only if the crop is fully ripe when harvested.
+         dropOnlyIfRipe: true
+         # Note: While true, dropOnBreak allows mending to function.
+         dropOnBreak: true
+         amount: 10
+         
+      # Note: Whether or not a permission is required to gain experience for this crop.
+      # Note: hexp.user.gain.beetroot
+      permission:
+         enabled: false
+         
+      # Note: In which worlds experience won't drop when harvesting this crop.
+      worlds:
+         blacklist:
+         - 'world_the_nether'
+         - 'another_world'
+         
+   ###############################
+         
+   COCOABEAN:
+   
+      general:
+         enabled: true
+         
+      experience:
+         # Note: While true, dropOnlyIfRipe will alter experience only if the crop is fully ripe when harvested.
+         dropOnlyIfRipe: true
+         # Note: While true, dropOnBreak allows mending to function.
+         dropOnBreak: true
+         amount: 10
+         
+      # Note: Whether or not a permission is required to gain experience for this crop.
+      # Note: hexp.user.gain.cocoabean
+      permission:
+         enabled: false
+         
+      # Note: In which worlds experience won't drop when harvesting this crop.
+      worlds:
+         blacklist:
+         - 'world_the_nether'
+         - 'another_world'
+         
+   ###############################
+         
+   SWEETBERRY:
+   
+      general:
+         enabled: true
+         
+      experience:
+         # Note: While true, dropOnlyIfRipe will alter experience only if the crop is fully ripe when harvested.
+         dropOnlyIfRipe: true
+         # Note: While true, dropOnBreak allows mending to function.
+         dropOnBreak: true
+         amount: 10
+         
+      # Note: Whether or not a permission is required to gain experience for this crop.
+      # Note: hexp.user.gain.sweetberry
+      permission:
+         enabled: false
+         
+      # Note: In which worlds experience won't drop when harvesting this crop.
+      worlds:
+         blacklist:
+         - 'world_the_nether'
+         - 'another_world'
+         
+   ###############################
+         
+   PUMPKIN:
+   
+      general:
+         enabled: true
+         
+      experience:
+         # Note: While true, dropOnlyIfNaturallyGrown will alter experience only if the crop is naturally spawned (not placed).
+         dropOnlyIfNaturallyGrown: true
+         # Note: While true, dropOnBreak allows mending to function.
+         dropOnBreak: true
+         amount: 10
+         
+      # Note: Whether or not a permission is required to gain experience for this crop.
+      # Note: hexp.user.gain.pumpkin
+      permission:
+         enabled: false
+         
+      # Note: In which worlds experience won't drop when harvesting this crop.
+      worlds:
+         blacklist:
+         - 'world_the_nether'
+         - 'another_world'
+         
+   ###############################
+         
+   MELON:
+   
+      general:
+         enabled: true
+         
+      experience:
+         # Note: While true, dropOnlyIfNaturallyGrown will alter experience only if the crop is naturally spawned (not placed).
+         dropOnlyIfNaturallyGrown: true
+         # Note: While true, dropOnBreak allows mending to function.
+         dropOnBreak: true
+         amount: 10
+         
+      # Note: Whether or not a permission is required to gain experience for this crop.
+      # Note: hexp.user.gain.melon
+      permission:
+         enabled: false
+         
+      # Note: In which worlds experience won't drop when harvesting this crop.
+      worlds:
+         blacklist:
+         - 'world_the_nether'
+         - 'another_world'
+         
+##################################
+#                                #
+#    UPDATE NOTIFIER SETTINGS    #
+#                                #
+##################################         
+   
+updates:
+   notifications: true

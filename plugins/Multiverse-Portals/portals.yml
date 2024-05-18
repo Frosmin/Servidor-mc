@@ -1,0 +1,21 @@
+portals:
+  inicio:
+    entryfee:
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: Jh0nD
+    location: 37.0,135.0,137.0:45.0,146.0,137.0
+    world: mundo
+    destination: p:lobby_inicio
+  lobby_inicio:
+    entryfee:
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: Jh0nD
+    location: -4.0,65.0,30.0:4.0,76.0,30.0
+    world: Lobby
+    destination: p:inicio

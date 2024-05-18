@@ -1,0 +1,47 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 186.121.194.162
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1715629634415
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1715630889409
+  login: 1715627187848
+money: '0.0'
+last-account-name: 3lpotato
+logoutlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: 59.077460038824555
+  y: -46.0
+  z: 1153.5202047247808
+  yaw: -83.51806640625
+  pitch: 13.649924278259277
+lastlocation:
+  world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+  world-name: mundo
+  x: 63.24776288006566
+  y: -49.0
+  z: 1146.6217995352624
+  yaw: -4.35009765625
+  pitch: 22.3501033782959
+homes:
+  home:
+    world: 11b1771e-40e9-46df-854d-c9c899f67ef7
+    world-name: mundo
+    x: 65.69999998807907
+    y: -46.0
+    z: 1144.300000011921
+    yaw: 66.89991760253906
+    pitch: 16.20010757446289
